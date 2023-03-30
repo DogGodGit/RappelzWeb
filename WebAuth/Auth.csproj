@@ -1,0 +1,185 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01BC704F-870F-45D0-ACA5-7265981972E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Auth</RootNamespace>
+    <AssemblyName>Auth</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\Lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>..\Lib\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Event\Coupon.aspx" />
+    <Content Include="Event\Images\180321_couponEvent.jpg" />
+    <Content Include="Event\Images\btn_regist.png" />
+    <Content Include="Event\Invite\Invite.aspx" />
+    <Content Include="Event\Invite\InviteReceive.aspx" />
+    <Content Include="Event\Invite\Reward.aspx" />
+    <Content Include="Terms\PrivacyPolicy.htm" />
+    <Content Include="Terms\TermsOfService.htm" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\CommandHandlers\AnnouncementsCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\ClientTextMetaDataCreateCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\ClientTextMetaDatasCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\CommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\CreateEntermateUserCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\CreateFacebookUserCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\CreateGoogleUserCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\CreateGuestUserCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\GameAssetBundlesCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\GameMetaDataCreateCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\GameMetaDatasCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\GameServersCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\LoginCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\PurchaseCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\PurchaseExceptionalLogCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\SupportedLanguagesCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\SystemSettingCommandHandler.cs" />
+    <Content Include="App_Code\CommandHandlers\UserHerosCommandHandler.cs" />
+    <Content Include="App_Code\Data\MakeGameMetaData.cs" />
+    <Content Include="App_Code\Data\UserAccessToken.cs" />
+    <Content Include="App_Code\Data\UserType.cs" />
+    <Content Include="App_Code\System\Biz.cs" />
+    <Content Include="App_Code\System\CommandHandlerException.cs" />
+    <Content Include="App_Code\System\ComUtil.cs" />
+    <Content Include="App_Code\System\Config.cs" />
+    <Content Include="App_Code\System\Connect.cs" />
+    <Content Include="App_Code\System\Dac.cs" />
+    <Content Include="App_Code\System\DacGame.cs" />
+    <Content Include="App_Code\System\DateTimeUtil.cs" />
+    <Content Include="App_Code\System\DBUtil.cs" />
+    <Content Include="App_Code\System\LitJsonUtil.cs" />
+    <Content Include="App_Code\System\LogUtil.cs" />
+    <Content Include="App_Code\System\Util.cs" />
+    <Content Include="App_Code\System\VerifyReceiptApple.cs" />
+    <Content Include="App_Code\System\VerifyReceiptGoogle.cs" />
+    <Content Include="Event\Coupon.aspx.cs">
+      <DependentUpon>Coupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Event\Invite\Invite.aspx.cs">
+      <DependentUpon>Invite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Event\Invite\InviteReceive.aspx.cs">
+      <DependentUpon>InviteReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Event\Invite\Reward.aspx.cs">
+      <DependentUpon>Reward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Api.ashx" />
+    <Content Include="ApiWork.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebCommon\WebCommon.csproj">
+      <Project>{ad1fb7c0-748a-4bf2-826a-6b64857b262c}</Project>
+      <Name>WebCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MetaData\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54457</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://127.0.0.1:8090</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

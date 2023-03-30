@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="InviteReceive.aspx.cs" Inherits="Event_Invite_InviteReceive" %>
