@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// LoginCommandHandler의 요약 설명입니다.
+/// LoginCommandHandler'的摘要描述.
 /// </summary>
 public class LoginCommandHandler : CommandHandler
 {
@@ -33,31 +33,31 @@ public class LoginCommandHandler : CommandHandler
 		string	sUserId = null;
 
 		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "userId", out sUserId))
-            throw new CommandHandlerException(this, kResult_Error, "'userId' 프로퍼티가 유효하지 않습니다.");
+            throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userId"));
 
 		if (string.IsNullOrEmpty(sUserId))
-			throw new CommandHandlerException(this, kResult_Error, "'userId' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userId"));
 
-		if (!Guid.TryParse(sUserId, out m_userId))
-			throw new CommandHandlerException(this, kResult_Error, "'userId' 프로퍼티가 유효하지 않습니다.");
+        if (!Guid.TryParse(sUserId, out m_userId))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userId"));
 
         //
         // 사용자Secret
         //
 
         if (!LitJsonUtil.TryGetStringProperty(m_joReq, "userSecret", out m_sUserSecret))
-            throw new CommandHandlerException(this, kResult_Error, "'userSecret' 프로퍼티가 유효하지 않습니다.");
+            throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userSecret"));
 
-		if (string.IsNullOrEmpty(m_sUserSecret))
-			throw new CommandHandlerException(this, kResult_Error, "'userSecret' 프로퍼티가 유효하지 않습니다.");
+        if (string.IsNullOrEmpty(m_sUserSecret))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userSecret"));
 
-		//
-		// 언어ID
-		//
+        //
+        // 언어ID
+        //
 
-		if (!LitJsonUtil.TryGetIntProperty(m_joReq, "languageId", out m_nLanguageId))
-			throw new CommandHandlerException(this, kResult_Error, "'languageId' 프로퍼티가 유효하지 않습니다.");
-	}
+        if (!LitJsonUtil.TryGetIntProperty(m_joReq, "languageId", out m_nLanguageId))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userSecret"));
+    }
 
 	protected override JsonData HandleCommand()
 	{
@@ -67,7 +67,7 @@ public class LoginCommandHandler : CommandHandler
 		try
         {
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -110,7 +110,7 @@ public class LoginCommandHandler : CommandHandler
 			DataRow drUser = Dac.User(conn, trans, m_userId);
 
 			if (drUser == null)
-				throw new CommandHandlerException(this, kResult_Error, "사용자 정보 조회 실패.(" + m_userId + ")");
+				throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception010 + "(" + m_userId + ")");
 
 			//===========================================================================================
 			// 사용자 제한 정보 조회
@@ -126,7 +126,7 @@ public class LoginCommandHandler : CommandHandler
 			int nLastVirtualGameServerId2 = Convert.ToInt32(drUser["lastVirtualGameServerId2"]);
 
 			if (sUserSecret != m_sUserSecret)
-				throw new CommandHandlerException(this, kResult_Error, "사용자Secret 불일치.");
+				throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception004);
 
 			//===========================================================================================
 			// 공유이벤트정보
@@ -199,13 +199,13 @@ public class LoginCommandHandler : CommandHandler
 			// 로그인로그 등록
 			//===============================================================================================
 			if (Dac.AddLoginLog(conn, trans, m_userId, sIp, out lastloginTime) != 0)
-				throw new CommandHandlerException(this, kResult_Error, "로그인로그 등록 실패.");
+				throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception015);
 
 			//===============================================================================================
 			// 사용자 수정(로그인, 언어ID)
 			//===============================================================================================
 			if (Dac.UpdateUser_Login(conn, trans, m_userId, sAccessSecret, lastloginTime, sIp, nSelectedLanguageId) != 0)
-				throw new CommandHandlerException(this, kResult_Error, "사용자 수정(로그인) 실패.");
+				throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception016);
 
 			//===============================================================================================
 			// 트랜잭션 커밋
@@ -213,14 +213,14 @@ public class LoginCommandHandler : CommandHandler
 			DBUtil.Commit(ref trans);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			UserAccessToken token = new UserAccessToken(m_userId, sAccessSecret, UserAccessToken.GetCheckCode(m_userId, sAccessSecret));
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 			joRes["userType"]		    = nUserType;

@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 
 /// <summary>
-/// Biz의 요약 설명입니다.
+/// Biz'的摘要描述.
 /// </summary>
 public static class Biz
 {

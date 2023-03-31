@@ -10,7 +10,7 @@ using LitJson;
 using System.Text.RegularExpressions;
 
 /// <summary>
-/// Util의 요약 설명입니다.
+/// Util'的摘要描述.
 /// </summary>
 public class Util
 {
@@ -42,7 +42,7 @@ public class Util
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // 응답 관련
+    // 响应 관련
 
     public static void WriteResponse(JsonData jo)
     {

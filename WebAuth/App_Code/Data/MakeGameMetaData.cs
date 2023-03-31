@@ -7,7 +7,7 @@ using System.Data;
 using WebCommon;
 
 /// <summary>
-/// MakeGameMetaData의 요약 설명입니다.
+/// MakeGameMetaData'的摘要描述.
 /// </summary>
 public class MakeGameMetaData
 {
@@ -25,7 +25,7 @@ public class MakeGameMetaData
 		try
 		{
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -33,7 +33,6 @@ public class MakeGameMetaData
 			//===============================================================================================
 			// 조회
 			//===============================================================================================
-			DataRow drGameConfig = Dac.GameConfig(conn, null);
 			DataRowCollection drcJobs = Dac.Jobs(conn, null);
 			DataRowCollection drcNations = Dac.Nations(conn, null);
 			DataRowCollection drcAttrCategories = Dac.AttrCategories(conn, null);
@@ -178,7 +177,7 @@ public class MakeGameMetaData
 			DataRowCollection drcUndergroundMazeEntrances = Dac.UndergroundMazeEntrances(conn, null);
 			DataRowCollection drcUndergroundMazeFloors = Dac.UndergroundMazeFloors(conn, null);
 			DataRowCollection drcUndergroundMazePortals = Dac.UndergroundMazePortals(conn, null);
-			DataRowCollection drcUndergroundMazeMapMonsters = Dac.UndergroundMazeMapMonsters(conn, null);
+
 			DataRowCollection drcUndergroundMazeNpcs = Dac.UndergroundMazeNpcs(conn, null);
 			DataRowCollection drcUndergroundMazeNpcTransmissionEntries = Dac.UndergroundMazeNpcTransmissionEntries(conn, null);
 			DataRowCollection drcUndergroundMazeMonsterArranges = Dac.UndergroundMazeMonsterArranges(conn, null);
@@ -208,7 +207,7 @@ public class MakeGameMetaData
 			DataRowCollection drcAncientRelicSteps = Dac.AncientRelicSteps(conn, null);
 			DataRowCollection drcAncientRelicStepWaves = Dac.AncientRelicStepWaves(conn, null);
 			DataRowCollection drcAncientRelicStepRoutes = Dac.AncientRelicStepRoutes(conn, null);
-			DataRowCollection drcAncientRelicMonsterSkillCastingGuides = Dac.AncientRelicMonsterSkillCastingGuides(conn, null);
+
 			DataRowCollection drcTodayTaskCategories = Dac.TodayTaskCategories(conn, null);
 			DataRowCollection drcTodayTasks = Dac.TodayTasks(conn, null);
 			DataRowCollection drcTodayTaskAvailableRewards = Dac.TodayTaskAvailableRewards(conn, null);
@@ -230,7 +229,7 @@ public class MakeGameMetaData
 			DataRowCollection drcRankRewards = Dac.RankRewards(conn, null);
 			DataRow drBattlefieldSupportEvent = Dac.BattlefieldSupportEvent(conn, null);
 			DataRowCollection drcLevelRankingRewards = Dac.LevelRankingRewards(conn, null);
-			DataRowCollection drcContentOpenEntries = Dac.ContentOpenEntries(conn, null);
+
 			DataRowCollection drcAttainmentEntries = Dac.AttainmentEntries(conn, null);
 			DataRowCollection drcAttainmentEntryRewards = Dac.AttainmentEntryRewards(conn, null);
 			DataRowCollection drcMenus = Dac.Menus(conn, null);
@@ -434,7 +433,7 @@ public class MakeGameMetaData
 			DataRowCollection drcWarMemoryStartPositions = Dac.WarMemoryStartPositions(conn, null);
 			DataRowCollection drcWarMemorySchedules = Dac.WarMemorySchedules(conn, null);
 			DataRowCollection drcWarMemoryAvailableRewards = Dac.WarMemoryAvailableRewards(conn, null);
-			DataRowCollection drcWarMemoryRewards = Dac.WarMemoryRewards(conn, null);
+
 			DataRowCollection drcWarMemoryRankingRewards = Dac.WarMemoryRankingRewards(conn, null);
 			DataRowCollection drcWarMemoryWaves = Dac.WarMemoryWaves(conn, null);
 			DataRowCollection drcWarMemoryTransformationObjects = Dac.WarMemoryTransformationObjects(conn, null);
@@ -563,20 +562,25 @@ public class MakeGameMetaData
 			DataRowCollection drcSharingEventSenderRewards = Dac.SharingEventSenderRewardAll(conn, null);
 			DataRowCollection drcSharingEventReceiverRewards = Dac.SharingEventReceiverRewardAll(conn, null);
 
-			//===============================================================================================
-			// 데이터베이스 연결 닫기
-			//===============================================================================================
-			DBUtil.Close(ref conn);
+            DataRow drGameConfig = Dac.GameConfig(conn, null);
+            DataRowCollection drcWarMemoryRewards = Dac.WarMemoryRewards(conn, null);
+            DataRowCollection drcUndergroundMazeMapMonsters = Dac.UndergroundMazeMapMonsters(conn, null);
+            DataRowCollection drcAncientRelicMonsterSkillCastingGuides = Dac.AncientRelicMonsterSkillCastingGuides(conn, null);
+            DataRowCollection drcContentOpenEntries = Dac.ContentOpenEntries(conn, null);
+            //===============================================================================================
+            // 关闭一个数据库连接
+            //===============================================================================================
+            DBUtil.Close(ref conn);
 
-			// 데이타
+            // 数据
 
-			WPDGameDatas gameDatas = new WPDGameDatas();
+            WPDGameDatas gameDatas = new WPDGameDatas();
 
-			//
-			// 게임설정
-			//
-			WPDGameConfig gameConfig = new WPDGameConfig();
-			if (drGameConfig != null)
+            //
+            // 游戏设置
+            //
+            WPDGameConfig gameConfig = new WPDGameConfig();
+            if (drGameConfig != null)
 			{
 				gameConfig.maxHeroCount = Convert.ToInt32(drGameConfig["maxHeroCount"]);
 				gameConfig.startContinentId = Convert.ToInt32(drGameConfig["startContinentId"]);
@@ -3418,11 +3422,11 @@ public class MakeGameMetaData
 			gameDatas.undergroundMazePortals = undergroundMazePortals.ToArray();
 			undergroundMazePortals.Clear();
 
-			//
-			// 지하미로맵몬스터 목록
-			//
-			List<WPDUndergroundMazeMapMonster> undergroundMazeMapMonsters = new List<WPDUndergroundMazeMapMonster>();
-			foreach (DataRow dr in drcUndergroundMazeMapMonsters)
+            //
+            // TODO: 地下迷宫地图怪物列表
+            //
+            List<WPDUndergroundMazeMapMonster> undergroundMazeMapMonsters = new List<WPDUndergroundMazeMapMonster>();
+            foreach (DataRow dr in drcUndergroundMazeMapMonsters)
 			{
 				WPDUndergroundMazeMapMonster data = new WPDUndergroundMazeMapMonster();
 				data.floor = Convert.ToInt32(dr["floor"]);
@@ -4007,11 +4011,11 @@ public class MakeGameMetaData
 			gameDatas.ancientRelicStepRoutes = ancientRelicStepRoutes.ToArray();
 			ancientRelicStepRoutes.Clear();
 
-			//
-			// 고대인의유적몬스터스킬발동가이드 목록
-			//
-			List<WPDAncientRelicMonsterSkillCastingGuide> ancientRelicMonsterSkillCastingGuides = new List<WPDAncientRelicMonsterSkillCastingGuide>();
-			foreach (DataRow dr in drcAncientRelicMonsterSkillCastingGuides)
+            //
+            // TODO: 古老的废墟怪物技能激活指南列表
+            //
+            List<WPDAncientRelicMonsterSkillCastingGuide> ancientRelicMonsterSkillCastingGuides = new List<WPDAncientRelicMonsterSkillCastingGuide>();
+            foreach (DataRow dr in drcAncientRelicMonsterSkillCastingGuides)
 			{
 				WPDAncientRelicMonsterSkillCastingGuide data = new WPDAncientRelicMonsterSkillCastingGuide();
 				data.step = Convert.ToInt32(dr["step"]);
@@ -4391,11 +4395,11 @@ public class MakeGameMetaData
 			gameDatas.levelRankingRewards = levelRankingRewards.ToArray();
 			levelRankingRewards.Clear();
 
-			//
-			// 컨텐츠개방항목 목록
-			//
-			List<WPDContentOpenEntry> contentOpenEntries = new List<WPDContentOpenEntry>();
-			foreach (DataRow dr in drcContentOpenEntries)
+            //
+            // TODO: 内容开放清单
+            //
+            List<WPDContentOpenEntry> contentOpenEntries = new List<WPDContentOpenEntry>();
+            foreach (DataRow dr in drcContentOpenEntries)
 			{
 				WPDContentOpenEntry data = new WPDContentOpenEntry();
 				data.entryId = Convert.ToInt32(dr["entryId"]);
@@ -8351,11 +8355,11 @@ public class MakeGameMetaData
 			gameDatas.warMemoryAvailableRewards = warMemoryAvailableRewards.ToArray();
 			warMemoryAvailableRewards.Clear();
 
-			//
-			// 전쟁의기억보상 목록
-			//
-			List<WPDWarMemoryReward> warMemoryRewards = new List<WPDWarMemoryReward>();
-			foreach (DataRow dr in drcWarMemoryRewards)
+            //
+            // TODO: 战争纪念活动奖励名单
+            //
+            List<WPDWarMemoryReward> warMemoryRewards = new List<WPDWarMemoryReward>();
+            foreach (DataRow dr in drcWarMemoryRewards)
 			{
 				WPDWarMemoryReward data = new WPDWarMemoryReward();
 				data.level = Convert.ToInt32(dr["level"]);

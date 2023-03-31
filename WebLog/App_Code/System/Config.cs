@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// Config의 요약 설명입니다.
+/// Config'的摘要描述.
 /// </summary>
 public static class Config
 {

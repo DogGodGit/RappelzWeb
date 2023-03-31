@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// SystemSettingCommandHandler의 요약 설명입니다.
+/// SystemSettingCommandHandler'的摘要描述.
 /// </summary>
 public class SystemSettingCommandHandler : CommandHandler
 {
@@ -22,7 +22,7 @@ public class SystemSettingCommandHandler : CommandHandler
 		try
 		{
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -41,12 +41,12 @@ public class SystemSettingCommandHandler : CommandHandler
 			DataRow drSystemSetting = Dac.SystemSetting(conn, null);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 

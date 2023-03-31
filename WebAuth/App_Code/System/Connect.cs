@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 
 /// <summary>
-/// Connect의 요약 설명입니다.
+/// Connect'的摘要描述.
 /// </summary>
 public static class Connect
 {

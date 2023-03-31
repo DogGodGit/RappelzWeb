@@ -7,7 +7,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// CommandHandler의 요약 설명입니다.
+/// CommandHandler'的摘要描述.
 /// </summary>
 public abstract class CommandHandler
 {

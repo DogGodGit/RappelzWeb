@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// CommandHandlerException의 요약 설명입니다.
+/// CommandHandlerException'的摘要描述.
 /// </summary>
 public class CommandHandlerException : Exception
 {

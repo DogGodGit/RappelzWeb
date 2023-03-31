@@ -8,7 +8,7 @@ using System.IO;
 using System.IO.Compression;
 
 /// <summary>
-/// GameMetaDataCreateCommandHandler의 요약 설명입니다.
+/// GameMetaDataCreateCommandHandler'的摘要描述.
 /// </summary>
 public class GameMetaDataCreateCommandHandler : CommandHandler
 {
@@ -28,27 +28,27 @@ public class GameMetaDataCreateCommandHandler : CommandHandler
 		base.Parse();
 
 		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "version", out m_sVersion))
-			throw new CommandHandlerException(this, kResult_Error, "'version' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "version"));
 	}
 
 	protected override JsonData HandleCommand()
 	{
 		try
 		{
-			//===============================================================================================
-			// 메타데이터 생성
-			//===============================================================================================
-			string sGameDataBase64String = MakeGameMetaData.GameMetaData();
+            //===============================================================================================
+            // 创建元数据
+            //===============================================================================================
+            string sGameDataBase64String = MakeGameMetaData.GameMetaData();
 
 			if (sGameDataBase64String == null)
-				throw new CommandHandlerException(this, kResult_Error, "메타데이터 생성 실패.");
+				throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception014);
 
 			//
-			// 파일 저장
+			// 保存一个文件
 			//
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = null;
 

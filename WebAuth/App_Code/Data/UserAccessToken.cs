@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// AccessToken의 요약 설명입니다.
+/// AccessToken'的摘要描述.
 /// </summary>
 public class UserAccessToken
 {

@@ -111,7 +111,7 @@ public partial class Event_Coupon : System.Web.UI.Page
 			WDDLServer.Attributes.Add("onchange", "selChange(this);");
 
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();

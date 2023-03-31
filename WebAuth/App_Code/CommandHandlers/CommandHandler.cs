@@ -7,7 +7,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// CommandHandler의 요약 설명입니다.
+/// CommandHandler'的摘要描述.
 /// </summary>
 public abstract class CommandHandler
 {
@@ -47,9 +47,9 @@ public abstract class CommandHandler
 			throw new ArgumentNullException("joReq");
 
 		if (!joReq.IsObject)
-			throw new ArgumentException("JsonData 인스턴스가 Object형식이 아닙니다.");
+			throw new ArgumentException(Resources.Message.Exception001);
 
-		m_joReq = joReq;
+        m_joReq = joReq;
 
 		Parse();
 
@@ -98,37 +98,35 @@ public abstract class CommandHandler
 
 	public static void Process(string sReqJson)
 	{
-		JsonData joReq = null;
-
+		JsonData joReq;
 		try
 		{
 			joReq = JsonMapper.ToObject(sReqJson);
 		}
 		catch (Exception ex)
 		{
-			throw new CommandHandlerException(sReqJson, kResult_Error, "유효한 Json형식이 아닙니다.", ex);
+			throw new CommandHandlerException(sReqJson, kResult_Error, Resources.Message.Exception002, ex);
 		}
 
 		if (!joReq.IsObject)
-			throw new CommandHandlerException(sReqJson, kResult_Error, "프로토콜 오류입니다.");
+			throw new CommandHandlerException(sReqJson, kResult_Error, Resources.Message.Exception003);
 
 		//
-		// 커맨드
+		// 命令
 		//
 
-		string sCmd = null;
-
+		string sCmd;
 		if (!LitJsonUtil.TryGetStringProperty(joReq, "cmd", out sCmd))
-			throw new CommandHandlerException(sReqJson, kResult_Error, "'cmd' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(sReqJson, kResult_Error, string.Format(Resources.Message.Exception006, "cmd"));
 
 		if (string.IsNullOrEmpty(sCmd))
-			throw new CommandHandlerException(sReqJson, kResult_Error, "'cmd' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(sReqJson, kResult_Error, string.Format(Resources.Message.Exception006, "cmd"));
 
-		//
-		// 커맨드 처리.
-		//
+        //
+        // 命令处理
+        //
 
-		CommandHandler handler = null;
+        CommandHandler handler = null;
 
 		switch (sCmd)
 		{
@@ -153,7 +151,7 @@ public abstract class CommandHandler
 		}
 
 		if (handler == null)
-			throw new CommandHandlerException(sReqJson, kResult_Error, "커맨드가 존재하지 않습니다.");
+			throw new CommandHandlerException(sReqJson, kResult_Error, Resources.Message.Exception005);
 
 		JsonData joRes = handler.Handle(joReq);
 

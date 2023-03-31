@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 /// <summary>
-/// Dac의 요약 설명입니다.
+/// Dac'的摘要描述.
 /// </summary>
 public class Dac
 {

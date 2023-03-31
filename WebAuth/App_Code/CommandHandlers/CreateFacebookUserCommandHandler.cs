@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// CreateFacebookUserCommandHandler의 요약 설명입니다.
+/// CreateFacebookUserCommandHandler'的摘要描述.
 /// </summary>
 public class CreateFacebookUserCommandHandler : CommandHandler
 {
@@ -30,21 +30,21 @@ public class CreateFacebookUserCommandHandler : CommandHandler
 		//
 
 		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "facebookAppId", out m_sFacebookAppId))
-			throw new CommandHandlerException(this, kResult_Error, "'facebookAppId' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "facebookAppId"));
 
 		if (string.IsNullOrEmpty(m_sFacebookAppId))
-			throw new CommandHandlerException(this, kResult_Error, "'facebookAppId' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "facebookAppId"));
 
-		//
-		// 페이스북 사용자ID
-		//
+        //
+        // 페이스북 사용자ID
+        //
 
-		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "facebookUserId", out m_sFacebookUserId))
-			throw new CommandHandlerException(this, kResult_Error, "'facebookUserId' 프로퍼티가 유효하지 않습니다.");
+        if (!LitJsonUtil.TryGetStringProperty(m_joReq, "facebookUserId", out m_sFacebookUserId))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "facebookUserId"));
 
-		if (string.IsNullOrEmpty(m_sFacebookUserId))
-			throw new CommandHandlerException(this, kResult_Error, "'facebookUserId' 프로퍼티가 유효하지 않습니다.");
-	}
+        if (string.IsNullOrEmpty(m_sFacebookUserId))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "facebookUserId"));
+    }
 
 	protected override JsonData HandleCommand()
 	{
@@ -54,7 +54,7 @@ public class CreateFacebookUserCommandHandler : CommandHandler
 		try
 		{
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -88,23 +88,23 @@ public class CreateFacebookUserCommandHandler : CommandHandler
 				sUserSecret = Util.CreateUserSecret();
 
 				if (Dac.AddUser(conn, trans, userId, UserType.kType_Facebook, sUserSecret) != 0)
-					throw new Exception("사용자 등록 실패.");
+					throw new Exception(Resources.Message.Exception008);
 
 				if (Dac.AddFacebookUser(conn, trans, userId, m_sFacebookAppId, m_sFacebookUserId) != 0)
-					throw new CommandHandlerException(this, kResult_Error, "페이스북사용자 등록 실패.");
+					throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception011);
 			}
 			else
 			{
 				if (!Guid.TryParse(drFacebookUser["userId"].ToString(), out userId))
-					throw new CommandHandlerException(this, kResult_Error, "'userId' 가 유효하지 않습니다.");
+					throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userId"));
 
-				//===============================================================================================
-				// 사용자 정보 조회
-				//===============================================================================================
-				DataRow drUser = Dac.User(conn, trans, userId);
+                //===============================================================================================
+                // 사용자 정보 조회
+                //===============================================================================================
+                DataRow drUser = Dac.User(conn, trans, userId);
 
 				if (drUser == null)
-					throw new CommandHandlerException(this, kResult_Error, "사용자 정보 조회 실패.");
+					throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception010);
 
 				sUserSecret = Convert.ToString(drUser["secret"]);
 			}
@@ -115,12 +115,12 @@ public class CreateFacebookUserCommandHandler : CommandHandler
 			DBUtil.Commit(ref trans);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 			joRes["userId"] = userId.ToString();

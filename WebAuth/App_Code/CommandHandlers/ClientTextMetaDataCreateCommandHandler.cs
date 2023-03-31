@@ -10,7 +10,7 @@ using System.IO;
 using System.IO.Compression;
 
 /// <summary>
-/// ClientTextMetaDataCreateCommandHandler의 요약 설명입니다.
+/// ClientTextMetaDataCreateCommandHandler'的摘要描述。
 /// </summary>
 public class ClientTextMetaDataCreateCommandHandler : CommandHandler
 {
@@ -27,7 +27,7 @@ public class ClientTextMetaDataCreateCommandHandler : CommandHandler
 		base.Parse();
 
 		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "version", out m_sVersion))
-			throw new CommandHandlerException(this, kResult_Error, "'version' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "version"));
 	}
 
 	protected override JsonData HandleCommand()
@@ -40,32 +40,32 @@ public class ClientTextMetaDataCreateCommandHandler : CommandHandler
 			WPDClientTexts clientTexts;
 			DataRowCollection drcClientTexts;
 
-			//===============================================================================================
-			// 데이터베이스 연결
-			//===============================================================================================
-			conn = DBUtil.GetUserConnection();
+            //===============================================================================================
+            // 连接到一个数据库
+            //===============================================================================================
+            conn = DBUtil.GetUserConnection();
 			conn.Open();
 
-			//===============================================================================================
-			// 응답 Json
-			//===============================================================================================
-			JsonData joRes = null;
+            //===============================================================================================
+            // 响应 Json
+            //===============================================================================================
+            JsonData joRes = null;
 
 			DataRowCollection drcLanguages = Dac.SupportedLanguages(conn, null);
 			for (int i = 0; i < drcLanguages.Count; i++)
 			{
 				nLanguageId = Convert.ToInt32(drcLanguages[i]["languageId"]);
 
-				//===============================================================================================
-				// 선택된 언어의 클라이언트 텍스트 목록 조회
-				//===============================================================================================
-				drcClientTexts = Dac.ClientTexts_LanguageId(conn, null, nLanguageId);
+                //===============================================================================================
+                // 获取所选语言的客户文本列表
+                //===============================================================================================
+                drcClientTexts = Dac.ClientTexts_LanguageId(conn, null, nLanguageId);
 
-				//
-				// 클라이언트 텍스트 목록
-				//
+                //
+                // 客户端文本列表
+                //
 
-				clientTexts = new WPDClientTexts();
+                clientTexts = new WPDClientTexts();
 
 				clientTexts.languageId = nLanguageId;
 
@@ -81,31 +81,31 @@ public class ClientTextMetaDataCreateCommandHandler : CommandHandler
 				clientTexts.clientTexts = texts.ToArray();
 				texts.Clear();
 
-				//
-				// 결과
-				//
+                //
+                // 结果
+                //
 
-				if (!ZipWithBase64(clientTexts.SerializeBase64String(), nLanguageId))
+                if (!ZipWithBase64(clientTexts.SerializeBase64String(), nLanguageId))
 				{
-					//===============================================================================================
-					// 데이터베이스 연결 닫기
-					//===============================================================================================
-					DBUtil.Close(ref conn);
+                    //===============================================================================================
+                    // 关闭一个数据库连接
+                    //===============================================================================================
+                    DBUtil.Close(ref conn);
 
 					joRes = CreateResponse(kResult_Error);
 					return joRes;
 				}
 			}
 
-			//===============================================================================================
-			// 데이터베이스 연결 닫기
-			//===============================================================================================
-			DBUtil.Close(ref conn);
+            //===============================================================================================
+            // 关闭一个数据库连接
+            //===============================================================================================
+            DBUtil.Close(ref conn);
 
-			//===============================================================================================
-			// 응답 Json
-			//===============================================================================================
-			joRes = CreateResponse();
+            //===============================================================================================
+            // 响应 Json
+            //===============================================================================================
+            joRes = CreateResponse();
 
 			return joRes;
 		}

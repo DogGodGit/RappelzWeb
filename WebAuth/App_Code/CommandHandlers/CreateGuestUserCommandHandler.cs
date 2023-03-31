@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 /// <summary>
-/// CreateGuestUserCommandHandler의 요약 설명입니다.
+/// CreateGuestUserCommandHandler'的摘要描述.
 /// </summary>
 public class CreateGuestUserCommandHandler : CommandHandler
 {
@@ -23,7 +23,7 @@ public class CreateGuestUserCommandHandler : CommandHandler
 		try
 		{
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -48,10 +48,10 @@ public class CreateGuestUserCommandHandler : CommandHandler
 			string sUserSecret = Util.CreateUserSecret();
 
 			if (Dac.AddUser(conn, trans, userId, UserType.kType_Guest, sUserSecret) != 0)
-				throw new Exception("사용자 등록 실패.");
+				throw new Exception(Resources.Message.Exception008);
 
 			if (Dac.AddGuestUser(conn, trans, userId) != 0)
-				throw new CommandHandlerException(this, kResult_Error, "게스트사용자 등록 실패.");
+				throw new CommandHandlerException(this, kResult_Error, Resources.Message.Exception013);
 
 			//===============================================================================================
 			// 트랜잭션 커밋
@@ -59,12 +59,12 @@ public class CreateGuestUserCommandHandler : CommandHandler
 			DBUtil.Commit(ref trans);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 			joRes["userId"] = userId.ToString();

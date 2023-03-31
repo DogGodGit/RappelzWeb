@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// GameServersCommandHandler의 요약 설명입니다.
+/// GameServersCommandHandler'的摘要描述.
 /// </summary>
 public class GameServersCommandHandler : CommandHandler
 {
@@ -25,7 +25,7 @@ public class GameServersCommandHandler : CommandHandler
 			long lnIpNo = Util.GetIpNum(ComUtil.GetIpAddress());
 
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -64,12 +64,12 @@ public class GameServersCommandHandler : CommandHandler
 			DataRowCollection drcWhiteIps = Dac.WhiteIps(conn, null, lnIpNo);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 

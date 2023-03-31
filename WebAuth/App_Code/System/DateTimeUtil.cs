@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// DateTimeUtil의 요약 설명입니다.
+/// DateTimeUtil'的摘要描述.
 /// </summary>
 public static class DateTimeUtil
 {

@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// StageFarmVersionCommandHandler의 요약 설명입니다.
+/// StageFarmVersionCommandHandler'的摘要描述.
 /// </summary>
 public class StageFarmVersionCommandHandler : CommandHandler
 {
@@ -62,12 +62,12 @@ public class StageFarmVersionCommandHandler : CommandHandler
 			int nSelectedFarmId = 0;
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = null;
 
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetConnection();
 			conn.Open();
@@ -134,7 +134,7 @@ public class StageFarmVersionCommandHandler : CommandHandler
 			}
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 

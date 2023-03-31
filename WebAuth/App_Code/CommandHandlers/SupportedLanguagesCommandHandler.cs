@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// SupportedLanguagesCommandHandler의 요약 설명입니다.
+/// SupportedLanguagesCommandHandler'的摘要描述.
 /// </summary>
 public class SupportedLanguagesCommandHandler : CommandHandler
 {
@@ -22,7 +22,7 @@ public class SupportedLanguagesCommandHandler : CommandHandler
 		try
 		{
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -35,12 +35,12 @@ public class SupportedLanguagesCommandHandler : CommandHandler
 			DataRowCollection drcSupportedLanguages = Dac.SupportedLanguages(conn, null);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 

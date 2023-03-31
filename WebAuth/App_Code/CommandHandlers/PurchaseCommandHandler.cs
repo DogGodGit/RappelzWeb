@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// PurchaseCommandHandler의 요약 설명입니다.
+/// PurchaseCommandHandler'的摘要描述.
 /// </summary>
 public class PurchaseCommandHandler : CommandHandler
 {
@@ -41,54 +41,54 @@ public class PurchaseCommandHandler : CommandHandler
 		string sUserAccessToken = null;
 
 		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "userAccessToken", out sUserAccessToken))
-			throw new CommandHandlerException(this, kResult_Error, "'userAccessToken' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userAccessToken"));
 
-		if (!UserAccessToken.TryParse(sUserAccessToken, out m_userAccessToken))
-			throw new CommandHandlerException(this, kResult_Error, "'userAccessToken' 프로퍼티가 유효하지 않습니다.");
+        if (!UserAccessToken.TryParse(sUserAccessToken, out m_userAccessToken))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "userAccessToken"));
 
-		//
-		// 스토어 타입
-		//
-		
-		if (!LitJsonUtil.TryGetIntValue(m_joReq["storeType"], out m_nStoreType))
-			throw new CommandHandlerException(this, kResult_Error, "'storeType' 프로퍼티가 유효하지 않습니다.");
+        //
+        // 스토어 타입
+        //
 
-		//
-		// 서버ID
-		//
+        if (!LitJsonUtil.TryGetIntValue(m_joReq["storeType"], out m_nStoreType))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "storeType"));
 
-		if (!LitJsonUtil.TryGetIntValue(m_joReq["virtualGameServerId"], out m_nVirtualGameServerId))
-			throw new CommandHandlerException(this, kResult_Error, "'virtualGameServerId' 프로퍼티가 유효하지 않습니다.");
+        //
+        // 서버ID
+        //
 
-		//
-		// 영웅ID
-		//
+        if (!LitJsonUtil.TryGetIntValue(m_joReq["virtualGameServerId"], out m_nVirtualGameServerId))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "virtualGameServerId"));
 
-		string sHeroId = null;
+        //
+        // 영웅ID
+        //
+
+        string sHeroId = null;
 
 		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "heroId", out sHeroId))
-			throw new CommandHandlerException(this, kResult_Error, "'heroId' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "heroId"));
 
-		if (!Guid.TryParse(sHeroId, out m_heroId))
-			throw new CommandHandlerException(this, kResult_Error, "'heroId' 프로퍼티가 유효하지 않습니다.");
+        if (!Guid.TryParse(sHeroId, out m_heroId))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "heroId"));
 
-		//
-		// 로그ID
-		//
+        //
+        // 로그ID
+        //
 
-		string sLogId = null;
+        string sLogId = null;
 
 		if (!LitJsonUtil.TryGetStringProperty(m_joReq, "logId", out sLogId))
-			throw new CommandHandlerException(this, kResult_Error, "'logId' 프로퍼티가 유효하지 않습니다.");
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "logId"));
 
-		if (!Guid.TryParse(sLogId, out m_logId))
-			throw new CommandHandlerException(this, kResult_Error, "'logId' 프로퍼티가 유효하지 않습니다.");
+        if (!Guid.TryParse(sLogId, out m_logId))
+			throw new CommandHandlerException(this, kResult_Error, string.Format(Resources.Message.Exception006, "logId"));
 
-		//
-		// 구글 - 결제데이터
-		//
+        //
+        // 구글 - 결제데이터
+        //
 
-		LitJsonUtil.TryGetStringProperty(m_joReq, "purchaseData", out m_sPurchaseData);
+        LitJsonUtil.TryGetStringProperty(m_joReq, "purchaseData", out m_sPurchaseData);
 
 		//
 		// 구글 - 사인
@@ -230,7 +230,7 @@ public class PurchaseCommandHandler : CommandHandler
 			}
 
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -290,12 +290,12 @@ public class PurchaseCommandHandler : CommandHandler
 			DBUtil.Commit(ref trans);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 			return joRes;

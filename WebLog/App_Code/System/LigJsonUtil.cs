@@ -7,7 +7,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// LitJsonUtil의 요약 설명입니다.
+/// LitJsonUtil'的摘要描述.
 /// </summary>
 public static class LitJsonUtil
 {

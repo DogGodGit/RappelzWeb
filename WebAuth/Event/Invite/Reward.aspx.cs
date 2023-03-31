@@ -59,7 +59,7 @@ public partial class Event_Invite_Reward : System.Web.UI.Page
 			}
 
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -103,7 +103,7 @@ public partial class Event_Invite_Reward : System.Web.UI.Page
 			//
 
 			//===============================================================================================
-			// 게임 데이터베이스 연결
+			// 게임 连接到一个数据库
 			//===============================================================================================
 			string sConnectionStringReceiver = drGameServerInfoReceiver["gameDBConnection"].ToString();
 
@@ -113,7 +113,7 @@ public partial class Event_Invite_Reward : System.Web.UI.Page
 			DataRow drAccount = DacGame.Account_HeroId(connGame1, null, heroId);
 
 			//===============================================================================================
-			// 게임 데이터베이스 연결 해제
+			// 게임 连接到一个数据库 해제
 			//===============================================================================================
 			DBUtil.Close(ref connGame1);
 
@@ -224,7 +224,7 @@ public partial class Event_Invite_Reward : System.Web.UI.Page
 			//
 
 			//=======================================================================================
-			// 게임 데이터베이스 연결
+			// 게임 连接到一个数据库
 			//=======================================================================================
 			connGame1 = DBUtil.GetGameDBConn(sConnectionStringSender);
 			connGame1.Open();
@@ -268,7 +268,7 @@ public partial class Event_Invite_Reward : System.Web.UI.Page
 				else
 				{
 					//=======================================================================================
-					// 게임 데이터베이스 연결
+					// 게임 连接到一个数据库
 					//=======================================================================================
 					connGame2 = DBUtil.GetGameDBConn(sConnectionStringReceiver);
 					connGame2.Open();
@@ -317,7 +317,7 @@ public partial class Event_Invite_Reward : System.Web.UI.Page
 			DBUtil.Commit(ref trans);
 
 			//===============================================================================================
-			// 데이터베이스 연결 해제
+			// 连接到一个数据库 해제
 			//===============================================================================================
 			DBUtil.Close(ref connGame1);
 			DBUtil.Close(ref connGame2);

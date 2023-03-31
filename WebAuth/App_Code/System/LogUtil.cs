@@ -8,7 +8,7 @@ using System.Text;
 using System.Web;
 
 /// <summary>
-/// LogUtil의 요약 설명입니다.
+/// LogUtil'的摘要描述.
 /// </summary>
 public static class LogUtil
 {

@@ -12,7 +12,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 
 /// <summary>
-/// VerifyReceiptGoogle의 요약 설명입니다.
+/// VerifyReceiptGoogle'的摘要描述.
 /// </summary>
 public class VerifyReceiptGoogle
 {

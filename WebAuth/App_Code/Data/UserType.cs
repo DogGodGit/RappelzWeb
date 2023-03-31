@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// UserType의 요약 설명입니다.
+/// UserType'的摘要描述.
 /// </summary>
 public static class UserType
 {

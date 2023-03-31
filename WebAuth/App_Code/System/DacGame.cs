@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 /// <summary>
-/// DacGame의 요약 설명입니다.
+/// DacGame'的摘要描述.
 /// </summary>
 public class DacGame
 {

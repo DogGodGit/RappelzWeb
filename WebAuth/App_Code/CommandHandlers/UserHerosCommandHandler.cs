@@ -8,7 +8,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// UserHerosCommandHandler의 요약 설명입니다.
+/// UserHerosCommandHandler'的摘要描述.
 /// </summary>
 public class UserHerosCommandHandler : CommandHandler
 {
@@ -53,7 +53,7 @@ public class UserHerosCommandHandler : CommandHandler
 				throw new CommandHandlerException(this, kResult_InvalidAccessToken, "사용자 액세스 토큰이 유효하지 않습니다.");
 
 			//===============================================================================================
-			// 데이터베이스 연결
+			// 连接到一个数据库
 			//===============================================================================================
 			conn = DBUtil.GetUserConnection();
 			conn.Open();
@@ -72,12 +72,12 @@ public class UserHerosCommandHandler : CommandHandler
 			DataRowCollection drcUserHeros = Dac.UserHeros(conn, null, m_userAccessToken.userId);
 
 			//===============================================================================================
-			// 데이터베이스 연결 닫기
+			// 关闭一个数据库连接
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
 			//===============================================================================================
-			// 응답 Json
+			// 响应 Json
 			//===============================================================================================
 			JsonData joRes = CreateResponse();
 

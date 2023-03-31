@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -9,7 +10,7 @@ using System.Web;
 using LitJson;
 
 /// <summary>
-/// Util의 요약 설명입니다.
+/// Util'的摘要描述.
 /// </summary>
 public class Util
 {
@@ -40,7 +41,7 @@ public class Util
 	}
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// 응답 관련
+	// 响应 관련
 
 	public static void WriteResponse(JsonData jo)
 	{
@@ -180,4 +181,50 @@ public class Util
 			return "";
 		}
 	}
+
+    public static string UnZipFromBase64(string Compressedvalue)
+    {
+        byte[] byteArray = Convert.FromBase64String(Compressedvalue);
+
+        MemoryStream stream = new MemoryStream(byteArray);
+        Stream sourceStream = stream;
+
+        if (sourceStream == null)
+        {
+            throw new ArgumentException();
+        }
+
+        if (!sourceStream.CanRead)
+        {
+            throw new ArgumentException();
+        }
+
+        MemoryStream memoryStream = new MemoryStream();
+        const int bufferSize = 31457280;   // 30MB
+
+        using (GZipStream gzipStream = new GZipStream(sourceStream, CompressionMode.Decompress))
+        {
+            byte[] buffer = new byte[bufferSize];
+
+            int bytesRead = 0;
+
+            do
+            {
+                bytesRead = gzipStream.Read(buffer, 0, bufferSize);
+            }
+            while (bytesRead == bufferSize);
+
+            memoryStream.Write(buffer, 0, bytesRead);
+        }
+        byte[] btArraymemoryStream = memoryStream.ToArray();
+
+        stream.Close();
+        stream.Dispose();
+        sourceStream.Close();
+        sourceStream.Dispose();
+        memoryStream.Close();
+        memoryStream.Dispose();
+
+        return Encoding.UTF8.GetString(btArraymemoryStream);
+    }
 }

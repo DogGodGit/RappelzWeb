@@ -8,7 +8,7 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// DBUtil의 요약 설명입니다.
+/// DBUtil'的摘要描述.
 /// </summary>
 public static class DBUtil
 {
