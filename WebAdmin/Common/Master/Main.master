@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Common_Master_Main" %>
+<%@ Register TagPrefix="ucl" TagName="TopMenu" Src="~/Common/UserControl/TopMenu.ascx" %>
+<%@ Register TagPrefix="ucl" TagName="LeftMenu" Src="~/Common/UserControl/LeftMenu.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Common/Css/Style.css?Rappelz_20170519" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div id="Wrapper">
+    <div id="GNB">
+        <ucl:TopMenu ID="TopMenu" Runat="server" />
+    </div>
+    <div id="CONTENTS">
+        <div id="LEFTMENU">
+            <ucl:LeftMenu ID="LeftMenu" Runat="server" />
+        </div>
+        <div id="CONTENT">
+            <asp:ContentPlaceHolder id="MstContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+</div>
+</form>
+</body>
+</html>

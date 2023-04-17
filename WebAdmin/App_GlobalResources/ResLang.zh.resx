@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACCHINFO_cs_txt_06" xml:space="preserve">
+    <value>请输入一个名字。</value>
+  </data>
+  <data name="ACCHRE_cs_mbox_02" xml:space="preserve">
+    <value>任务成功</value>
+  </data>
+  <data name="COMMON_cfrm_01" xml:space="preserve">
+    <value>你想用修改后的信息进行编辑吗？</value>
+  </data>
+  <data name="COMMON_mbox_01" xml:space="preserve">
+    <value>不正确的做法。</value>
+  </data>
+  <data name="COMMON_mbox_02" xml:space="preserve">
+    <value>抛出的异常</value>
+  </data>
+  <data name="GameServerList_aspx_txt_01" xml:space="preserve">
+    <value>游戏服务器组</value>
+  </data>
+  <data name="GameServerList_aspx_txt_02" xml:space="preserve">
+    <value>服务器组</value>
+  </data>
+  <data name="GameServerList_aspx_txt_03" xml:space="preserve">
+    <value>(组内)</value>
+  </data>
+  <data name="GameServerList_aspx_txt_04" xml:space="preserve">
+    <value>自动转诊</value>
+  </data>
+  <data name="GameServerList_aspx_txt_05" xml:space="preserve">
+    <value>公众</value>
+  </data>
+  <data name="GameServerList_aspx_txt_06" xml:space="preserve">
+    <value>是否可以进行PK</value>
+  </data>
+  <data name="GameServerList_aspx_txt_07" xml:space="preserve">
+    <value>时区</value>
+  </data>
+  <data name="GameServerList_aspx_txt_08" xml:space="preserve">
+    <value>虚拟服务器管理(全部)</value>
+  </data>
+  <data name="GameServerList_aspx_txt_09" xml:space="preserve">
+    <value>虚拟服务器号码</value>
+  </data>
+  <data name="GameServerList_aspx_txt_10" xml:space="preserve">
+    <value>游戏服务器</value>
+  </data>
+  <data name="GameServerList_aspx_txt_11" xml:space="preserve">
+    <value>命名</value>
+  </data>
+  <data name="GameServerList_aspx_txt_12" xml:space="preserve">
+    <value>显示号码</value>
+  </data>
+  <data name="GameServerList_aspx_txt_13" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_01" xml:space="preserve">
+    <value>服务器ID</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_02" xml:space="preserve">
+    <value>显示号码</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_03" xml:space="preserve">
+    <value>服务器名称</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_04" xml:space="preserve">
+    <value>API地址</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_05" xml:space="preserve">
+    <value>游戏服务器地址</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_06" xml:space="preserve">
+    <value>游戏服务器支持</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_07" xml:space="preserve">
+    <value>连接数</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_08" xml:space="preserve">
+    <value>已检查</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_09" xml:space="preserve">
+    <value>建议</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_10" xml:space="preserve">
+    <value>状况</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_11" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_01" xml:space="preserve">
+    <value>推荐的服务器</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_02" xml:space="preserve">
+    <value>数值</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_03" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_04" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_05" xml:space="preserve">
+    <value>活跃</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_06" xml:space="preserve">
+    <value>不活跃</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_07" xml:space="preserve">
+    <value>改变推荐服务器</value>
+  </data>
+  <data name="GAMESLIST_cs_cfrm_01" xml:space="preserve">
+    <value>你想注册吗？</value>
+  </data>
+  <data name="GAMESLIST_cs_mbox_01" xml:space="preserve">
+    <value>任务失败(现有推荐服务器)。</value>
+  </data>
+  <data name="GAMESLIST_cs_mbox_02" xml:space="preserve">
+    <value>任务失败(新推荐的服务器)。</value>
+  </data>
+  <data name="Master_Main_Cs_001" xml:space="preserve">
+    <value>你没有许可。</value>
+  </data>
+  <data name="MenuUtil_01" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="MenuUtil_01_001" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="MenuUtil_02" xml:space="preserve">
+    <value>游戏</value>
+  </data>
+  <data name="MenuUtil_02_001" xml:space="preserve">
+    <value>英雄</value>
+  </data>
+  <data name="MenuUtil_02_002" xml:space="preserve">
+    <value>资产捆绑</value>
+  </data>
+  <data name="MenuUtil_02_003" xml:space="preserve">
+    <value>菜单设置</value>
+  </data>
+  <data name="MenuUtil_02_004" xml:space="preserve">
+    <value>邮件</value>
+  </data>
+  <data name="MenuUtil_02_005" xml:space="preserve">
+    <value>邮件(全部)</value>
+  </data>
+  <data name="MenuUtil_02_006" xml:space="preserve">
+    <value>开发</value>
+  </data>
+  <data name="MenuUtil_02_007" xml:space="preserve">
+    <value>游戏中的公告</value>
+  </data>
+  <data name="MenuUtil_03" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="MenuUtil_03_001" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="MenuUtil_03_002" xml:space="preserve">
+    <value>游戏服务器</value>
+  </data>
+  <data name="MenuUtil_03_003" xml:space="preserve">
+    <value>管理语言</value>
+  </data>
+  <data name="MenuUtil_03_004" xml:space="preserve">
+    <value>白名单IP</value>
+  </data>
+  <data name="MenuUtil_03_005" xml:space="preserve">
+    <value>游戏系统</value>
+  </data>
+  <data name="MenuUtil_04" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="MenuUtil_04_001" xml:space="preserve">
+    <value>核实客户文本</value>
+  </data>
+  <data name="SENDMAIL_cs_mbox_03" xml:space="preserve">
+    <value>任务失败</value>
+  </data>
+  <data name="UserControl_TopMenu_001" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_01" xml:space="preserve">
+    <value>注册一个新的优惠券活动</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_02" xml:space="preserve">
+    <value>关于优惠券活动</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_03" xml:space="preserve">
+    <value>注册优惠券</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_04" xml:space="preserve">
+    <value>优惠券长度</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_05" xml:space="preserve">
+    <value>优惠券代码页眉</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_06" xml:space="preserve">
+    <value>在优惠券前设置一个标题</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_07" xml:space="preserve">
+    <value>优惠券公共使用</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_08" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_09" xml:space="preserve">
+    <value>(一个相同的优惠券号码可以在结账时对所有的角色使用一次。）</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_10" xml:space="preserve">
+    <value>优惠券的到期日</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_11" xml:space="preserve">
+    <value>优惠券的可用性</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_12" xml:space="preserve">
+    <value>想注册一个运动吗？</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_13" xml:space="preserve">
+    <value>已发行的优惠券数量</value>
+  </data>
+  <data name="CouponPopup_cs_txt_01" xml:space="preserve">
+    <value>促销信息并不存在。</value>
+  </data>
+  <data name="CouponPopup_cs_txt_02" xml:space="preserve">
+    <value>该游戏服务器不存在。</value>
+  </data>
+  <data name="CouponPopup_cs_txt_03" xml:space="preserve">
+    <value>想编辑你的活动吗？</value>
+  </data>
+  <data name="CouponPopup_cs_txt_04" xml:space="preserve">
+    <value>请仔细检查你的作品。</value>
+  </data>
+  <data name="CouponPopup_cs_txt_05" xml:space="preserve">
+    <value>晋升修改失败。</value>
+  </data>
+  <data name="CouponPopup_cs_txt_06" xml:space="preserve">
+    <value>促销登记失败。</value>
+  </data>
+  <data name="CouponPopup_cs_txt_07" xml:space="preserve">
+    <value>未能注册一个促销项目。</value>
+  </data>
+  <data name="CouponPopup_cs_txt_08" xml:space="preserve">
+    <value>优惠券注册失败。</value>
+  </data>
+  <data name="CouponPopup_cs_txt_09" xml:space="preserve">
+    <value>促销ID</value>
+  </data>
+  <data name="CouponPopup_cs_txt_10" xml:space="preserve">
+    <value>优惠券代码</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_01" xml:space="preserve">
+    <value>管理优惠券</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_02" xml:space="preserve">
+    <value>优惠券活动历史</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_03" xml:space="preserve">
+    <value>活动名称</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_04" xml:space="preserve">
+    <value>查询时间</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_05" xml:space="preserve">
+    <value>搜索优惠券</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_06" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_07" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_08" xml:space="preserve">
+    <value>优惠券数量</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_09" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_10" xml:space="preserve">
+    <value>优惠券类型</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_11" xml:space="preserve">
+    <value>优惠券状态</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_12" xml:space="preserve">
+    <value>检查优惠券编号</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_13" xml:space="preserve">
+    <value>开放式</value>
+  </data>
+  <data name="CouponSystem_cs_01" xml:space="preserve">
+    <value>普通</value>
+  </data>
+  <data name="CouponSystem_cs_02" xml:space="preserve">
+    <value>失能</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_01" xml:space="preserve">
+    <value>项目名称</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_02" xml:space="preserve">
+    <value>项目编号</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_03" xml:space="preserve">
+    <value>项目数量</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_04" xml:space="preserve">
+    <value>编辑一个活动</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_05" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_06" xml:space="preserve">
+    <value>编辑一个优惠券</value>
+  </data>
+  <data name="COMMON_page_txt_01" xml:space="preserve">
+    <value>最初</value>
+  </data>
+  <data name="COMMON_page_txt_02" xml:space="preserve">
+    <value>以前的</value>
+  </data>
+  <data name="COMMON_page_txt_03" xml:space="preserve">
+    <value>下一页</value>
+  </data>
+  <data name="COMMON_page_txt_04" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="PopupCoupon_aspx_txt_01" xml:space="preserve">
+    <value>查看完整的优惠券编号</value>
+  </data>
+  <data name="PopupCoupon_aspx_txt_02" xml:space="preserve">
+    <value>优惠券代码</value>
+  </data>
+  <data name="PopupCoupon_aspx_txt_03" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Login_01" xml:space="preserve">
+    <value>仅供开发人员使用。</value>
+  </data>
+  <data name="Login_02" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="ACCHfD_cs_txt_05" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ACCHfD_cs_txt_06" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_03" xml:space="preserve">
+    <value>输入你的用户名。</value>
+  </data>
+  <data name="Login_04" xml:space="preserve">
+    <value>输入你的密码。</value>
+  </data>
+  <data name="MenuUtil_02_008" xml:space="preserve">
+    <value>邮件订阅者</value>
+  </data>
+  <data name="MenuUtil_02_009" xml:space="preserve">
+    <value>充值 (管理购买)</value>
+  </data>
+  <data name="MenuUtil_02_010" xml:space="preserve">
+    <value>钻石店（限量版）</value>
+  </data>
+  <data name="MenuUtil_03_006" xml:space="preserve">
+    <value>游戏服务器区域</value>
+  </data>
+  <data name="MenuUtil_03_007" xml:space="preserve">
+    <value>游戏服务器组</value>
+  </data>
+  <data name="MenuUtil_03_008" xml:space="preserve">
+    <value>游戏服务器连接管理</value>
+  </data>
+  <data name="MenuUtil_03_009" xml:space="preserve">
+    <value>管理优惠券</value>
+  </data>
+  <data name="MenuUtil_03_010" xml:space="preserve">
+    <value>黑名单IP</value>
+  </data>
+  <data name="MenuUtil_03_011" xml:space="preserve">
+    <value>分享</value>
+  </data>
+  <data name="MenuUtil_03_012" xml:space="preserve">
+    <value>客户文本</value>
+  </data>
+</root>

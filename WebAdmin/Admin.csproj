@@ -1,0 +1,563 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47019D4B-7E78-415E-9C2C-A1C0F842A974}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admin</RootNamespace>
+    <AssemblyName>Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.69.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Css\Style.css" />
+    <Content Include="Common\Images\bottom_left.gif" />
+    <Content Include="Common\Images\bottom_right.gif" />
+    <Content Include="Common\Images\btn_comment-delete.gif" />
+    <Content Include="Common\Images\btn_comment-modify.gif" />
+    <Content Include="Common\Images\btn_grey_left.gif" />
+    <Content Include="Common\Images\btn_grey_right.gif" />
+    <Content Include="Common\Images\btn_next_1.gif" />
+    <Content Include="Common\Images\btn_pre_1.gif" />
+    <Content Include="Common\Images\btn_replyer.gif" />
+    <Content Include="Common\Images\bullet01.gif" />
+    <Content Include="Common\Images\bullet_1depth.gif" />
+    <Content Include="Common\Images\bullet_2depth.gif" />
+    <Content Include="Common\Images\bullet_2depthOn.gif" />
+    <Content Include="Common\Images\bullet_arrow.gif" />
+    <Content Include="Common\Images\b_01.gif" />
+    <Content Include="Common\Images\b_grey.gif" />
+    <Content Include="Common\Images\icon_new.gif" />
+    <Content Include="Common\Images\ico_arrow_back_02.gif" />
+    <Content Include="Common\Images\ico_arrow_next_02.gif" />
+    <Content Include="Common\Images\ico_lock.png" />
+    <Content Include="Common\Images\ico_minus.gif" />
+    <Content Include="Common\Images\ico_plus.gif" />
+    <Content Include="Common\Images\img_file.gif" />
+    <Content Include="Common\Images\logo.gif" />
+    <Content Include="Common\Images\logo_galalab.gif" />
+    <Content Include="Common\Images\nav_down_on.gif" />
+    <Content Include="Common\Images\nav_up_on.gif" />
+    <Content Include="Common\Images\top_icon1.gif" />
+    <Content Include="Common\Images\top_icon2.gif" />
+    <Content Include="Common\Images\top_icon3.gif" />
+    <Content Include="Common\Images\top_left.gif" />
+    <Content Include="Common\Images\top_right.gif" />
+    <Content Include="Common\Images\_blank.gif" />
+    <Content Include="Common\Js\Common.js" />
+    <Content Include="Common\UserControl\LeftMenu.ascx" />
+    <Content Include="Common\UserControl\PageNavigator.ascx" />
+    <Content Include="Common\UserControl\TopMenu.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Game\AccountHero.aspx" />
+    <Content Include="Game\AccountHeroList.aspx" />
+    <Content Include="Game\AccountHero_Info.aspx" />
+    <Content Include="Game\AccountHero_Inventory.aspx" />
+    <Content Include="Game\AccountHero_MainQuest.aspx" />
+    <Content Include="Game\Announcement.aspx" />
+    <Content Include="Game\AssetBundleList.aspx" />
+    <Content Include="Game\ChargePurchaseProduct.aspx" />
+    <Content Include="Game\Development.aspx" />
+    <Content Include="Game\DiaShop.aspx" />
+    <Content Include="Game\Hero.aspx" />
+    <Content Include="Game\HeroList.aspx" />
+    <Content Include="Game\Hero\Constellation.aspx" />
+    <Content Include="Game\Hero\Event\DailyCharge.aspx" />
+    <Content Include="Game\Hero\Event\FirstCharge.aspx" />
+    <Content Include="Game\Hero\ForcedDisconnection.aspx" />
+    <Content Include="Game\Hero\Friend.aspx" />
+    <Content Include="Game\Hero\HeroInfo.aspx" />
+    <Content Include="Game\Hero\Inventory.aspx" />
+    <Content Include="Game\Hero\MainQuest.aspx" />
+    <Content Include="Game\Hero\MonsterBook.aspx" />
+    <Content Include="Game\Hero\Stat.aspx" />
+    <Content Include="Game\Mail.aspx" />
+    <Content Include="Game\MailAll.aspx" />
+    <Content Include="Game\MenuSetting.aspx" />
+    <Content Include="Game\Notice_Global.aspx" />
+    <Content Include="Game\Notice_Server.aspx" />
+    <Content Include="Game\Popup_AccountHeroGear.aspx" />
+    <Content Include="Game\SendMail.aspx" />
+    <Content Include="Game\SubMenuSetting.aspx" />
+    <Content Include="Game\Sub_MenuSetting.aspx" />
+    <Content Include="Game\TimeDesignationEvent.aspx" />
+    <Content Include="Game\TimeDesignationEventForm.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Log\Popup\Popup_PurchaseAllLog.aspx" />
+    <Content Include="Log\PurchaseAllLog.aspx" />
+    <Content Include="Setting\BlackIp.aspx" />
+    <Content Include="Setting\ClientText.aspx" />
+    <Content Include="Setting\ClientTextChanges.aspx" />
+    <Content Include="Setting\CouponForm.aspx" />
+    <Content Include="Setting\CouponSystem.aspx" />
+    <Content Include="Setting\GameServerAccess.aspx" />
+    <Content Include="Setting\GameServerGroup.aspx" />
+    <Content Include="Setting\GameServerGroupSetting.aspx" />
+    <Content Include="Setting\GameServerList.aspx" />
+    <Content Include="Setting\GameServerRegion.aspx" />
+    <Content Include="Setting\GameServerSetting.aspx" />
+    <Content Include="Setting\GameSystem.aspx" />
+    <Content Include="Setting\Languages.aspx" />
+    <Content Include="Setting\Popup\CouponAllCheck.aspx" />
+    <Content Include="Setting\Popup\Popup_ClientNewText_Excel.aspx" />
+    <Content Include="Setting\Popup\Popup_ClientText_Excel.aspx" />
+    <Content Include="Setting\Popup\Popup_SharingEventReceiverLog.aspx" />
+    <Content Include="Setting\Popup\Popup_SharingEventSenderLog.aspx" />
+    <Content Include="Setting\SharingEvents\ReviewLog.aspx" />
+    <Content Include="Setting\SharingEvents\SharingEvent.aspx" />
+    <Content Include="Setting\SharingEvents\SharingEventAdd.aspx" />
+    <Content Include="Setting\SharingEvents\SharingEventReceiveReward.aspx" />
+    <Content Include="Setting\SharingEvents\SharingEventReceiverLog.aspx" />
+    <Content Include="Setting\SharingEvents\SharingEventSenderLog.aspx" />
+    <Content Include="Setting\SharingEvents\SharingEventSenderReward.aspx" />
+    <Content Include="Setting\SystemSetting.aspx" />
+    <Content Include="Setting\WhiteIp.aspx" />
+    <Content Include="Tools\ClientTextView.aspx" />
+    <Content Include="Tools\ValidateMetaData.aspx" />
+    <Content Include="User\UserList.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\BlackIp.aspx.cs">
+      <DependentUpon>BlackIp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\ClientText.aspx.cs">
+      <DependentUpon>ClientText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\ClientTextChanges.aspx.cs">
+      <DependentUpon>ClientTextChanges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\CouponForm.aspx.cs">
+      <DependentUpon>CouponForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\CouponSystem.aspx.cs">
+      <DependentUpon>CouponSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\GameServerAccess.aspx.cs">
+      <DependentUpon>GameServerAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\GameServerGroup.aspx.cs">
+      <DependentUpon>GameServerGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\GameServerGroupSetting.aspx.cs">
+      <DependentUpon>GameServerGroupSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\GameServerList.aspx.cs">
+      <DependentUpon>GameServerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\GameServerRegion.aspx.cs">
+      <DependentUpon>GameServerRegion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\GameServerSetting.aspx.cs">
+      <DependentUpon>GameServerSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\GameSystem.aspx.cs">
+      <DependentUpon>GameSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\Languages.aspx.cs">
+      <DependentUpon>Languages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\Popup\CouponAllCheck.aspx.cs">
+      <DependentUpon>CouponAllCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\Popup\Popup_ClientNewText_Excel.aspx.cs">
+      <DependentUpon>Popup_ClientNewText_Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\Popup\Popup_ClientText_Excel.aspx.cs">
+      <DependentUpon>Popup_ClientText_Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\Popup\Popup_SharingEventReceiverLog.aspx.cs">
+      <DependentUpon>Popup_SharingEventReceiverLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\Popup\Popup_SharingEventSenderLog.aspx.cs">
+      <DependentUpon>Popup_SharingEventSenderLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SharingEvents\ReviewLog.aspx.cs">
+      <DependentUpon>ReviewLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SharingEvents\SharingEvent.aspx.cs">
+      <DependentUpon>SharingEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SharingEvents\SharingEventAdd.aspx.cs">
+      <DependentUpon>SharingEventAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SharingEvents\SharingEventReceiveReward.aspx.cs">
+      <DependentUpon>SharingEventReceiveReward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SharingEvents\SharingEventReceiverLog.aspx.cs">
+      <DependentUpon>SharingEventReceiverLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SharingEvents\SharingEventSenderLog.aspx.cs">
+      <DependentUpon>SharingEventSenderLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SharingEvents\SharingEventSenderReward.aspx.cs">
+      <DependentUpon>SharingEventSenderReward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\SystemSetting.aspx.cs">
+      <DependentUpon>SystemSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Setting\WhiteIp.aspx.cs">
+      <DependentUpon>WhiteIp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Tools\ClientTextView.aspx.cs">
+      <DependentUpon>ClientTextView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Tools\ValidateMetaData.aspx.cs">
+      <DependentUpon>ValidateMetaData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="User\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="App_Code\Data\Gear\GearAttr.cs" />
+    <Content Include="App_Code\Data\UserAccessToken.cs" />
+    <Content Include="App_Code\System\Biz.cs" />
+    <Content Include="App_Code\System\BizUser.cs" />
+    <Content Include="App_Code\System\ComUtil.cs" />
+    <Content Include="App_Code\System\Config.cs" />
+    <Content Include="App_Code\System\Dac.cs" />
+    <Content Include="App_Code\System\DacUser.cs" />
+    <Content Include="App_Code\System\DataUtil.cs" />
+    <Content Include="App_Code\System\DateTimeUtil.cs" />
+    <Content Include="App_Code\System\DBUtil.cs" />
+    <Content Include="App_Code\System\Define.cs" />
+    <Content Include="App_Code\System\LitJsonUtil.cs" />
+    <Content Include="App_Code\System\MenuUtil.cs" />
+    <Content Include="App_Code\System\Util.cs" />
+    <Content Include="App_Code\System\ValidateMetaData.cs" />
+    <Content Include="Common\Master\IFrame.master.cs">
+      <DependentUpon>IFrame.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Common\Master\Main.master.cs">
+      <DependentUpon>Main.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Common\UserControl\LeftMenu.ascx.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Common\UserControl\PageNavigator.ascx.cs">
+      <DependentUpon>PageNavigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Common\UserControl\TopMenu.ascx.cs">
+      <DependentUpon>TopMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\AccountHero.aspx.cs">
+      <DependentUpon>AccountHero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\AccountHeroList.aspx.cs">
+      <DependentUpon>AccountHeroList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\AccountHero_Info.aspx.cs">
+      <DependentUpon>AccountHero_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\AccountHero_Inventory.aspx.cs">
+      <DependentUpon>AccountHero_Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\AccountHero_MainQuest.aspx.cs">
+      <DependentUpon>AccountHero_MainQuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Announcement.aspx.cs">
+      <DependentUpon>Announcement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\AssetBundleList.aspx.cs">
+      <DependentUpon>AssetBundleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\ChargePurchaseProduct.aspx.cs">
+      <DependentUpon>ChargePurchaseProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Development.aspx.cs">
+      <DependentUpon>Development.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\DiaShop.aspx.cs">
+      <DependentUpon>DiaShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero.aspx.cs">
+      <DependentUpon>Hero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\HeroList.aspx.cs">
+      <DependentUpon>HeroList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\Constellation.aspx.cs">
+      <DependentUpon>Constellation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\Event\DailyCharge.aspx.cs">
+      <DependentUpon>DailyCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\Event\FirstCharge.aspx.cs">
+      <DependentUpon>FirstCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\ForcedDisconnection.aspx.cs">
+      <DependentUpon>ForcedDisconnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\Friend.aspx.cs">
+      <DependentUpon>Friend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\HeroInfo.aspx.cs">
+      <DependentUpon>HeroInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\MainQuest.aspx.cs">
+      <DependentUpon>MainQuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\MonsterBook.aspx.cs">
+      <DependentUpon>MonsterBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Hero\Stat.aspx.cs">
+      <DependentUpon>Stat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Mail.aspx.cs">
+      <DependentUpon>Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\MailAll.aspx.cs">
+      <DependentUpon>MailAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\MenuSetting.aspx.cs">
+      <DependentUpon>MenuSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Notice_Global.aspx.cs">
+      <DependentUpon>Notice_Global.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Notice_Server.aspx.cs">
+      <DependentUpon>Notice_Server.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Popup_AccountHeroGear.aspx.cs">
+      <DependentUpon>Popup_AccountHeroGear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\SendMail.aspx.cs">
+      <DependentUpon>SendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\SubMenuSetting.aspx.cs">
+      <DependentUpon>SubMenuSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\Sub_MenuSetting.aspx.cs">
+      <DependentUpon>Sub_MenuSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\TimeDesignationEvent.aspx.cs">
+      <DependentUpon>TimeDesignationEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Game\TimeDesignationEventForm.aspx.cs">
+      <DependentUpon>TimeDesignationEventForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Log\Popup\Popup_PurchaseAllLog.aspx.cs">
+      <DependentUpon>Popup_PurchaseAllLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Log\PurchaseAllLog.aspx.cs">
+      <DependentUpon>PurchaseAllLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\ResLang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResLang.resx</DependentUpon>
+    </Content>
+    <Content Include="App_GlobalResources\ResLang.zh.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResLang.zh.resx</DependentUpon>
+    </Content>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\System\Analytics.conf" />
+    <Content Include="Common\Master\IFrame.master" />
+    <Content Include="Common\Master\Main.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ResLang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ResLang.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ResLang.zh.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ResLang.zh.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62021</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://127.0.0.1:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

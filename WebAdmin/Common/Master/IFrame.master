@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="IFrame.master.cs" Inherits="Common_Master_IFrame" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="head1" runat="server">
+    <title></title>
+	<link rel="stylesheet" type="text/css" href="/Common/Css/Style.css?Rappelz_20170519" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+            <asp:ContentPlaceHolder id="MstContent" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

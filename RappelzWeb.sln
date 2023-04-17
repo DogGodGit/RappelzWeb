@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "WebLog\Log.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "WebAuth\Auth.csproj", "{01BC704F-870F-45D0-ACA5-7265981972E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin", "WebAdmin\Admin.csproj", "{47019D4B-7E78-415E-9C2C-A1C0F842A974}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{01BC704F-870F-45D0-ACA5-7265981972E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01BC704F-870F-45D0-ACA5-7265981972E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01BC704F-870F-45D0-ACA5-7265981972E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47019D4B-7E78-415E-9C2C-A1C0F842A974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47019D4B-7E78-415E-9C2C-A1C0F842A974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47019D4B-7E78-415E-9C2C-A1C0F842A974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47019D4B-7E78-415E-9C2C-A1C0F842A974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

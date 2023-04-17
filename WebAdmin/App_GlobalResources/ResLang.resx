@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACCHINFO_cs_txt_06" xml:space="preserve">
+    <value>이름을 입력해주세요.</value>
+  </data>
+  <data name="ACCHRE_cs_mbox_02" xml:space="preserve">
+    <value>작업성공</value>
+  </data>
+  <data name="COMMON_cfrm_01" xml:space="preserve">
+    <value>변경된 정보로 수정하시겠습니까?</value>
+  </data>
+  <data name="COMMON_mbox_01" xml:space="preserve">
+    <value>잘못된 접근입니다.</value>
+  </data>
+  <data name="COMMON_mbox_02" xml:space="preserve">
+    <value>예외발생</value>
+  </data>
+  <data name="GameServerList_aspx_txt_01" xml:space="preserve">
+    <value>게임서버그룹</value>
+  </data>
+  <data name="GameServerList_aspx_txt_02" xml:space="preserve">
+    <value>서버그룹</value>
+  </data>
+  <data name="GameServerList_aspx_txt_03" xml:space="preserve">
+    <value>(그룹내)</value>
+  </data>
+  <data name="GameServerList_aspx_txt_04" xml:space="preserve">
+    <value>자동추천대상</value>
+  </data>
+  <data name="GameServerList_aspx_txt_05" xml:space="preserve">
+    <value>공개여부</value>
+  </data>
+  <data name="GameServerList_aspx_txt_06" xml:space="preserve">
+    <value>PK가능여부</value>
+  </data>
+  <data name="GameServerList_aspx_txt_07" xml:space="preserve">
+    <value>타임존</value>
+  </data>
+  <data name="GameServerList_aspx_txt_08" xml:space="preserve">
+    <value>가상서버관리(전체)</value>
+  </data>
+  <data name="GameServerList_aspx_txt_09" xml:space="preserve">
+    <value>가상서버번호</value>
+  </data>
+  <data name="GameServerList_aspx_txt_10" xml:space="preserve">
+    <value>게임서버</value>
+  </data>
+  <data name="GameServerList_aspx_txt_11" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="GameServerList_aspx_txt_12" xml:space="preserve">
+    <value>표시번호</value>
+  </data>
+  <data name="GameServerList_aspx_txt_13" xml:space="preserve">
+    <value>수정</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_01" xml:space="preserve">
+    <value>서버ID</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_02" xml:space="preserve">
+    <value>표시번호</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_03" xml:space="preserve">
+    <value>서버명</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_04" xml:space="preserve">
+    <value>API 주소</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_05" xml:space="preserve">
+    <value>게임서버주소</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_06" xml:space="preserve">
+    <value>게임서버포트</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_07" xml:space="preserve">
+    <value>접속유저수</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_08" xml:space="preserve">
+    <value>점검여부</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_09" xml:space="preserve">
+    <value>추천</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_10" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="GAMESLIST_aspx_th_11" xml:space="preserve">
+    <value>수정</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_01" xml:space="preserve">
+    <value>추천 서버</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_02" xml:space="preserve">
+    <value>숫자</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_03" xml:space="preserve">
+    <value>정상</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_04" xml:space="preserve">
+    <value>점검중</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_05" xml:space="preserve">
+    <value>활성</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_06" xml:space="preserve">
+    <value>비활성</value>
+  </data>
+  <data name="GAMESLIST_aspx_txt_07" xml:space="preserve">
+    <value>추천서버 변경</value>
+  </data>
+  <data name="GAMESLIST_cs_cfrm_01" xml:space="preserve">
+    <value>등록하시겠습니까?</value>
+  </data>
+  <data name="GAMESLIST_cs_mbox_01" xml:space="preserve">
+    <value>작업실패(기존 추천 서버)</value>
+  </data>
+  <data name="GAMESLIST_cs_mbox_02" xml:space="preserve">
+    <value>작업실패(새 추천 서버)</value>
+  </data>
+  <data name="Master_Main_Cs_001" xml:space="preserve">
+    <value>권한이 없습니다.</value>
+  </data>
+  <data name="MenuUtil_01" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="MenuUtil_01_001" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="MenuUtil_02" xml:space="preserve">
+    <value>게임</value>
+  </data>
+  <data name="MenuUtil_02_001" xml:space="preserve">
+    <value>영웅</value>
+  </data>
+  <data name="MenuUtil_02_002" xml:space="preserve">
+    <value>어셋번들</value>
+  </data>
+  <data name="MenuUtil_02_003" xml:space="preserve">
+    <value>메뉴설정</value>
+  </data>
+  <data name="MenuUtil_02_004" xml:space="preserve">
+    <value>우편</value>
+  </data>
+  <data name="MenuUtil_02_005" xml:space="preserve">
+    <value>우편(전체)</value>
+  </data>
+  <data name="MenuUtil_02_006" xml:space="preserve">
+    <value>개발</value>
+  </data>
+  <data name="MenuUtil_02_007" xml:space="preserve">
+    <value>인게임 공지</value>
+  </data>
+  <data name="MenuUtil_03" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="MenuUtil_03_001" xml:space="preserve">
+    <value>시스템</value>
+  </data>
+  <data name="MenuUtil_03_002" xml:space="preserve">
+    <value>게임서버</value>
+  </data>
+  <data name="MenuUtil_03_003" xml:space="preserve">
+    <value>언어 관리</value>
+  </data>
+  <data name="MenuUtil_03_004" xml:space="preserve">
+    <value>화이트 IP</value>
+  </data>
+  <data name="MenuUtil_03_005" xml:space="preserve">
+    <value>게임시스템</value>
+  </data>
+  <data name="MenuUtil_04" xml:space="preserve">
+    <value>도구</value>
+  </data>
+  <data name="MenuUtil_04_001" xml:space="preserve">
+    <value>클라이언트 텍스트 확인</value>
+  </data>
+  <data name="SENDMAIL_cs_mbox_03" xml:space="preserve">
+    <value>작업실패</value>
+  </data>
+  <data name="UserControl_TopMenu_001" xml:space="preserve">
+    <value>로그아웃</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_01" xml:space="preserve">
+    <value>새 쿠폰 캠페인 등록하기</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_02" xml:space="preserve">
+    <value>쿠폰 캠페인 정보</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_03" xml:space="preserve">
+    <value>쿠폰 등록</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_04" xml:space="preserve">
+    <value>쿠폰길이</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_05" xml:space="preserve">
+    <value>쿠폰코드 헤더</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_06" xml:space="preserve">
+    <value>쿠폰 앞자리에 들어갈 헤더 설정</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_07" xml:space="preserve">
+    <value>쿠폰공용사용여부</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_08" xml:space="preserve">
+    <value>사용</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_09" xml:space="preserve">
+    <value>(체크 시 1개의 동일한 쿠폰번호로 모든 캐릭터가 1회씩 사용 가능)</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_10" xml:space="preserve">
+    <value>쿠폰사용가능일시</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_11" xml:space="preserve">
+    <value>쿠폰사용가능여부</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_12" xml:space="preserve">
+    <value>캠페인을 등록하시겠습니까?</value>
+  </data>
+  <data name="CouponAdd_aspx_txt_13" xml:space="preserve">
+    <value>쿠폰발급수</value>
+  </data>
+  <data name="CouponPopup_cs_txt_01" xml:space="preserve">
+    <value>프로모션 정보가 존재하지 않습니다.</value>
+  </data>
+  <data name="CouponPopup_cs_txt_02" xml:space="preserve">
+    <value>게임 서버가 존재하지 않습니다.</value>
+  </data>
+  <data name="CouponPopup_cs_txt_03" xml:space="preserve">
+    <value>캠페인을 수정하시겠습니까?</value>
+  </data>
+  <data name="CouponPopup_cs_txt_04" xml:space="preserve">
+    <value>입력하신 내용을 다시 확인해주세요.</value>
+  </data>
+  <data name="CouponPopup_cs_txt_05" xml:space="preserve">
+    <value>프로모션 수정에 실패하였습니다.</value>
+  </data>
+  <data name="CouponPopup_cs_txt_06" xml:space="preserve">
+    <value>프로모션 등록에 실패하였습니다.</value>
+  </data>
+  <data name="CouponPopup_cs_txt_07" xml:space="preserve">
+    <value>프로모션 아이템 등록에 실패하였습니다.</value>
+  </data>
+  <data name="CouponPopup_cs_txt_08" xml:space="preserve">
+    <value>쿠폰 등록에 실패하였습니다.</value>
+  </data>
+  <data name="CouponPopup_cs_txt_09" xml:space="preserve">
+    <value>프로모션ID</value>
+  </data>
+  <data name="CouponPopup_cs_txt_10" xml:space="preserve">
+    <value>쿠폰코드</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_01" xml:space="preserve">
+    <value>쿠폰 관리</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_02" xml:space="preserve">
+    <value>쿠폰 캠페인 내역</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_03" xml:space="preserve">
+    <value>캠페인 명</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_04" xml:space="preserve">
+    <value>조회 기간</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_05" xml:space="preserve">
+    <value>쿠폰 검색</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_06" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_07" xml:space="preserve">
+    <value>번호</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_08" xml:space="preserve">
+    <value>쿠폰수량</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_09" xml:space="preserve">
+    <value>사용기간</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_10" xml:space="preserve">
+    <value>쿠폰타입</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_11" xml:space="preserve">
+    <value>쿠폰상태</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_12" xml:space="preserve">
+    <value>쿠폰번호 확인</value>
+  </data>
+  <data name="CouponSystem_aspx_txt_13" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="CouponSystem_cs_01" xml:space="preserve">
+    <value>공통</value>
+  </data>
+  <data name="CouponSystem_cs_02" xml:space="preserve">
+    <value>사용안함</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_01" xml:space="preserve">
+    <value>아이템명</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_02" xml:space="preserve">
+    <value>아이템ID</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_03" xml:space="preserve">
+    <value>아이템 갯수</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_04" xml:space="preserve">
+    <value>캠페인 수정하기</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_05" xml:space="preserve">
+    <value>목록</value>
+  </data>
+  <data name="CouponUpdate_aspx_txt_06" xml:space="preserve">
+    <value>쿠폰 수정</value>
+  </data>
+  <data name="COMMON_page_txt_01" xml:space="preserve">
+    <value>처음</value>
+  </data>
+  <data name="COMMON_page_txt_02" xml:space="preserve">
+    <value>이전</value>
+  </data>
+  <data name="COMMON_page_txt_03" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="COMMON_page_txt_04" xml:space="preserve">
+    <value>끝</value>
+  </data>
+  <data name="PopupCoupon_aspx_txt_01" xml:space="preserve">
+    <value>쿠폰 번호 전체 확인</value>
+  </data>
+  <data name="PopupCoupon_aspx_txt_02" xml:space="preserve">
+    <value>쿠폰 코드</value>
+  </data>
+  <data name="PopupCoupon_aspx_txt_03" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="Login_01" xml:space="preserve">
+    <value>개발자 전용입니다.</value>
+  </data>
+  <data name="Login_02" xml:space="preserve">
+    <value>로그인</value>
+  </data>
+  <data name="ACCHfD_cs_txt_05" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ACCHfD_cs_txt_06" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_03" xml:space="preserve">
+    <value>아이디를 입력하세요.</value>
+  </data>
+  <data name="Login_04" xml:space="preserve">
+    <value>비밀번호를 입력하세요.</value>
+  </data>
+  <data name="MenuUtil_02_008" xml:space="preserve">
+    <value>접속자 우편발송</value>
+  </data>
+  <data name="MenuUtil_02_009" xml:space="preserve">
+    <value>충전(구입상품관리)</value>
+  </data>
+  <data name="MenuUtil_02_010" xml:space="preserve">
+    <value>다이아상점(한정상품)</value>
+  </data>
+  <data name="MenuUtil_03_006" xml:space="preserve">
+    <value>게임서버지역</value>
+  </data>
+  <data name="MenuUtil_03_007" xml:space="preserve">
+    <value>게임서버그룹</value>
+  </data>
+  <data name="MenuUtil_03_008" xml:space="preserve">
+    <value>게임서버 접속관리</value>
+  </data>
+  <data name="MenuUtil_03_009" xml:space="preserve">
+    <value>쿠폰 관리</value>
+  </data>
+  <data name="MenuUtil_03_010" xml:space="preserve">
+    <value>차단IP</value>
+  </data>
+  <data name="MenuUtil_03_011" xml:space="preserve">
+    <value>공유하기</value>
+  </data>
+  <data name="MenuUtil_03_012" xml:space="preserve">
+    <value>클라이언트 텍스트</value>
+  </data>
+</root>
