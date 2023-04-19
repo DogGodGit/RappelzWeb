@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="UserList.aspx.cs" Inherits="User_UserList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="UserList.aspx.cs" Inherits="User_UserList" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigator" Src="~/Common/UserControl/PageNavigator.ascx" %>
 

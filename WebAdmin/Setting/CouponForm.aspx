@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" MasterPageFile="~/Common/Master/Main.master" CodeFile="CouponForm.aspx.cs" Inherits="Setting_CouponForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" MasterPageFile="~/Common/Master/Main.master" Codebehind="CouponForm.aspx.cs" Inherits="Setting_CouponForm" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <div id="CONTENT_INNER">

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TopMenu.ascx.cs" Inherits="Common_UserControl_TopMenu" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Codebehind="TopMenu.ascx.cs" Inherits="Common_UserControl_TopMenu" %>
     <asp:PlaceHolder ID="WPHTop" Visible="true" runat="server">
     <table>
     <tr>

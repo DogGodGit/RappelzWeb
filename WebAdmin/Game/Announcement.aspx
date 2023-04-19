@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="Announcement.aspx.cs" Inherits="Game_Announcement" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="Announcement.aspx.cs" Inherits="Game_Announcement" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <div id="CONTENT_INNER">

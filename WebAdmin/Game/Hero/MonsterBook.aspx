@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/IFrame.master" AutoEventWireup="true" CodeFile="MonsterBook.aspx.cs" Inherits="Game_Hero_MonsterBook" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/IFrame.master" AutoEventWireup="true" Codebehind="MonsterBook.aspx.cs" Inherits="Game_Hero_MonsterBook" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" Runat="Server">
 <body>

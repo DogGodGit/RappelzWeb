@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Drawing.Charts;
+using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Web;
 
@@ -168,7 +170,6 @@ public class Biz
         }
     }
 
-    //Biz.AddForcedDisconnectionTask(scConn, m_heroId, WCBox.Checked, sReason, dtoBlockTime, ComUtil.GetUserId());
     public static int AddForcedDisconnectionTask(SqlConnection conn, Guid heroId, bool bRewardReceived, string sReason, DateTimeOffset date, string sUser)
     {
         SqlTransaction tran = null;
@@ -203,5 +204,135 @@ public class Biz
 
             return -999;
         }
+    }
+
+    internal static int Hero_Update(SqlConnection conn, Guid m_nHeroId, int nLevel, long lnExp, int nBaseUnOwnDia, int nBonusUnOwnDia, int nOwnDia, long lnGold, int nJobPoint, int nLak, int nDeadCount)
+    {
+        SqlTransaction tran = null;
+
+        try
+        {
+            tran = conn.BeginTransaction();
+
+            int nRetVal = Dac.UpdateHero(conn, tran, m_nHeroId, 0, nLevel, lnExp, lnGold, nLak, nOwnDia, 0, 0, 0, 0, 0);
+
+            if (nRetVal != 0)
+            {
+                tran.Rollback();
+                tran.Dispose();
+                return -1;
+            }
+
+            DataRow drHero = Dac.Hero(conn, null, m_nHeroId);
+            if (drHero == null)
+            {
+                tran.Rollback();
+                tran.Dispose();
+                return -1;
+            }
+
+            if (Dac.UpdateAccount(conn, tran, Guid.Parse(drHero["accountId"].ToString()), nBaseUnOwnDia, nBonusUnOwnDia, 0) != 0)
+            {
+                tran.Rollback();
+                tran.Dispose();
+
+                ComUtil.MsgBox("영웅 정보 수정 실패", "history.back();");
+                return -1;
+            }
+
+            tran.Commit();
+            tran.Dispose();
+
+            return nRetVal;
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.Message);
+            HttpContext.Current.Response.Write(ex.StackTrace);
+            if (tran != null)
+            {
+                tran.Rollback();
+                tran.Dispose();
+            }
+
+            return -999;
+        }
+    }
+
+    internal static int AddInventoryGear(SqlConnection conn, Guid m_nHeroId, int nSlotIndex, int nGearId, int nGrade, bool isOwned)
+    {
+        SqlTransaction tran = null;
+
+        try
+        {
+            tran = conn.BeginTransaction();
+
+            int nRetVal = 0;// Dac.AddInventoryGear(conn, tran, heroId); UNDONE
+
+            if (nRetVal != 0)
+            {
+                tran.Rollback();
+                tran.Dispose();
+                return -1;
+            }
+
+            tran.Commit();
+            tran.Dispose();
+
+            return nRetVal;
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.Message);
+            HttpContext.Current.Response.Write(ex.StackTrace);
+            if (tran != null)
+            {
+                tran.Rollback();
+                tran.Dispose();
+            }
+
+            return -999;
+        }
+    }
+
+    public static int DeleteInventorySlot(SqlConnection conn, Guid m_nHeroId, int nInventoryType, int nSlotNo, Guid uidHeroGearId)
+    {
+        SqlTransaction tran = null;
+
+        try
+        {
+            tran = conn.BeginTransaction();
+
+            int nRetVal = Dac.DeleteInventorySlot(conn, tran, m_nHeroId,nSlotNo);
+
+            if (nRetVal != 0)
+            {
+                tran.Rollback();
+                tran.Dispose();
+                return -1;
+            }
+
+            tran.Commit();
+            tran.Dispose();
+
+            return nRetVal;
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.Message);
+            HttpContext.Current.Response.Write(ex.StackTrace);
+            if (tran != null)
+            {
+                tran.Rollback();
+                tran.Dispose();
+            }
+
+            return -999;
+        }
+    }
+
+    internal static int ManageHeroMainQuest(SqlConnection conn, Guid m_nHeroId, int nMainQuestNo)
+    {
+        throw new NotImplementedException();
     }
 }

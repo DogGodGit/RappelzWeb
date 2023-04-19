@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 /// <summary>
 /// Summary description for DataUtil
@@ -16,6 +14,7 @@ public class DataUtil
         // TODO: Add constructor logic here
         //
     }
+
     public static string GetGameServerConnectionString(int nGameServerId)
     {
         // DB연결
@@ -32,5 +31,10 @@ public class DataUtil
             if (Convert.ToInt32(drcGameServer[i]["serverId"]) == nGameServerId)
                 return drcGameServer[i]["gameDBConnection"].ToString();
         return null;
+    }
+
+    internal static List<GearAttr> GetGearOptionAttr(int nGearOptionAttrCount, DataTable dtGearOptionAttrGrades)
+    {
+        throw new NotImplementedException();
     }
 }

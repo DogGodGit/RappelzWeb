@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/IFrame.master" CodeFile="MainQuest.aspx.cs" Inherits="Game_Hero_MainQuest" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/IFrame.master" Codebehind="MainQuest.aspx.cs" Inherits="Game_Hero_MainQuest" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigator" Src="~/Common/UserControl/PageNavigator.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <body>

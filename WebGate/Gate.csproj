@@ -67,16 +67,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\CommandHandlers\CommandHandler.cs" />
-    <Content Include="App_Code\CommandHandlers\StageFarmVersionCommandHandler.cs" />
-    <Content Include="App_Code\System\CommandHandlerException.cs" />
-    <Content Include="App_Code\System\Config.cs" />
-    <Content Include="App_Code\System\Dac.cs" />
-    <Content Include="App_Code\System\DateTimeUtil.cs" />
-    <Content Include="App_Code\System\DBUtil.cs" />
-    <Content Include="App_Code\System\LitJsonUtil.cs" />
-    <Content Include="App_Code\System\LogUtil.cs" />
-    <Content Include="App_Code\System\Util.cs" />
+    <Compile Include="App_Code\CommandHandlers\CommandHandler.cs" />
+    <Compile Include="App_Code\CommandHandlers\StageFarmVersionCommandHandler.cs" />
+    <Compile Include="App_Code\System\CommandHandlerException.cs" />
+    <Compile Include="App_Code\System\Config.cs" />
+    <Compile Include="App_Code\System\Dac.cs" />
+    <Compile Include="App_Code\System\DateTimeUtil.cs" />
+    <Compile Include="App_Code\System\DBUtil.cs" />
+    <Compile Include="App_Code\System\LitJsonUtil.cs" />
+    <Compile Include="App_Code\System\LogUtil.cs" />
+    <Compile Include="App_Code\System\Util.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

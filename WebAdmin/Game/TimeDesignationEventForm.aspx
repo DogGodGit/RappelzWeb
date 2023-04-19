@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" CodeFile="TimeDesignationEventForm.aspx.cs" Inherits="Game_TimeDesignationEventForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" Codebehind="TimeDesignationEventForm.aspx.cs" Inherits="Game_TimeDesignationEventForm" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" Runat="Server">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" CodeFile="ChargePurchaseProduct.aspx.cs" Inherits="Game_ChargePurchaseProduct" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" Codebehind="ChargePurchaseProduct.aspx.cs" Inherits="Game_ChargePurchaseProduct" %>
 
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigator" Src="~/Common/UserControl/PageNavigator.ascx" %>

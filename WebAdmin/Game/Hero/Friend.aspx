@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/IFrame.master" AutoEventWireup="true" CodeFile="Friend.aspx.cs" Inherits="Game_Hero_Friend" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/IFrame.master" AutoEventWireup="true" Codebehind="Friend.aspx.cs" Inherits="Game_Hero_Friend" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigatorFriend" Src="~/Common/UserControl/PageNavigator.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigatorFriendBlock" Src="~/Common/UserControl/PageNavigator.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigatorFriendEnemy" Src="~/Common/UserControl/PageNavigator.ascx" %>

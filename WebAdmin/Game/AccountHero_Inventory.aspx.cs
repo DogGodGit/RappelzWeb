@@ -10,7 +10,7 @@ public partial class Game_Inventory : System.Web.UI.Page
 	private const int LogType_Delete = 2;
 
 	protected int m_nGameServerId = 0;
-	protected int m_nHeroId = 0;
+	protected Guid m_nHeroId;
 
 	protected string[] names;
 	
@@ -25,7 +25,7 @@ public partial class Game_Inventory : System.Web.UI.Page
 		// 파라미터
 		//======================================================================
 		m_nGameServerId = ComUtil.GetRequestInt("SVR", RequestMethod.Get, 0);
-		m_nHeroId = ComUtil.GetRequestInt("AHID", RequestMethod.Get, 0);
+		m_nHeroId = ComUtil.GetRequestGuid("AHID", RequestMethod.Get);
 
 		if (IsPostBack)
 			return;
@@ -50,7 +50,7 @@ public partial class Game_Inventory : System.Web.UI.Page
 		SqlConnection uConn = DBUtil.GetUserDBConn();
 		SqlConnection conn = DBUtil.GetGameDBConn(Convert.ToInt32(m_nGameServerId));
 
-		DataTable dtAccountHeros = Dac.SearchHeros(conn, null, 1, m_nHeroId);
+		DataTable dtAccountHeros = Dac.Heros_Search(conn, null, 1, m_nHeroId.ToString());
 		DataTable dtInventory = Dac.InventorySlots(conn, null, m_nHeroId);
 		DataRow dr = Dac.Hero(conn, null, m_nHeroId);
 		DataTable dtItems = DacUser.Items(uConn, null);
@@ -173,9 +173,9 @@ public partial class Game_Inventory : System.Web.UI.Page
 
 			//DB연결
 			SqlConnection conn = DBUtil.GetGameDBConn(Convert.ToInt32(m_nGameServerId));
-		
+
 			// 인벤토리에 아이템 등록
-			int nRet = Dac.AddInventorySlot(conn, null, m_nHeroId, nSlotIndex, 2, uidHeroGearId, nItemId, nCount, isOwned);
+			int nRet = Dac.AddInventorySlot(conn, null, m_nHeroId, nSlotIndex, 2, uidHeroGearId, 0, nItemId, nCount, isOwned);
 
 			//DB연결 끊기
 			DBUtil.CloseDBConn(conn);

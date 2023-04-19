@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using DataTable = System.Data.DataTable;
+using DocumentFormat.OpenXml.ExtendedProperties;
 
 /// <summary>
 /// Data의 요약 설명입니다.
@@ -291,7 +292,49 @@ public class Dac
 		}
 	}
 
-	public static DataTable HeroSearchTargets(SqlConnection conn, SqlTransaction trans, int nType, string sTargets)
+    public static int AddGMMail(SqlConnection conn, SqlTransaction trans, Guid mailId, Guid heroId, int nTitleType, string sTitle, int nContentType, string sContent, int nDurationDay, int nAttachmentType,
+    int nItemId, int nItemCount, bool itemOwned, int nGearId, int nGearGrade, bool gearOwned, int nGearEnchantLevel, int nGearLevel, int nGearRoyalType)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = trans;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdminGame_AddMail";
+            sc.Parameters.Clear();
+            sc.Parameters.Add("@mailId", SqlDbType.UniqueIdentifier).Value = mailId;
+            sc.Parameters.Add("@heroId", SqlDbType.UniqueIdentifier).Value = heroId;
+            sc.Parameters.Add("@nTitleType", SqlDbType.Int).Value = nTitleType;
+            sc.Parameters.Add("@sTitle", SqlDbType.NVarChar, 100).Value = sTitle;
+            sc.Parameters.Add("@nContentType", SqlDbType.Int).Value = nContentType;
+            sc.Parameters.Add("@sContent", SqlDbType.NVarChar, sContent.Length).Value = sContent;
+            sc.Parameters.Add("@nDurationDay", SqlDbType.Int).Value = nDurationDay;
+            sc.Parameters.Add("@nAttachmentType", SqlDbType.Int).Value = nAttachmentType;
+            sc.Parameters.Add("@nItemId", SqlDbType.Int).Value = nItemId;
+            sc.Parameters.Add("@nItemCount", SqlDbType.Int).Value = nItemCount;
+            sc.Parameters.Add("@itemOwned", SqlDbType.Int).Value = itemOwned;
+            sc.Parameters.Add("@nGearId", SqlDbType.Int).Value = nGearId;
+            sc.Parameters.Add("@nGearGrade", SqlDbType.Int).Value = nGearGrade;
+            sc.Parameters.Add("@gearOwned", SqlDbType.Int).Value = gearOwned;
+            sc.Parameters.Add("@nGearEnchantLevel", SqlDbType.Int).Value = nGearEnchantLevel;
+            sc.Parameters.Add("@nGearLevel", SqlDbType.Int).Value = nGearLevel;
+            sc.Parameters.Add("@nGearRoyalType", SqlDbType.Int).Value = nGearRoyalType;
+            sc.Parameters.Add("ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
+
+            sc.ExecuteNonQuery();
+
+            return Convert.ToInt32(sc.Parameters["ReturnValue"].Value);
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.Message);
+            return -99;
+        }
+    }
+
+
+    public static DataTable HeroSearchTargets(SqlConnection conn, SqlTransaction trans, int nType, string sTargets)
 	{
 		try
 		{
@@ -1383,6 +1426,134 @@ public class Dac
             sc.Parameters.Add("@nStep", SqlDbType.Int).Value = nStep;
             sc.Parameters.Add("@nCycle", SqlDbType.Int).Value = nCycle;
             sc.Parameters.Add("@nEntryId", SqlDbType.Int).Value = nEntryId;
+
+            sc.Parameters.Add("ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
+
+            sc.ExecuteNonQuery();
+
+            return Convert.ToInt32(sc.Parameters["ReturnValue"].Value);
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.ToString());
+            return -99;
+        }
+    }
+
+    public static int UpdateInventorySlot_ItemCount(SqlConnection conn, SqlTransaction trans, Guid m_nHeroId, int nSlotIndex, int nItemCount)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = trans;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdminGame_UpdateInventorySlot_ItemCount";
+            sc.Parameters.Clear();
+            sc.Parameters.Add("@heroId", SqlDbType.UniqueIdentifier).Value = m_nHeroId;
+            sc.Parameters.Add("@nSlotIndex", SqlDbType.Int).Value = nSlotIndex;
+            sc.Parameters.Add("@nItemCount\t", SqlDbType.Int).Value = nItemCount;
+            sc.Parameters.Add("ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
+
+            sc.ExecuteNonQuery();
+
+            return Convert.ToInt32(sc.Parameters["ReturnValue"].Value);
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.ToString());
+            return -99;
+        }
+    }
+
+    public static int DeleteInventorySlot(SqlConnection conn, SqlTransaction trans, Guid heroId, int nSlotIndex)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = trans;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdminGame_DeleteInventorySlot";
+            sc.Parameters.Clear();
+            sc.Parameters.Add("@heroId", SqlDbType.UniqueIdentifier).Value = heroId;
+            sc.Parameters.Add("@nSlotIndex", SqlDbType.Int).Value = nSlotIndex;
+            sc.Parameters.Add("ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
+
+            sc.ExecuteNonQuery();
+
+            return Convert.ToInt32(sc.Parameters["ReturnValue"].Value);
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.ToString());
+            return -99;
+        }
+    }
+
+    public static int AddMailAttachmentGearOptionAttr(SqlConnection conn, SqlTransaction tran, Guid mailId, int nOptionIndex, int nAttrId, int @nValue)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = tran;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdminGame_AddMailAttachmentGearOptionAttr";
+            sc.Parameters.Clear();
+            sc.Parameters.Add("@mailId", SqlDbType.UniqueIdentifier).Value = mailId;
+            sc.Parameters.Add("@nOptionIndex", SqlDbType.Int).Value = nOptionIndex;
+            sc.Parameters.Add("@nAttrId", SqlDbType.Int).Value = nAttrId;
+            sc.Parameters.Add("@nValue", SqlDbType.Int).Value = @nValue;
+
+            sc.Parameters.Add("ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
+
+            sc.ExecuteNonQuery();
+
+            return Convert.ToInt32(sc.Parameters["ReturnValue"].Value);
+        }
+        catch (Exception ex)
+        {
+            HttpContext.Current.Response.Write(ex.ToString());
+            return -99;
+        }
+    }
+
+    public static DataRow HeroMainQuest_Last(SqlConnection conn, SqlTransaction trans, Guid m_nHeroId)
+    {
+        SqlCommand sc = new SqlCommand();
+        sc.Connection = conn;
+        sc.Transaction = trans;
+        sc.CommandType = CommandType.StoredProcedure;
+        sc.CommandText = "uspAdmin_HeroMainQuest";
+        sc.Parameters.Clear();
+        sc.Parameters.Add("@mailId", SqlDbType.UniqueIdentifier).Value = m_nHeroId;
+        sc.Parameters.Add("@nRowsPerPage", SqlDbType.Int).Value = 9999;
+        sc.Parameters.Add("@nPage", SqlDbType.Int).Value = 1;
+        DataTable dt = new DataTable();
+
+        SqlDataAdapter sda = new SqlDataAdapter();
+        sda.SelectCommand = sc;
+        sda.Fill(dt);
+
+        return dt.Rows.Count == 0 ? null : dt.Rows[dt.Rows.Count - 1];
+    }
+
+    public static int AddMailTextArgument(SqlConnection conn, SqlTransaction tran, Guid mailId, int nArgsType, int nArgsIndex, int nValueType, string sValue)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = tran;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdminGame_AddMailTextArgument";
+            sc.Parameters.Clear();
+            sc.Parameters.Add("@mailId", SqlDbType.UniqueIdentifier).Value = mailId;
+            sc.Parameters.Add("@nType", SqlDbType.Int).Value = nArgsType;
+            sc.Parameters.Add("@nIndex", SqlDbType.Int).Value = nArgsIndex;
+            sc.Parameters.Add("@nValueType", SqlDbType.Int).Value = nValueType;
+            sc.Parameters.Add("@sValue", SqlDbType.Int).Value = sValue;
 
             sc.Parameters.Add("ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 

@@ -114,9 +114,9 @@ public partial class Game_Hero_ForcedDisconnection : System.Web.UI.Page
         {
             case "handled":
                 if (Convert.ToBoolean(ComUtil.GetDataItem(objData, sFieldNm)))
-                    sRtn = Resources.resLang.ACCHfD_cs_txt_05;
+                    sRtn = Resources.ResLang.ACCHfD_cs_txt_05;
                 else
-                    sRtn = Resources.resLang.ACCHfD_cs_txt_06;
+                    sRtn = Resources.ResLang.ACCHfD_cs_txt_06;
                 break;
             default:
                 sRtn = ComUtil.GetDataItem(objData, sFieldNm);

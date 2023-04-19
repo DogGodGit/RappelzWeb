@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Popup_SharingEventSenderLog.aspx.cs" Inherits="Setting_Popup_Popup_SharingEventSenderLog" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Codebehind="Popup_SharingEventSenderLog.aspx.cs" Inherits="Setting_Popup_Popup_SharingEventSenderLog" %>
 
 <!DOCTYPE html>
 

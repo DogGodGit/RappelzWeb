@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" CodeFile="ClientText.aspx.cs" Inherits="Setting_ClientText" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" Codebehind="ClientText.aspx.cs" Inherits="Setting_ClientText" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" Runat="Server">
 <div id="CONTENT_INNER">

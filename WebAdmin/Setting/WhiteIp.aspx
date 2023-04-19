@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="WhiteIp.aspx.cs" Inherits="Setting_WhiteIp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="WhiteIp.aspx.cs" Inherits="Setting_WhiteIp" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">

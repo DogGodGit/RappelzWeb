@@ -182,8 +182,8 @@ public partial class Game_SendMail : System.Web.UI.Page
 			//영웅아이디의 갯수만큼 반복
 			for (int i = 0; i < sArrHeroIds.Length; i++)
 			{
-				int nHeroId = 0;
-				bool stringCheck = int.TryParse(sArrHeroIds[i], out nHeroId); 
+				Guid nHeroId;
+				bool stringCheck = ComUtil.TryParseGuid(sArrHeroIds[i], out nHeroId); 
 				if (!stringCheck)
 				{
 					ComUtil.MsgBox("영웅ID가 숫자가 아닙니다.", "history.back();");
@@ -276,7 +276,7 @@ public partial class Game_SendMail : System.Web.UI.Page
 							mailId = Guid.NewGuid();
 
 							// 메일 등록
-							if (Dac.AddMail(conn, tran, mailId, nHeroId, nTitleType, sTitle, nContentType, sContent, nDurationDay, nAttachmentType,
+							if (Dac.AddGMMail(conn, tran, mailId, nHeroId, nTitleType, sTitle, nContentType, sContent, nDurationDay, nAttachmentType,
 								nItemId, nItemCount, itemOwned, nGearId, nGearGrade, gearOwned, nGearEnchantLevel, nGearLevel, nGearRoyalType) != 0)
 							{
 								tran.Rollback();

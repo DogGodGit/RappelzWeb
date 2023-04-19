@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" CodeFile="TimeDesignationEvent.aspx.cs" Inherits="Game_TimeDesignationEvent" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" Codebehind="TimeDesignationEvent.aspx.cs" Inherits="Game_TimeDesignationEvent" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigator" Src="~/Common/UserControl/PageNavigator.ascx" %>
 

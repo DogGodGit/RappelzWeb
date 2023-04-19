@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/IFrame.master" CodeFile="Popup_AccountHeroGear.aspx.cs" Inherits="Game_Popup_AccountHeroGear" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/IFrame.master" Codebehind="Popup_AccountHeroGear.aspx.cs" Inherits="Game_Popup_AccountHeroGear" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server" >
 <body>
 <div>

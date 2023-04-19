@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="Sub_Game_MenuSetting.aspx.cs" Inherits="Sub_Game_MenuSetting" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="Sub_Game_MenuSetting.aspx.cs" Inherits="Sub_Game_MenuSetting" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="SubMenuSetting.aspx.cs" Inherits="Game_SubMenuSetting" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="SubMenuSetting.aspx.cs" Inherits="Game_SubMenuSetting" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">

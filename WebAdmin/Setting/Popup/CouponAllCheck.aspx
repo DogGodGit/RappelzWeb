@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/IFrame.master" CodeFile="CouponAllCheck.aspx.cs" Inherits="Setting_Popup_CouponAllCheck" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/IFrame.master" Codebehind="CouponAllCheck.aspx.cs" Inherits="Setting_Popup_CouponAllCheck" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <body>
 <div>

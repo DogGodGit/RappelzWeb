@@ -516,6 +516,52 @@ public class ComUtil
             return 0;
         }
     }
+
+    public static bool TryParseGuid(string str, out Guid result)
+    {
+        try
+        {
+            result = new Guid(str);
+            return true;
+        }
+        catch (Exception)
+        {
+            result = Guid.Empty;
+            return false;
+        }
+    }
+
+    ///=========================================================================
+    /// <summary>
+    /// (GUID) Request Getting parameter values
+    /// </summary>
+    /// <param name="sName">Parameter Name</param>
+    /// <param name="rm">Methods</param>
+    /// <param name="nDefault">Default</param>
+    /// <returns>Parameter values</returns>
+    ///=========================================================================
+    public static Guid GetRequestGuid(string sName, RequestMethod rm, string nDefault = "00000000-0000-0000-0000-000000000000")
+    {
+        Guid result;
+        TryParseGuid(GetRequestString(sName, rm, nDefault.ToString()), out result);
+        return result;
+    }
+
+    ///=========================================================================
+    /// <summary>
+    /// (GUID) Request Getting parameter values
+    /// </summary>
+    /// <param name="sName">Parameter Name</param>
+    /// <param name="nDefault">Default</param>
+    /// <returns>Parameter values</returns>
+    ///=========================================================================
+    public static Guid GetRequestGuid(string sName, string nDefault = "00000000-0000-0000-0000-000000000000")
+    {
+        Guid result;
+        TryParseGuid(GetRequestString(sName, RequestMethod.All, nDefault.ToString()), out result);
+        return result;
+    }
+
     ///=====================================================================
     /// <summary>
     /// (문자열) 2차원 쿠키값 가져오기

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="ClientTextView.aspx.cs" Inherits="Tools_ClientTextView" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="ClientTextView.aspx.cs" Inherits="Tools_ClientTextView" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" CodeFile="DiaShop.aspx.cs" Inherits="Game_DiaShop" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Common/Master/Main.master" AutoEventWireup="true" Codebehind="DiaShop.aspx.cs" Inherits="Game_DiaShop" %>
 
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigator" Src="~/Common/UserControl/PageNavigator.ascx" %>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="CouponSystem.aspx.cs" Inherits="Setting_CouponSystem" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="CouponSystem.aspx.cs" Inherits="Setting_CouponSystem" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %> 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <%@ Register TagPrefix="ucl" TagName="PageNavigator" Src="~/Common/UserControl/PageNavigator.ascx" %>

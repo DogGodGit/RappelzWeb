@@ -67,14 +67,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\System\ComUtil.cs" />
-    <Content Include="App_Code\System\Config.cs" />
-    <Content Include="App_Code\System\Dac.cs" />
-    <Content Include="App_Code\System\DateTimeUtil.cs" />
-    <Content Include="App_Code\System\DBUtil.cs" />
-    <Content Include="App_Code\System\LigJsonUtil.cs" />
-    <Content Include="App_Code\System\LogUtil.cs" />
-    <Content Include="App_Code\System\Util.cs" />
+    <Compile Include="App_Code\System\ComUtil.cs" />
+    <Compile Include="App_Code\System\Config.cs" />
+    <Compile Include="App_Code\System\Dac.cs" />
+    <Compile Include="App_Code\System\DateTimeUtil.cs" />
+    <Compile Include="App_Code\System\DBUtil.cs" />
+    <Compile Include="App_Code\System\LigJsonUtil.cs" />
+    <Compile Include="App_Code\System\LogUtil.cs" />
+    <Compile Include="App_Code\System\Util.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

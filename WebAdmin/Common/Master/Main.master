@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Common_Master_Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codebehind="Main.master.cs" Inherits="Common_Master_Main" %>
 <%@ Register TagPrefix="ucl" TagName="TopMenu" Src="~/Common/UserControl/TopMenu.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="LeftMenu" Src="~/Common/UserControl/LeftMenu.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

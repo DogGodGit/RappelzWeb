@@ -81,7 +81,7 @@ public partial class Sub_Game_MenuSetting : System.Web.UI.Page
 
 		SqlConnection conn = DBUtil.GetUserDBConn();
 
-		nRet = DacUser.AddSubMenu(conn, null, mainmenuId, sSubMenuId, sSubnameKeyAdd, sprefab1Add, sprefab2Add);
+		nRet = DacUser.AddSubMenu(conn, null, mainmenuId, sSubMenuId, sSubnameKeyAdd, sprefab1Add, sprefab2Add, "", 0, 0, 0);
 
 		DBUtil.CloseDBConn(conn);
 
@@ -120,9 +120,9 @@ public partial class Sub_Game_MenuSetting : System.Web.UI.Page
 			case "update":
 					string subNameKey = ((TextBox)e.Item.FindControl("WTxtNameKey")).Text.Trim();
 					string subPrefab1 = ((TextBox)e.Item.FindControl("WTxtprefab1")).Text.Trim();
-					string subPrefab2 = ((TextBox)e.Item.FindControl("WTxtprefab2")).Text.Trim(); 
+					string subPrefab2 = ((TextBox)e.Item.FindControl("WTxtprefab2")).Text.Trim();
 
-				nRet = DacUser.UpdateSubMenu(conn, null, mainmenuId, submenuId,subNameKey, subPrefab1, subPrefab2);
+				nRet = DacUser.UpdateSubMenu(conn, null, mainmenuId, submenuId, subNameKey, subPrefab1, subPrefab2, "", 0, 0, 0);
 				break;
 			case "delete":
 

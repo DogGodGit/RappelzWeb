@@ -55,6 +55,9 @@
       <HintPath>..\Lib\LitJson.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -65,6 +68,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -74,6 +83,134 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\BlackIp.aspx.designer.cs">
+      <DependentUpon>BlackIp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\ClientText.aspx.designer.cs">
+      <DependentUpon>ClientText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\ClientTextChanges.aspx.designer.cs">
+      <DependentUpon>ClientTextChanges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\CouponForm.aspx.designer.cs">
+      <DependentUpon>CouponForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\CouponSystem.aspx.designer.cs">
+      <DependentUpon>CouponSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\GameServerAccess.aspx.designer.cs">
+      <DependentUpon>GameServerAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\GameServerGroup.aspx.designer.cs">
+      <DependentUpon>GameServerGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\GameServerGroupSetting.aspx.designer.cs">
+      <DependentUpon>GameServerGroupSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\GameServerList.aspx.designer.cs">
+      <DependentUpon>GameServerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\GameServerRegion.aspx.designer.cs">
+      <DependentUpon>GameServerRegion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\GameServerSetting.aspx.designer.cs">
+      <DependentUpon>GameServerSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\GameSystem.aspx.designer.cs">
+      <DependentUpon>GameSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Languages.aspx.designer.cs">
+      <DependentUpon>Languages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Popup\CouponAllCheck.aspx.designer.cs">
+      <DependentUpon>CouponAllCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Popup\Popup_ClientNewText_Excel.aspx.designer.cs">
+      <DependentUpon>Popup_ClientNewText_Excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Popup\Popup_ClientText_Excel.aspx.designer.cs">
+      <DependentUpon>Popup_ClientText_Excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Popup\Popup_SharingEventReceiverLog.aspx.designer.cs">
+      <DependentUpon>Popup_SharingEventReceiverLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Popup\Popup_SharingEventSenderLog.aspx.designer.cs">
+      <DependentUpon>Popup_SharingEventSenderLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SharingEvents\ReviewLog.aspx.designer.cs">
+      <DependentUpon>ReviewLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SharingEvents\SharingEvent.aspx.designer.cs">
+      <DependentUpon>SharingEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SharingEvents\SharingEventAdd.aspx.designer.cs">
+      <DependentUpon>SharingEventAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SharingEvents\SharingEventReceiveReward.aspx.designer.cs">
+      <DependentUpon>SharingEventReceiveReward.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SharingEvents\SharingEventReceiverLog.aspx.designer.cs">
+      <DependentUpon>SharingEventReceiverLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SharingEvents\SharingEventSenderLog.aspx.designer.cs">
+      <DependentUpon>SharingEventSenderLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SharingEvents\SharingEventSenderReward.aspx.designer.cs">
+      <DependentUpon>SharingEventSenderReward.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SystemSetting.aspx.designer.cs">
+      <DependentUpon>SystemSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\WhiteIp.aspx.designer.cs">
+      <DependentUpon>WhiteIp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ClientTextView.aspx.designer.cs">
+      <DependentUpon>ClientTextView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ValidateMetaData.aspx.designer.cs">
+      <DependentUpon>ValidateMetaData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\System\Analytics.conf" />
+    <Content Include="App_GlobalResources\ResLang.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ResLang.designer.cs</LastGenOutput>
+    </Content>
+    <Compile Include="App_Code\Data\Gear\GearAttr.cs" />
+    <Compile Include="App_Code\Data\UserAccessToken.cs" />
+    <Compile Include="App_Code\System\Biz.cs" />
+    <Compile Include="App_Code\System\BizUser.cs" />
+    <Compile Include="App_Code\System\ComUtil.cs" />
+    <Compile Include="App_Code\System\Config.cs" />
+    <Compile Include="App_Code\System\Dac.cs" />
+    <Compile Include="App_Code\System\DacUser.cs" />
+    <Compile Include="App_Code\System\DataUtil.cs" />
+    <Compile Include="App_Code\System\DateTimeUtil.cs" />
+    <Compile Include="App_Code\System\DBUtil.cs" />
+    <Compile Include="App_Code\System\Define.cs" />
+    <Compile Include="App_Code\System\LitJsonUtil.cs" />
+    <Compile Include="App_Code\System\MenuUtil.cs" />
+    <Compile Include="App_Code\System\Util.cs" />
+    <Compile Include="App_Code\System\ValidateMetaData.cs" />
+    <Compile Include="App_GlobalResources\ResLang.zh.designer.cs">
+      <DependentUpon>ResLang.zh.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Content Include="App_GlobalResources\ResLang.zh.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ResLang.zh.designer.cs</LastGenOutput>
+    </Content>
     <Content Include="Common\Css\Style.css" />
     <Content Include="Common\Images\bottom_left.gif" />
     <Content Include="Common\Images\bottom_right.gif" />
@@ -109,404 +246,494 @@
     <Content Include="Common\Images\top_right.gif" />
     <Content Include="Common\Images\_blank.gif" />
     <Content Include="Common\Js\Common.js" />
+    <Content Include="Common\Master\IFrame.master" />
+    <Content Include="Common\Master\Main.master" />
     <Content Include="Common\UserControl\LeftMenu.ascx" />
     <Content Include="Common\UserControl\PageNavigator.ascx" />
     <Content Include="Common\UserControl\TopMenu.ascx" />
     <Content Include="Default.aspx" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\AccountHero.aspx" />
     <Content Include="Game\AccountHeroList.aspx" />
+    <Compile Include="Game\AccountHeroList.aspx.cs">
+      <DependentUpon>AccountHeroList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\AccountHero_Info.aspx" />
+    <Compile Include="Game\AccountHero_Info.aspx.cs">
+      <DependentUpon>AccountHero_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\AccountHero_Inventory.aspx" />
+    <Compile Include="Game\AccountHero_Inventory.aspx.cs">
+      <DependentUpon>AccountHero_Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\AccountHero_MainQuest.aspx" />
+    <Compile Include="Game\AccountHero_MainQuest.aspx.cs">
+      <DependentUpon>AccountHero_MainQuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Announcement.aspx" />
+    <Compile Include="Game\Announcement.aspx.cs">
+      <DependentUpon>Announcement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\AssetBundleList.aspx" />
+    <Compile Include="Game\AssetBundleList.aspx.cs">
+      <DependentUpon>AssetBundleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\ChargePurchaseProduct.aspx" />
+    <Compile Include="Game\ChargePurchaseProduct.aspx.cs">
+      <DependentUpon>ChargePurchaseProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Development.aspx" />
+    <Compile Include="Game\Development.aspx.cs">
+      <DependentUpon>Development.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\DiaShop.aspx" />
+    <Compile Include="Game\DiaShop.aspx.cs">
+      <DependentUpon>DiaShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero.aspx" />
+    <Compile Include="Game\Hero.aspx.cs">
+      <DependentUpon>Hero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\HeroList.aspx" />
+    <Compile Include="Game\HeroList.aspx.cs">
+      <DependentUpon>HeroList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\Constellation.aspx" />
+    <Compile Include="Game\Hero\Constellation.aspx.cs">
+      <DependentUpon>Constellation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\Event\DailyCharge.aspx" />
+    <Compile Include="Game\Hero\Event\DailyCharge.aspx.cs">
+      <DependentUpon>DailyCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\Event\FirstCharge.aspx" />
+    <Compile Include="Game\Hero\Event\FirstCharge.aspx.cs">
+      <DependentUpon>FirstCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\ForcedDisconnection.aspx" />
+    <Compile Include="Game\Hero\ForcedDisconnection.aspx.cs">
+      <DependentUpon>ForcedDisconnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\Friend.aspx" />
+    <Compile Include="Game\Hero\Friend.aspx.cs">
+      <DependentUpon>Friend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\HeroInfo.aspx" />
+    <Compile Include="Game\Hero\HeroInfo.aspx.cs">
+      <DependentUpon>HeroInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\Inventory.aspx" />
+    <Compile Include="Game\Hero\Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\MainQuest.aspx" />
+    <Compile Include="Game\Hero\MainQuest.aspx.cs">
+      <DependentUpon>MainQuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\MonsterBook.aspx" />
+    <Compile Include="Game\Hero\MonsterBook.aspx.cs">
+      <DependentUpon>MonsterBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Hero\Stat.aspx" />
+    <Compile Include="Game\Hero\Stat.aspx.cs">
+      <DependentUpon>Stat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Mail.aspx" />
+    <Compile Include="Game\Mail.aspx.cs">
+      <DependentUpon>Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\MailAll.aspx" />
+    <Compile Include="Game\MailAll.aspx.cs">
+      <DependentUpon>MailAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\MenuSetting.aspx" />
+    <Compile Include="Game\MenuSetting.aspx.cs">
+      <DependentUpon>MenuSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Notice_Global.aspx" />
+    <Compile Include="Game\Notice_Global.aspx.cs">
+      <DependentUpon>Notice_Global.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Notice_Server.aspx" />
+    <Compile Include="Game\Notice_Server.aspx.cs">
+      <DependentUpon>Notice_Server.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Popup_AccountHeroGear.aspx" />
+    <Compile Include="Game\Popup_AccountHeroGear.aspx.cs">
+      <DependentUpon>Popup_AccountHeroGear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\SendMail.aspx" />
+    <Compile Include="Game\SendMail.aspx.cs">
+      <DependentUpon>SendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\SubMenuSetting.aspx" />
+    <Compile Include="Game\SubMenuSetting.aspx.cs">
+      <DependentUpon>SubMenuSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\Sub_MenuSetting.aspx" />
+    <Compile Include="Game\Sub_MenuSetting.aspx.cs">
+      <DependentUpon>Sub_MenuSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\TimeDesignationEvent.aspx" />
+    <Compile Include="Game\TimeDesignationEvent.aspx.cs">
+      <DependentUpon>TimeDesignationEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Game\TimeDesignationEventForm.aspx" />
+    <Compile Include="Game\TimeDesignationEventForm.aspx.cs">
+      <DependentUpon>TimeDesignationEventForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Login.aspx" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Logout.aspx" />
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Log\Popup\Popup_PurchaseAllLog.aspx" />
+    <Compile Include="Log\Popup\Popup_PurchaseAllLog.aspx.cs">
+      <DependentUpon>Popup_PurchaseAllLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Log\PurchaseAllLog.aspx" />
+    <Compile Include="Log\PurchaseAllLog.aspx.cs">
+      <DependentUpon>PurchaseAllLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\BlackIp.aspx" />
+    <Compile Include="Setting\BlackIp.aspx.cs">
+      <DependentUpon>BlackIp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\ClientText.aspx" />
+    <Compile Include="Setting\ClientText.aspx.cs">
+      <DependentUpon>ClientText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\ClientTextChanges.aspx" />
+    <Compile Include="Setting\ClientTextChanges.aspx.cs">
+      <DependentUpon>ClientTextChanges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\CouponForm.aspx" />
+    <Compile Include="Setting\CouponForm.aspx.cs">
+      <DependentUpon>CouponForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\CouponSystem.aspx" />
+    <Compile Include="Setting\CouponSystem.aspx.cs">
+      <DependentUpon>CouponSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\GameServerAccess.aspx" />
+    <Compile Include="Setting\GameServerAccess.aspx.cs">
+      <DependentUpon>GameServerAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\GameServerGroup.aspx" />
+    <Compile Include="Setting\GameServerGroup.aspx.cs">
+      <DependentUpon>GameServerGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\GameServerGroupSetting.aspx" />
+    <Compile Include="Setting\GameServerGroupSetting.aspx.cs">
+      <DependentUpon>GameServerGroupSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\GameServerList.aspx" />
+    <Compile Include="Setting\GameServerList.aspx.cs">
+      <DependentUpon>GameServerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\GameServerRegion.aspx" />
+    <Compile Include="Setting\GameServerRegion.aspx.cs">
+      <DependentUpon>GameServerRegion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\GameServerSetting.aspx" />
+    <Compile Include="Setting\GameServerSetting.aspx.cs">
+      <DependentUpon>GameServerSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\GameSystem.aspx" />
+    <Compile Include="Setting\GameSystem.aspx.cs">
+      <DependentUpon>GameSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\Languages.aspx" />
+    <Compile Include="Setting\Languages.aspx.cs">
+      <DependentUpon>Languages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\Popup\CouponAllCheck.aspx" />
+    <Compile Include="Setting\Popup\CouponAllCheck.aspx.cs">
+      <DependentUpon>CouponAllCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\Popup\Popup_ClientNewText_Excel.aspx" />
+    <Compile Include="Setting\Popup\Popup_ClientNewText_Excel.aspx.cs">
+      <DependentUpon>Popup_ClientNewText_Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\Popup\Popup_ClientText_Excel.aspx" />
+    <Compile Include="Setting\Popup\Popup_ClientText_Excel.aspx.cs">
+      <DependentUpon>Popup_ClientText_Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\Popup\Popup_SharingEventReceiverLog.aspx" />
+    <Compile Include="Setting\Popup\Popup_SharingEventReceiverLog.aspx.cs">
+      <DependentUpon>Popup_SharingEventReceiverLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\Popup\Popup_SharingEventSenderLog.aspx" />
+    <Compile Include="Setting\Popup\Popup_SharingEventSenderLog.aspx.cs">
+      <DependentUpon>Popup_SharingEventSenderLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SharingEvents\ReviewLog.aspx" />
+    <Compile Include="Setting\SharingEvents\ReviewLog.aspx.cs">
+      <DependentUpon>ReviewLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SharingEvents\SharingEvent.aspx" />
+    <Compile Include="Setting\SharingEvents\SharingEvent.aspx.cs">
+      <DependentUpon>SharingEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SharingEvents\SharingEventAdd.aspx" />
+    <Compile Include="Setting\SharingEvents\SharingEventAdd.aspx.cs">
+      <DependentUpon>SharingEventAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SharingEvents\SharingEventReceiveReward.aspx" />
+    <Compile Include="Setting\SharingEvents\SharingEventReceiveReward.aspx.cs">
+      <DependentUpon>SharingEventReceiveReward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SharingEvents\SharingEventReceiverLog.aspx" />
+    <Compile Include="Setting\SharingEvents\SharingEventReceiverLog.aspx.cs">
+      <DependentUpon>SharingEventReceiverLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SharingEvents\SharingEventSenderLog.aspx" />
+    <Compile Include="Setting\SharingEvents\SharingEventSenderLog.aspx.cs">
+      <DependentUpon>SharingEventSenderLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SharingEvents\SharingEventSenderReward.aspx" />
+    <Compile Include="Setting\SharingEvents\SharingEventSenderReward.aspx.cs">
+      <DependentUpon>SharingEventSenderReward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\SystemSetting.aspx" />
+    <Compile Include="Setting\SystemSetting.aspx.cs">
+      <DependentUpon>SystemSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Setting\WhiteIp.aspx" />
+    <Compile Include="Setting\WhiteIp.aspx.cs">
+      <DependentUpon>WhiteIp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Tools\ClientTextView.aspx" />
+    <Compile Include="Tools\ClientTextView.aspx.cs">
+      <DependentUpon>ClientTextView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Tools\ValidateMetaData.aspx" />
+    <Compile Include="Tools\ValidateMetaData.aspx.cs">
+      <DependentUpon>ValidateMetaData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="User\UserList.aspx" />
+    <Compile Include="User\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Logout.aspx.cs">
-      <DependentUpon>Logout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\BlackIp.aspx.cs">
-      <DependentUpon>BlackIp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\ClientText.aspx.cs">
-      <DependentUpon>ClientText.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\ClientTextChanges.aspx.cs">
-      <DependentUpon>ClientTextChanges.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\CouponForm.aspx.cs">
-      <DependentUpon>CouponForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\CouponSystem.aspx.cs">
-      <DependentUpon>CouponSystem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\GameServerAccess.aspx.cs">
-      <DependentUpon>GameServerAccess.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\GameServerGroup.aspx.cs">
-      <DependentUpon>GameServerGroup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\GameServerGroupSetting.aspx.cs">
-      <DependentUpon>GameServerGroupSetting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\GameServerList.aspx.cs">
-      <DependentUpon>GameServerList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\GameServerRegion.aspx.cs">
-      <DependentUpon>GameServerRegion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\GameServerSetting.aspx.cs">
-      <DependentUpon>GameServerSetting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\GameSystem.aspx.cs">
-      <DependentUpon>GameSystem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\Languages.aspx.cs">
-      <DependentUpon>Languages.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\Popup\CouponAllCheck.aspx.cs">
-      <DependentUpon>CouponAllCheck.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\Popup\Popup_ClientNewText_Excel.aspx.cs">
-      <DependentUpon>Popup_ClientNewText_Excel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\Popup\Popup_ClientText_Excel.aspx.cs">
-      <DependentUpon>Popup_ClientText_Excel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\Popup\Popup_SharingEventReceiverLog.aspx.cs">
-      <DependentUpon>Popup_SharingEventReceiverLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\Popup\Popup_SharingEventSenderLog.aspx.cs">
-      <DependentUpon>Popup_SharingEventSenderLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SharingEvents\ReviewLog.aspx.cs">
-      <DependentUpon>ReviewLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SharingEvents\SharingEvent.aspx.cs">
-      <DependentUpon>SharingEvent.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SharingEvents\SharingEventAdd.aspx.cs">
-      <DependentUpon>SharingEventAdd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SharingEvents\SharingEventReceiveReward.aspx.cs">
-      <DependentUpon>SharingEventReceiveReward.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SharingEvents\SharingEventReceiverLog.aspx.cs">
-      <DependentUpon>SharingEventReceiverLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SharingEvents\SharingEventSenderLog.aspx.cs">
-      <DependentUpon>SharingEventSenderLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SharingEvents\SharingEventSenderReward.aspx.cs">
-      <DependentUpon>SharingEventSenderReward.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\SystemSetting.aspx.cs">
-      <DependentUpon>SystemSetting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Setting\WhiteIp.aspx.cs">
-      <DependentUpon>WhiteIp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Tools\ClientTextView.aspx.cs">
-      <DependentUpon>ClientTextView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Tools\ValidateMetaData.aspx.cs">
-      <DependentUpon>ValidateMetaData.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="User\UserList.aspx.cs">
-      <DependentUpon>UserList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="App_Code\Data\Gear\GearAttr.cs" />
-    <Content Include="App_Code\Data\UserAccessToken.cs" />
-    <Content Include="App_Code\System\Biz.cs" />
-    <Content Include="App_Code\System\BizUser.cs" />
-    <Content Include="App_Code\System\ComUtil.cs" />
-    <Content Include="App_Code\System\Config.cs" />
-    <Content Include="App_Code\System\Dac.cs" />
-    <Content Include="App_Code\System\DacUser.cs" />
-    <Content Include="App_Code\System\DataUtil.cs" />
-    <Content Include="App_Code\System\DateTimeUtil.cs" />
-    <Content Include="App_Code\System\DBUtil.cs" />
-    <Content Include="App_Code\System\Define.cs" />
-    <Content Include="App_Code\System\LitJsonUtil.cs" />
-    <Content Include="App_Code\System\MenuUtil.cs" />
-    <Content Include="App_Code\System\Util.cs" />
-    <Content Include="App_Code\System\ValidateMetaData.cs" />
-    <Content Include="Common\Master\IFrame.master.cs">
+    <Compile Include="Common\Master\IFrame.master.cs">
       <DependentUpon>IFrame.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Common\Master\Main.master.cs">
+    </Compile>
+    <Compile Include="Common\Master\Main.master.cs">
       <DependentUpon>Main.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Common\UserControl\LeftMenu.ascx.cs">
+    </Compile>
+    <Compile Include="Common\UserControl\LeftMenu.ascx.cs">
       <DependentUpon>LeftMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Common\UserControl\PageNavigator.ascx.cs">
+    </Compile>
+    <Compile Include="Common\UserControl\LeftMenu.ascx.designer.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserControl\PageNavigator.ascx.cs">
       <DependentUpon>PageNavigator.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Common\UserControl\TopMenu.ascx.cs">
+    </Compile>
+    <Compile Include="Common\UserControl\PageNavigator.ascx.designer.cs">
+      <DependentUpon>PageNavigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserControl\TopMenu.ascx.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\AccountHero.aspx.cs">
+    </Compile>
+    <Compile Include="Common\UserControl\TopMenu.ascx.designer.cs">
+      <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Game\AccountHero.aspx.cs">
       <DependentUpon>AccountHero.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\AccountHeroList.aspx.cs">
+    </Compile>
+    <Compile Include="Game\AccountHero.aspx.designer.cs">
+      <DependentUpon>AccountHero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Game\AccountHeroList.aspx.designer.cs">
       <DependentUpon>AccountHeroList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\AccountHero_Info.aspx.cs">
+    </Compile>
+    <Compile Include="Game\AccountHero_Info.aspx.designer.cs">
       <DependentUpon>AccountHero_Info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\AccountHero_Inventory.aspx.cs">
+    </Compile>
+    <Compile Include="Game\AccountHero_Inventory.aspx.designer.cs">
       <DependentUpon>AccountHero_Inventory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\AccountHero_MainQuest.aspx.cs">
+    </Compile>
+    <Compile Include="Game\AccountHero_MainQuest.aspx.designer.cs">
       <DependentUpon>AccountHero_MainQuest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Announcement.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Announcement.aspx.designer.cs">
       <DependentUpon>Announcement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\AssetBundleList.aspx.cs">
+    </Compile>
+    <Compile Include="Game\AssetBundleList.aspx.designer.cs">
       <DependentUpon>AssetBundleList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\ChargePurchaseProduct.aspx.cs">
+    </Compile>
+    <Compile Include="Game\ChargePurchaseProduct.aspx.designer.cs">
       <DependentUpon>ChargePurchaseProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Development.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Development.aspx.designer.cs">
       <DependentUpon>Development.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\DiaShop.aspx.cs">
+    </Compile>
+    <Compile Include="Game\DiaShop.aspx.designer.cs">
       <DependentUpon>DiaShop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero.aspx.designer.cs">
       <DependentUpon>Hero.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\HeroList.aspx.cs">
+    </Compile>
+    <Compile Include="Game\HeroList.aspx.designer.cs">
       <DependentUpon>HeroList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\Constellation.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\Constellation.aspx.designer.cs">
       <DependentUpon>Constellation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\Event\DailyCharge.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\Event\DailyCharge.aspx.designer.cs">
       <DependentUpon>DailyCharge.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\Event\FirstCharge.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\Event\FirstCharge.aspx.designer.cs">
       <DependentUpon>FirstCharge.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\ForcedDisconnection.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\ForcedDisconnection.aspx.designer.cs">
       <DependentUpon>ForcedDisconnection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\Friend.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\Friend.aspx.designer.cs">
       <DependentUpon>Friend.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\HeroInfo.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\HeroInfo.aspx.designer.cs">
       <DependentUpon>HeroInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\Inventory.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\Inventory.aspx.designer.cs">
       <DependentUpon>Inventory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\MainQuest.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\MainQuest.aspx.designer.cs">
       <DependentUpon>MainQuest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\MonsterBook.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\MonsterBook.aspx.designer.cs">
       <DependentUpon>MonsterBook.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Hero\Stat.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Hero\Stat.aspx.designer.cs">
       <DependentUpon>Stat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Mail.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Mail.aspx.designer.cs">
       <DependentUpon>Mail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\MailAll.aspx.cs">
+    </Compile>
+    <Compile Include="Game\MailAll.aspx.designer.cs">
       <DependentUpon>MailAll.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\MenuSetting.aspx.cs">
+    </Compile>
+    <Compile Include="Game\MenuSetting.aspx.designer.cs">
       <DependentUpon>MenuSetting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Notice_Global.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Notice_Global.aspx.designer.cs">
       <DependentUpon>Notice_Global.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Notice_Server.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Notice_Server.aspx.designer.cs">
       <DependentUpon>Notice_Server.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Popup_AccountHeroGear.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Popup_AccountHeroGear.aspx.designer.cs">
       <DependentUpon>Popup_AccountHeroGear.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\SendMail.aspx.cs">
+    </Compile>
+    <Compile Include="Game\SendMail.aspx.designer.cs">
       <DependentUpon>SendMail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\SubMenuSetting.aspx.cs">
+    </Compile>
+    <Compile Include="Game\SubMenuSetting.aspx.designer.cs">
       <DependentUpon>SubMenuSetting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\Sub_MenuSetting.aspx.cs">
+    </Compile>
+    <Compile Include="Game\Sub_MenuSetting.aspx.designer.cs">
       <DependentUpon>Sub_MenuSetting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\TimeDesignationEvent.aspx.cs">
+    </Compile>
+    <Compile Include="Game\TimeDesignationEvent.aspx.designer.cs">
       <DependentUpon>TimeDesignationEvent.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Game\TimeDesignationEventForm.aspx.cs">
+    </Compile>
+    <Compile Include="Game\TimeDesignationEventForm.aspx.designer.cs">
       <DependentUpon>TimeDesignationEventForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Log\Popup\Popup_PurchaseAllLog.aspx.cs">
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\Popup\Popup_PurchaseAllLog.aspx.designer.cs">
       <DependentUpon>Popup_PurchaseAllLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="Log\PurchaseAllLog.aspx.cs">
+    </Compile>
+    <Compile Include="Log\PurchaseAllLog.aspx.designer.cs">
       <DependentUpon>PurchaseAllLog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="App_GlobalResources\ResLang.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ResLang.resx</DependentUpon>
-    </Content>
-    <Content Include="App_GlobalResources\ResLang.zh.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ResLang.zh.resx</DependentUpon>
-    </Content>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\System\Analytics.conf" />
-    <Content Include="Common\Master\IFrame.master" />
-    <Content Include="Common\Master\Main.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -515,18 +742,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\ResLang.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>ResLang.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\ResLang.zh.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>ResLang.zh.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
+    <Compile Include="App_GlobalResources\ResLang.designer.cs">
+      <DependentUpon>ResLang.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

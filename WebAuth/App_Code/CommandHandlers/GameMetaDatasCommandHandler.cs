@@ -7,6 +7,8 @@ using LitJson;
 using System.Data.SqlClient;
 using System.Data;
 using System.IO;
+using WebCommon;
+using System.Configuration;
 
 /// <summary>
 /// GameMetaDatasCommandHandler의 요약 설명입니다.
@@ -55,8 +57,25 @@ public class GameMetaDatasCommandHandler : CommandHandler
 			JsonData joRes = CreateResponse();
 
 			joRes["gameDatas"] = File.ReadAllText(System.Web.HttpContext.Current.Server.MapPath(kFileName_MetaDataPath) + "/" + string.Format(kFileName_GameData, sMetaDataVersion));
+			var sBase64String = Util.UnZipFromBase64(joRes["gameDatas"].ToString());
+            var m_gameData = new WPDGameDatas();
+            m_gameData.DeserializeFromBase64String(sBase64String);
+			if (m_gameData.blessings != null)
+			{
+				foreach (var blessing in m_gameData.blessings)
+				{
+					LogUtil.Log("m_nBlessingId =" + blessing.blessingId);
+					LogUtil.Log("m_strName = " + blessing.nameKey);
+					LogUtil.Log("m_strDescription " + blessing.descriptionKey);
+					LogUtil.Log("m_nMoneyType = " + blessing.moneyType);
+					LogUtil.Log("m_nMoneyAmount = " + blessing.moneyAmount);
+					LogUtil.Log("m_csItemRewardSender" + blessing.senderItemRewardId);
+					LogUtil.Log("m_csGoldRewardReceiver" + blessing.receiverGoldRewardId);
+                }
+            }
 
-			return joRes;
+
+            return joRes;
 		}
 		catch (FileNotFoundException ex)
 		{

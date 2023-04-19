@@ -10,7 +10,7 @@ using System.Data;
 public partial class Game_AccountHero_MainQuest : System.Web.UI.Page
 {
 	protected int m_nGameServerId = 0;
-	protected int m_nHeroId = 0;
+	protected Guid m_nHeroId;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -23,7 +23,7 @@ public partial class Game_AccountHero_MainQuest : System.Web.UI.Page
 		// 파라미터
 		//======================================================================
 		m_nGameServerId = ComUtil.GetRequestInt("SVR", RequestMethod.Get, 0);
-		m_nHeroId = ComUtil.GetRequestInt("AHID", RequestMethod.Get, 0);
+		m_nHeroId = ComUtil.GetRequestGuid("AHID", RequestMethod.Get);
 
 		if (IsPostBack)
 			return;

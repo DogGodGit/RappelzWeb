@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
@@ -1108,8 +1106,32 @@ public class DacUser
 		}
 	}
 
+    public static DataTable Gears(SqlConnection conn, SqlTransaction trans)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = trans;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdmin_Gears";
+            sc.Parameters.Clear();
 
-	public static DataTable MainGears(SqlConnection conn, SqlTransaction trans)
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter();
+            sda.SelectCommand = sc;
+            sda.Fill(dt);
+
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
+
+    public static DataTable MainGears(SqlConnection conn, SqlTransaction trans)
 	{
 		try
 		{
@@ -3567,5 +3589,63 @@ public class DacUser
             nTotalCount = 0;
             return null;
         }
+    }
+
+    public static DataTable Grades(SqlConnection conn, SqlTransaction trans)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = trans;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdmin_Grades";
+            sc.Parameters.Clear();
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter();
+            sda.SelectCommand = sc;
+            sda.Fill(dt);
+
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
+    public static DataTable GearRoyalTypes(SqlConnection conn, SqlTransaction trans)
+    {
+        try
+        {
+            SqlCommand sc = new SqlCommand();
+            sc.Connection = conn;
+            sc.Transaction = trans;
+            sc.CommandType = CommandType.StoredProcedure;
+            sc.CommandText = "uspAdmin_GearRoyalTypes";
+            sc.Parameters.Clear();
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter();
+            sda.SelectCommand = sc;
+            sda.Fill(dt);
+
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
+    internal static DataTable GearOptionAttrGrades(SqlConnection connUser, object value, int nGearId)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal static DataTable MainQuests(SqlConnection connUser, object value, int nNation)
+    {
+        throw new NotImplementedException();
     }
 }

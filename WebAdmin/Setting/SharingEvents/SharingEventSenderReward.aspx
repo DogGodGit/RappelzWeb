@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" CodeFile="SharingEventSenderReward.aspx.cs" Inherits="Setting_SharingEvents_SharingEventSenderReward" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Common/Master/Main.master" Codebehind="SharingEventSenderReward.aspx.cs" Inherits="Setting_SharingEvents_SharingEventSenderReward" %>
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 <%@ Register TagPrefix="ucl" TagName="PageNavigator" Src="~/Common/UserControl/PageNavigator.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">

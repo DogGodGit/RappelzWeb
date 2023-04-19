@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Popup_ClientText_Excel.aspx.cs" Inherits="Setting_Popup_Popup_ClientText_Excel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Codebehind="Popup_ClientText_Excel.aspx.cs" Inherits="Setting_Popup_Popup_ClientText_Excel" %>
 
 <!DOCTYPE html>
 

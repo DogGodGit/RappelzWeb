@@ -8786,10 +8786,11 @@ public class MakeGameMetaData
 			gameDatas.biographyQuestDungeonWaves = biographyQuestDungeonWaves.ToArray();
 			biographyQuestDungeonWaves.Clear();
 
-			//
-			// 축복 목록
-			//
-			List<WPDBlessing> blessings = new List<WPDBlessing>();
+            //
+            // 축복 목록
+            // 祝福列表
+            //
+            List<WPDBlessing> blessings = new List<WPDBlessing>();
 			foreach (DataRow dr in drcBlessings)
 			{
 				WPDBlessing data = new WPDBlessing();
@@ -10168,10 +10169,11 @@ public class MakeGameMetaData
 			gameDatas.constellationSteps = constellationSteps.ToArray();
 			constellationSteps.Clear();
 
-			//
-			// 별자리사이클 목록
-			//
-			List<WPDConstellationCycle> constellationCycles = new List<WPDConstellationCycle>();
+            //
+            // 별자리사이클 목록
+            // 星座周期列表
+            //
+            List<WPDConstellationCycle> constellationCycles = new List<WPDConstellationCycle>();
 			foreach (DataRow dr in drcConstellationCycles)
 			{
 				WPDConstellationCycle data = new WPDConstellationCycle();

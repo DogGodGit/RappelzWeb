@@ -80,7 +80,7 @@ public partial class Game_AccountHeroList : System.Web.UI.Page
 		try
 		{
 			int nSearchType = Convert.ToInt32(WDDLSearch.SelectedValue);
-			int sSearch = Convert.ToInt32(WTxtsearch.Text.Trim());
+			string sSearch = WTxtsearch.Text.Trim();
 
 			if (sSearch.ToString() == "")
 				return;
@@ -92,7 +92,7 @@ public partial class Game_AccountHeroList : System.Web.UI.Page
 			
 			SqlConnection conn = DBUtil.GetGameDBConn(Convert.ToInt32(WDDLServerList.SelectedValue));
 		
-			DataTable dt = Dac.SearchHeros(conn, null, nSearchType, sSearch);
+			DataTable dt = Dac.Heros_Search(conn, null, nSearchType, sSearch);
 
 			DBUtil.CloseDBConn(conn);
 
