@@ -179,28 +179,27 @@
     <Compile Include="User\UserList.aspx.designer.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\System\Analytics.conf" />
     <Content Include="App_GlobalResources\ResLang.resx">
       <SubType>Designer</SubType>
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>ResLang.designer.cs</LastGenOutput>
     </Content>
-    <Compile Include="App_Code\Data\Gear\GearAttr.cs" />
-    <Compile Include="App_Code\Data\UserAccessToken.cs" />
-    <Compile Include="App_Code\System\Biz.cs" />
-    <Compile Include="App_Code\System\BizUser.cs" />
-    <Compile Include="App_Code\System\ComUtil.cs" />
-    <Compile Include="App_Code\System\Config.cs" />
-    <Compile Include="App_Code\System\Dac.cs" />
-    <Compile Include="App_Code\System\DacUser.cs" />
-    <Compile Include="App_Code\System\DataUtil.cs" />
-    <Compile Include="App_Code\System\DateTimeUtil.cs" />
-    <Compile Include="App_Code\System\DBUtil.cs" />
-    <Compile Include="App_Code\System\Define.cs" />
-    <Compile Include="App_Code\System\LitJsonUtil.cs" />
-    <Compile Include="App_Code\System\MenuUtil.cs" />
-    <Compile Include="App_Code\System\Util.cs" />
-    <Compile Include="App_Code\System\ValidateMetaData.cs" />
+    <Compile Include="App_Codes\Data\Gear\GearAttr.cs" />
+    <Compile Include="App_Codes\Data\UserAccessToken.cs" />
+    <Compile Include="App_Codes\System\Biz.cs" />
+    <Compile Include="App_Codes\System\BizUser.cs" />
+    <Compile Include="App_Codes\System\ComUtil.cs" />
+    <Compile Include="App_Codes\System\Config.cs" />
+    <Compile Include="App_Codes\System\Dac.cs" />
+    <Compile Include="App_Codes\System\DacUser.cs" />
+    <Compile Include="App_Codes\System\DataUtil.cs" />
+    <Compile Include="App_Codes\System\DateTimeUtil.cs" />
+    <Compile Include="App_Codes\System\DBUtil.cs" />
+    <Compile Include="App_Codes\System\Define.cs" />
+    <Compile Include="App_Codes\System\LitJsonUtil.cs" />
+    <Compile Include="App_Codes\System\MenuUtil.cs" />
+    <Compile Include="App_Codes\System\Util.cs" />
+    <Compile Include="App_Codes\System\ValidateMetaData.cs" />
     <Compile Include="App_GlobalResources\ResLang.zh.designer.cs">
       <DependentUpon>ResLang.zh.resx</DependentUpon>
       <DesignTime>True</DesignTime>

@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-/// <summary>
+﻿/// <summary>
 /// Define의 요약 설명입니다.
 /// </summary>
 public class Define
 {
-	public Define()
-	{
-		//
-		// TODO: 여기에 생성자 논리를 추가합니다.
-		//
+    public Define()
+    {
+        //
+        // TODO: 여기에 생성자 논리를 추가합니다.
+        //
     }
 
-	// 관리자 버전.
-	public const int kRev = 1;
+    // 관리자 버전.
+    public const int kRev = 1;
 
     public const int kUserType_Guest = 1;
     public const int kUserType_Facebook = 101;
