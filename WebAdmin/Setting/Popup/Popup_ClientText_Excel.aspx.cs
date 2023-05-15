@@ -56,7 +56,10 @@ public partial class Setting_Popup_Popup_ClientText_Excel : System.Web.UI.Page
         for (int i = 0; i < dtLanguage.Rows.Count; i++)
         {
             if (m_nLanguageId == Convert.ToInt32(dtLanguage.Rows[i]["languageId"]))
+            {
                 sLanguageName = dtLanguage.Rows[i]["languageName"].ToString();
+                break;
+            }
         }
 
         string sFilePath = "ClientText_" + sLanguageName + "_" + DateTimeUtil.ToDateTimeString(DateTime.Now) + ".xlsx";

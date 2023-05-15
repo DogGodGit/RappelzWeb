@@ -498,4 +498,40 @@
   <data name="MenuUtil_03_012" xml:space="preserve">
     <value>클라이언트 텍스트</value>
   </data>
+  <data name="ClientText_aspx_01" xml:space="preserve">
+    <value>---언어선택---</value>
+  </data>
+  <data name="ClientText_aspx_02" xml:space="preserve">
+    <value>엑셀로 다운로드 받으시겠습니까?</value>
+  </data>
+  <data name="ClientText_aspx_03" xml:space="preserve">
+    <value>엑셀로 데이터를 업로드 하시겠습니까?</value>
+  </data>
+  <data name="ClientText_aspx_04" xml:space="preserve">
+    <value>작업성공</value>
+  </data>
+  <data name="ClientText_aspx_05" xml:space="preserve">
+    <value>한국어 이외의 데이터가 모두 초기화됩니다.\n진행하시겠습니까?</value>
+  </data>
+  <data name="ClientText_aspx_06" xml:space="preserve">
+    <value>한국어 기준 데이터 초기화</value>
+  </data>
+  <data name="ClientText_aspx_07" xml:space="preserve">
+    <value>StandardLanguageID 를 선택해주세요</value>
+  </data>
+  <data name="ClientText_aspx_08" xml:space="preserve">
+    <value>파일을 선택해주세요.</value>
+  </data>
+  <data name="ClientText_aspx_09" xml:space="preserve">
+    <value>테이블 초기화 실패</value>
+  </data>
+  <data name="ClientText_aspx_10" xml:space="preserve">
+    <value>데이터 입력 실패</value>
+  </data>
+  <data name="ClientText_aspx_11" xml:space="preserve">
+    <value>데이터 입력 완료</value>
+  </data>
+  <data name="ClientText_aspx_12" xml:space="preserve">
+    <value>파일 형식이 올바르지 않습니다.</value>
+  </data>
 </root>

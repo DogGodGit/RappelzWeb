@@ -498,4 +498,40 @@
   <data name="MenuUtil_03_012" xml:space="preserve">
     <value>客户文本</value>
   </data>
+  <data name="ClientText_aspx_01" xml:space="preserve">
+    <value>---选择一种语言---</value>
+  </data>
+  <data name="ClientText_aspx_02" xml:space="preserve">
+    <value>在Excel中下载？</value>
+  </data>
+  <data name="ClientText_aspx_03" xml:space="preserve">
+    <value>在Excel中上传数据？</value>
+  </data>
+  <data name="ClientText_aspx_04" xml:space="preserve">
+    <value>任务成功</value>
+  </data>
+  <data name="ClientText_aspx_05" xml:space="preserve">
+    <value>所有的非英语数据将被重置。你想继续吗？</value>
+  </data>
+  <data name="ClientText_aspx_06" xml:space="preserve">
+    <value>初始化英语参考数据</value>
+  </data>
+  <data name="ClientText_aspx_07" xml:space="preserve">
+    <value>请选择一个StandardLanguageID</value>
+  </data>
+  <data name="ClientText_aspx_08" xml:space="preserve">
+    <value>选择一个文件。</value>
+  </data>
+  <data name="ClientText_aspx_09" xml:space="preserve">
+    <value>表初始化失败</value>
+  </data>
+  <data name="ClientText_aspx_10" xml:space="preserve">
+    <value>数据输入失败</value>
+  </data>
+  <data name="ClientText_aspx_11" xml:space="preserve">
+    <value>完成数据输入</value>
+  </data>
+  <data name="ClientText_aspx_12" xml:space="preserve">
+    <value>文件格式不正确</value>
+  </data>
 </root>

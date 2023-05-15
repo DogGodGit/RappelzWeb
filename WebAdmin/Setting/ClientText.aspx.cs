@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
+using System.Linq;
 
 public partial class Setting_ClientText : System.Web.UI.Page
 {
@@ -44,11 +45,11 @@ public partial class Setting_ClientText : System.Web.UI.Page
     }
     private void PageLoad()
     {
-        WBtnInit.Attributes.Add("onclick", string.Format("return confirm('{0}');", "한국어 이외의 데이터가 모두 초기화됩니다.\n진행하시겠습니까?"));
+        WBtnInit.Attributes.Add("onclick", string.Format("return confirm('{0}');", Resources.ResLang.ClientText_aspx_05));
 
         WBtnInit.Visible = false;
 
-        WBtnInit.Text = "한국어 기준 데이터 초기화";
+        WBtnInit.Text = Resources.ResLang.ClientText_aspx_06;
 
         string sMyIp = Request.UserHostAddress;
         string[] sInternalIps = Config.InternalIp.Split('|');
@@ -75,17 +76,17 @@ public partial class Setting_ClientText : System.Web.UI.Page
         DataTable dt = DacUser.ClientTextLanguageLists(conn, null);
 
         DataTable dtAll = new DataTable();
-
-        if (m_nStandardLanguageId > 0)
+        WDDLStandardLanguage.Items.Add(new ListItem(string.Format(Resources.ResLang.ClientText_aspx_01), "0"));
+        if (dt != null)
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 int nTempLanguageId = Convert.ToInt32(dt.Rows[i]["languageId"]);
-
-                if (nTempLanguageId != m_nStandardLanguageId)
+                WDDLStandardLanguage.Items.Add(new ListItem(dt.Rows[i]["languageName"].ToString(), nTempLanguageId.ToString()));
+                if (m_nStandardLanguageId > 0 && nTempLanguageId != m_nStandardLanguageId)
                 {
                     DataTable dtNewText = DacUser.ClientTextGetListForNews(conn, null, m_nStandardLanguageId, nTempLanguageId);
-
+                    dt.Rows[i]["NewTextCount"] = dtNewText.Rows.Count;
                     if (dtNewText != null && dtNewText.Rows.Count > 0)
                         dtAll.Merge(dtNewText);
                 }
@@ -94,10 +95,6 @@ public partial class Setting_ClientText : System.Web.UI.Page
 
         // DB연결해제
         DBUtil.CloseDBConn(conn);
-
-        WDDLStandardLanguage.Items.Add(new ListItem(string.Format("---언어선택---"), "0"));
-        WDDLStandardLanguage.Items.Add(new ListItem(string.Format("Korean"), "23"));
-        WDDLStandardLanguage.Items.Add(new ListItem(string.Format("English"), "11"));
 
         WDDLStandardLanguage.SelectedValue = m_nStandardLanguageId.ToString();
 
@@ -150,7 +147,7 @@ public partial class Setting_ClientText : System.Web.UI.Page
             // DB연결해제
             DBUtil.CloseDBConn(conn);
 
-            ComUtil.MsgBox("작업성공", "location.href='" + Request.Url.ToString() + "';");
+            ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_04, "location.href='" + Request.Url.ToString() + "';");
         }
         catch (Exception ex)
         {
@@ -170,8 +167,8 @@ public partial class Setting_ClientText : System.Web.UI.Page
     {
         if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item)
         {
-            ((Button)e.Item.FindControl("WBtnDownLoad")).Attributes.Add("onclick", string.Format("return confirm('{0}');", "엑셀로 다운로드 받으시겠습니까?"));
-            ((Button)e.Item.FindControl("WBtnUpload")).Attributes.Add("onclick", string.Format("return confirm('{0}');", "엑셀로 데이터를 업로드 하시겠습니까?"));
+            ((Button)e.Item.FindControl("WBtnDownLoad")).Attributes.Add("onclick", string.Format("return confirm('{0}');", Resources.ResLang.ClientText_aspx_02));
+            ((Button)e.Item.FindControl("WBtnUpload")).Attributes.Add("onclick", string.Format("return confirm('{0}');", Resources.ResLang.ClientText_aspx_03));
         }
     }
 
@@ -190,7 +187,7 @@ public partial class Setting_ClientText : System.Web.UI.Page
                     //StandardLanguageId 체크
                     if (WDDLStandardLanguage.SelectedValue == "0")
                     {
-                        ComUtil.MsgBox("StandardLanguageID 를 선택해주세요", "hitory.back();");
+                        ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_07, "hitory.back();");
                         return;
                     }
 
@@ -204,7 +201,7 @@ public partial class Setting_ClientText : System.Web.UI.Page
                     //StandardLanguageId 체크
                     if (WDDLStandardLanguage.SelectedValue == "0")
                     {
-                        ComUtil.MsgBox("StandardLanguageID 를 선택해주세요", "hitory.back();");
+                        ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_07, "hitory.back();");
                         return;
                     }
 
@@ -217,7 +214,7 @@ public partial class Setting_ClientText : System.Web.UI.Page
 
                     if (WFUUpload.PostedFile == null || WFUUpload.PostedFile.FileName == "")
                     {
-                        ComUtil.MsgBox("파일을 선택해주세요.", "hitory.back();");
+                        ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_08, "hitory.back();");
                         return;
                     }
 
@@ -229,7 +226,9 @@ public partial class Setting_ClientText : System.Web.UI.Page
                         string filename = WFUUpload.FileName;
 
                         string targetpath = Server.MapPath("~/Doc/");
-			
+
+                        if (!Directory.Exists(targetpath))
+                            Directory.CreateDirectory(targetpath);
 
                         WFUUpload.SaveAs(targetpath + filename);
 
@@ -273,13 +272,13 @@ public partial class Setting_ClientText : System.Web.UI.Page
                         if (DacUser.TruncateClientTextTemp(conn, null) != 0)
                         {
                             DBUtil.CloseDBConn(conn);
-                            ComUtil.MsgBox("테이블 초기화 실패", "history.back();");
+                            ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_09, "history.back();");
                             return;
                         }
-                        if (DacUser.SqlBulkCopy(conn, dt, "s_ClientText$") != 0)
+                        if (DacUser.SqlBulkCopy(conn, dt, "s_ClientText") != 0)
                         {
                             DBUtil.CloseDBConn(conn);
-                            ComUtil.MsgBox("데이터 입력 실패", "history.back();");
+                            ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_10, "history.back();");
                             return;
                         }
                         DBUtil.CloseDBConn(conn);
@@ -288,11 +287,11 @@ public partial class Setting_ClientText : System.Web.UI.Page
                         if (fi.Exists)
                             fi.Delete();
 
-                        ComUtil.MsgBox("데이터 입력 완료", "location.href='/Setting/ClientTextChanges.aspx?SID=" + m_nStandardLanguageId + "&LID=" + nLanguageId + "';");
+                        ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_11, "location.href='/Setting/ClientTextChanges.aspx?SID=" + m_nStandardLanguageId + "&LID=" + nLanguageId + "';");
                     }
                     else
                     {
-                        ComUtil.MsgBox("파일 형식이 올바르지 않습니다.", "history.back();");
+                        ComUtil.MsgBox(Resources.ResLang.ClientText_aspx_12, "history.back();");
                     }
 
                     break;

@@ -97,6 +97,114 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 ---언어선택--- 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_01 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 엑셀로 다운로드 받으시겠습니까? 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_02 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 엑셀로 데이터를 업로드 하시겠습니까? 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_03 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 작업성공 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_04 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 한국어 이외의 데이터가 모두 초기화됩니다.\n진행하시겠습니까? 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_05 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 한국어 기준 데이터 초기화 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_06 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 StandardLanguageID 를 선택해주세요 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_07 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 파일을 선택해주세요. 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_08 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 테이블 초기화 실패 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_09 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 데이터 입력 실패 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_10 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 데이터 입력 완료 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_11 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 파일 형식이 올바르지 않습니다. 的本地化字符串。
+        /// </summary>
+        internal static string ClientText_aspx_12 {
+            get {
+                return ResourceManager.GetString("ClientText_aspx_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 변경된 정보로 수정하시겠습니까? 的本地化字符串。
         /// </summary>
         internal static string COMMON_cfrm_01 {
