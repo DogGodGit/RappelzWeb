@@ -2,17 +2,17 @@
 <%@ MasterType VirtualPath="~/Common/Master/Main.master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <div id="CONTENT_INNER">
-	<h2>영웅관리</h2>
+	<h2><%=Resources.ResLang.HeroList_01%></h2>
 
     <p class="top_line"><br /></p>
     <table cellspacing="2" class="bbs_read">
     <tr>
         <th class="left">
-            가상서버<asp:DropDownList ID="WDDLServer" runat="server" />
+            <%=Resources.ResLang.HeroList_02%><asp:DropDownList ID="WDDLServer" runat="server" />
             &nbsp;&nbsp;&nbsp;
-            검색대상 <asp:DropDownList ID="WDDLType" runat="server" />
+            <%=Resources.ResLang.HeroList_03%><asp:DropDownList ID="WDDLType" runat="server" />
             <asp:TextBox ID="WTxtSearch" runat="server" /> 
-            <asp:Button ID="WBtnSearch" Text="검색" OnClick="WBtnSearch_OnClick" CssClass="button" runat="server" />
+            <asp:Button ID="WBtnSearch" Text="<%$ Resources:ResLang,HeroList_04 %>" OnClick="WBtnSearch_OnClick" CssClass="button" runat="server" />
             </th>
     </tr>
     </table>
@@ -22,14 +22,14 @@
     <table cellspacing="1" cellpadding="0" class="bbs_list">
     <thead>
     <tr>
-        <th>영웅ID</th>
-        <th>이름</th>
-        <th>계정ID</th>
-        <th>국가ID</th>
-        <th>직업ID</th>
-        <th>레벨</th>
-        <th>삭제여부</th>
-        <th>등록시각</th>
+        <th><%=Resources.ResLang.HeroList_tr_01%></th>
+        <th><%=Resources.ResLang.HeroList_tr_02%></th>
+        <th><%=Resources.ResLang.HeroList_tr_03%></th>
+        <th><%=Resources.ResLang.HeroList_tr_04%></th>
+        <th><%=Resources.ResLang.HeroList_tr_05%></th>
+        <th><%=Resources.ResLang.HeroList_tr_06%></th>
+        <th><%=Resources.ResLang.HeroList_tr_07%></th>
+        <th><%=Resources.ResLang.HeroList_tr_08%></th>
     </tr>
     </thead>
     <asp:Repeater ID="WRptList" runat="server">

@@ -30,36 +30,36 @@
 		}
     </script>
 
-	<h2>계정정보 ID - <asp:Literal ID="WLtlAccountId" runat="server" /></h2>
+	<h2><%=Resources.ResLang.Hero_aspx_01%> ID - <asp:Literal ID="WLtlAccountId" runat="server" /></h2>
 
 	<p class="top_line"></p>
     <table cellspacing="1" cellpadding="0" class="bbs_read">
 	<tr>
-		<th>사용자ID</th>
+		<th><%=Resources.ResLang.WLtlUserId%></th>
 		<td><asp:Literal ID="WLtlUserId" runat="server" /></td>
-		<th>가상게임서버ID</th>
+		<th><%=Resources.ResLang.WLtlVirtualGameServerId%></th>
 		<td><asp:Literal ID="WLtlVirtualGameServerId" runat="server" /></td>
-		<th>상태</th>
+		<th><%=Resources.ResLang.WLtlDeleted%></th>
 		<td><asp:Literal ID="WLtlDeleted" runat="server" /></td>
 	</tr>
 	<tr>
-		<th>기본비귀속다이아</th>
+		<th><%=Resources.ResLang.WTxtBaseUnOwnDia%></th>
 		<td><asp:TextBox ID="WTxtBaseUnOwnDia" CssClass="txtAttr" runat="server" /></td>
-		<th>보너스비귀속다이아</th>
+		<th><%=Resources.ResLang.WTxtBaseUnOwnDia%></th>
 		<td><asp:TextBox ID="WTxtBonusUnOwnDia" CssClass="txtAttr" runat="server" /></td>
-		<th>VIP포인트</th>
+		<th><%=Resources.ResLang.WTxtVipPoint%></th>
 		<td><asp:TextBox ID="WTxtVipPoint" CssClass="txtAttr" runat="server" ></asp:TextBox></td>
 	</tr>
 	<tr>
-		<th>최근로그인시각</th>
+		<th><%=Resources.ResLang.WLtlLastLoginTime%></th>
 		<td><asp:Literal ID="WLtlLastLoginTime" runat="server" /></td>
-		<th>최근로그인IP</th>
+		<th><%=Resources.ResLang.WLtlLastLoginIp%></th>
 		<td><asp:Literal ID="WLtlLastLoginIp" runat="server" /></td>
-		<th>등록시각</th>
+		<th><%=Resources.ResLang.WLtlRegTime%></th>
 		<td><asp:Literal ID="WLtlRegTime" runat="server" /></td>
 	</tr>
 	<tr>
-		<th>VIP보상내역</th>
+		<th><%=Resources.ResLang.WLtlVipReward%></th>
 		<td colspan="5">
 			<script type="text/javascript">
 				function ToggleVipReward() {
@@ -70,7 +70,7 @@
 
 				}
 			</script>
-			<input type="button" value="보기/안보기" class="button" onclick="ToggleVipReward()" />
+			<input type="button" value="<%= Resources.ResLang.btnShow%>" class="button" onclick="ToggleVipReward()" />
 			<div id="DivVipReward" style="display:none">
 			<asp:Repeater ID="WRptVipRewardList" runat="server">
 			<ItemTemplate>
@@ -81,7 +81,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th>보유계정영웅</th>
+		<th><%=Resources.ResLang.Hero_aspx_03%></th>
 		<td colspan="5">
 			<asp:Repeater ID="WRptList" runat="server">
 			<ItemTemplate>
@@ -92,19 +92,19 @@
 	</tr>
 	</table>
 	<p class="bottom_line"></p>
-	<asp:Button ID="WBtnUpdate" Text="수정" Width="100" OnClick="WBtnUpdate_OnClick" CssClass="button" runat="server" />
+	<asp:Button ID="WBtnUpdate" Text="<%$ Resources:ResLang,Hero_aspx_02 %>" Width="100" OnClick="WBtnUpdate_OnClick" CssClass="button" runat="server" />
 	<!-- -->
 	<div class="spacer"></div>
-    	<h2>계정영웅 GM 이전</h2>
+    	<h2><%=Resources.ResLang.Hero_aspx_04%></h2>
     <p class="top_line"></p>
 	<table cellspacing="1" cellpadding="0" class="bbs_read">
 	<tr>
-		<th>GM 닉네임</th>
+		<th><%=Resources.ResLang.Hero_aspx_05%></th>
 		<td><asp:TextBox ID="WTxtGMNickName" runat="server" />
-			<asp:Button ID="WBtnGMSearch" Text="찾기" OnClick="WBtnGMSearch_OnClick" runat="server" />
+			<asp:Button ID="WBtnGMSearch" Text="<%$ Resources:ResLang,WBtnGMSearch %>" OnClick="WBtnGMSearch_OnClick" runat="server" />
 			<span class="red"><asp:Literal ID="WLtlGMInfo" runat="server" /></span><asp:HiddenField ID="WHFGMAccount" runat="server" />
-			<asp:Button ID="WBtnGMTrans" Text="계정영웅 이전" OnClick="WBtnGMTrans_OnClick" CssClass="button" Visible="false" runat="server" />
-			<asp:Button ID="WBtnRecovery" Text="계정영웅 회수" OnClick="WBtnRecovery_OnClick" CssClass="button" Visible="false" runat="server" />
+			<asp:Button ID="WBtnGMTrans" Text="<%$ Resources:ResLang,WBtnGMTrans %>" OnClick="WBtnGMTrans_OnClick" CssClass="button" Visible="false" runat="server" />
+			<asp:Button ID="WBtnRecovery" Text="<%$ Resources:ResLang,WBtnRecovery %>" OnClick="WBtnRecovery_OnClick" CssClass="button" Visible="false" runat="server" />
 			</td>
 	</tr>
 	</table>
@@ -118,9 +118,9 @@
 	<table cellspacing="1" cellpadding="0" class="bbs_read">
 	<tr>
 		<td id="TdDetail">
-            <input type="button" class="btnMenu100 btnMenuSelected" value="영웅정보" onclick="displayMenu(this, '/Game/Hero/HeroInfo.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
-            <input type="button" class="btnMenu100" value="인벤토리" onclick="displayMenu(this, '/Game/Hero/Inventory.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
-            <input type="button" class="btnMenu100" value="메인퀘스트" onclick="displayMenu(this, '/Game/Hero/MainQuest.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
+            <input type="button" class="btnMenu100 btnMenuSelected" value="<%= Resources.ResLang.Hero_aspx_06 %>" onclick="displayMenu(this, '/Game/Hero/HeroInfo.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
+            <input type="button" class="btnMenu100" value="<%= Resources.ResLang.Hero_aspx_07 %>" onclick="displayMenu(this, '/Game/Hero/Inventory.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
+            <input type="button" class="btnMenu100" value="<%= Resources.ResLang.Hero_aspx_08 %>" onclick="displayMenu(this, '/Game/Hero/MainQuest.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
            <%-- <input type="button" class="btnMenu" value="스탯정보" onclick="displayMenu(this, '/Game/Hero/Stat.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
             <input type="button" class="btnMenu60" value="별자리" onclick="displayMenu(this, '/Game/Hero/Constellation.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />
             <input type="button" class="btnMenu60" value="도감" onclick="displayMenu(this, '/Game/Hero/MonsterBook.aspx?SVR=<%=m_nServerId.ToString()%>&HID=<%=m_heroId.ToString()%>');" />

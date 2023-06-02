@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <div id="CONTENT_INNER">
 
-    <h2>사용자관리</h2>
+    <h2><%=Resources.ResLang.UserList_01%></h2>
     
     <p class="top_line"><br /></p>
     <table cellspacing="2" class="bbs_read">
@@ -13,7 +13,7 @@
         <th class="right">
             <asp:Literal ID="WLtlSearchResult" runat="server" />
             <asp:TextBox ID="WTxtSearch" MaxLength="50" Columns="20" CssClass="text" runat="server" /> 
-            <asp:Button ID="WBtnSearch" Text="검색" OnClick="WBtnSearch_OnClick" CssClass="button" runat="server" /> 
+            <asp:Button ID="WBtnSearch" Text="<%$ Resources:ResLang,UserList_02 %>" OnClick="WBtnSearch_OnClick" CssClass="button" runat="server" /> 
         </th>
     </tr>
     </table>
@@ -22,13 +22,13 @@
     <table cellspacing="1" cellpadding="0" class="bbs_list">
     <thead>
     <tr>
-        <th>사용자ID</th>
-        <th>비밀키</th>
-        <th>엑세스키</th>
-        <th>인증타입</th>
-        <th>삭제여부</th>
-        <th>등록시각</th>
-        <th>엑세스토큰</th>
+        <th><%=Resources.ResLang.UserList_tr_01%></th>
+        <th><%=Resources.ResLang.UserList_tr_02%></th>
+        <th><%=Resources.ResLang.UserList_tr_03%></th>
+        <th><%=Resources.ResLang.UserList_tr_04%></th>
+        <th><%=Resources.ResLang.UserList_tr_05%></th>
+        <th><%=Resources.ResLang.UserList_tr_06%></th>
+        <th><%=Resources.ResLang.UserList_tr_07%></th>
     </tr>
     </thead>
     <asp:Repeater ID="WRptList" runat="server">
@@ -51,7 +51,7 @@
         <ucl:PageNavigator ID="WPageNavigator" Runat="server" />
     </div>
     <div class="formListRight">
-        <asp:Button ID="WBtnAdd" Text="게스트 사용자 생성" OnClick="WBtnAdd_OnClick" CssClass="button" runat="server" />
+        <asp:Button ID="WBtnAdd" Text="<%$ Resources:ResLang,UserList_03 %>" OnClick="WBtnAdd_OnClick" CssClass="button" runat="server" />
     </div>
 
 </div>

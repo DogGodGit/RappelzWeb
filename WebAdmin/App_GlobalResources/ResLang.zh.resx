@@ -534,4 +534,358 @@
   <data name="ClientText_aspx_12" xml:space="preserve">
     <value>文件格式不正确</value>
   </data>
+  <data name="btnShow" xml:space="preserve">
+    <value>显示/隐藏</value>
+  </data>
+  <data name="HeroInfo_aspx_01" xml:space="preserve">
+    <value>英雄信息</value>
+  </data>
+  <data name="HeroInfo_aspx_02" xml:space="preserve">
+    <value>工作编号</value>
+  </data>
+  <data name="HeroInfo_aspx_03" xml:space="preserve">
+    <value>国家ID</value>
+  </data>
+  <data name="HeroInfo_aspx_04" xml:space="preserve">
+    <value>命名</value>
+  </data>
+  <data name="HeroInfo_aspx_05" xml:space="preserve">
+    <value>级别</value>
+  </data>
+  <data name="HeroInfo_aspx_06" xml:space="preserve">
+    <value>经验</value>
+  </data>
+  <data name="HeroInfo_aspx_07" xml:space="preserve">
+    <value>战斗力</value>
+  </data>
+  <data name="HeroInfo_aspx_08" xml:space="preserve">
+    <value>金色</value>
+  </data>
+  <data name="HeroInfo_aspx_09" xml:space="preserve">
+    <value>一百万</value>
+  </data>
+  <data name="HeroInfo_aspx_10" xml:space="preserve">
+    <value>归属地DIA</value>
+  </data>
+  <data name="HeroInfo_aspx_11" xml:space="preserve">
+    <value>VIP积分</value>
+  </data>
+  <data name="HeroInfo_aspx_12" xml:space="preserve">
+    <value>健康</value>
+  </data>
+  <data name="HeroInfo_aspx_13" xml:space="preserve">
+    <value>功绩点</value>
+  </data>
+  <data name="HeroInfo_aspx_14" xml:space="preserve">
+    <value>翅膀</value>
+  </data>
+  <data name="HeroInfo_aspx_15" xml:space="preserve">
+    <value>翅膀步骤</value>
+  </data>
+  <data name="HeroInfo_aspx_16" xml:space="preserve">
+    <value>翅膀等级</value>
+  </data>
+  <data name="HeroInfo_aspx_17" xml:space="preserve">
+    <value>翅膀经验</value>
+  </data>
+  <data name="HeroInfo_aspx_18" xml:space="preserve">
+    <value>升级主要设备</value>
+  </data>
+  <data name="HeroInfo_aspx_19" xml:space="preserve">
+    <value>主要设备风格</value>
+  </data>
+  <data name="HeroInfo_aspx_20" xml:space="preserve">
+    <value>免费即时复活</value>
+  </data>
+  <data name="HeroInfo_aspx_21" xml:space="preserve">
+    <value>付费复活</value>
+  </data>
+  <data name="HeroInfo_aspx_22" xml:space="preserve">
+    <value>休息时间</value>
+  </data>
+  <data name="HeroInfo_aspx_23" xml:space="preserve">
+    <value>每日出勤奖励</value>
+  </data>
+  <data name="HeroInfo_aspx_24" xml:space="preserve">
+    <value>每日访问时间</value>
+  </data>
+  <data name="HeroInfo_aspx_25" xml:space="preserve">
+    <value>加固的支架</value>
+  </data>
+  <data name="HeroInfo_aspx_26" xml:space="preserve">
+    <value>使用经验药水</value>
+  </data>
+  <data name="HeroInfo_aspx_27" xml:space="preserve">
+    <value>装备</value>
+  </data>
+  <data name="HeroInfo_aspx_28" xml:space="preserve">
+    <value>使用自由洗刷</value>
+  </data>
+  <data name="HeroInfo_aspx_29" xml:space="preserve">
+    <value>主要任务编号</value>
+  </data>
+  <data name="HeroInfo_aspx_30" xml:space="preserve">
+    <value>购买的库存槽数量</value>
+  </data>
+  <data name="HeroInfo_aspx_31" xml:space="preserve">
+    <value>主要装备（武器）</value>
+  </data>
+  <data name="HeroInfo_aspx_32" xml:space="preserve">
+    <value>主要装备（盔甲）</value>
+  </data>
+  <data name="HeroInfo_aspx_33" xml:space="preserve">
+    <value>名称教程</value>
+  </data>
+  <data name="HeroInfo_aspx_34" xml:space="preserve">
+    <value>最后登录</value>
+  </data>
+  <data name="HeroInfo_aspx_35" xml:space="preserve">
+    <value>最后一次登出</value>
+  </data>
+  <data name="HeroInfo_aspx_36" xml:space="preserve">
+    <value>状况</value>
+  </data>
+  <data name="HeroInfo_aspx_37" xml:space="preserve">
+    <value>注册时间</value>
+  </data>
+  <data name="HeroInfo_aspx_38" xml:space="preserve">
+    <value>GM是否</value>
+  </data>
+  <data name="HeroInfo_aspx_39" xml:space="preserve">
+    <value>累计购买Dia</value>
+  </data>
+  <data name="HeroInfo_aspx_40" xml:space="preserve">
+    <value>累计消费量 dia</value>
+  </data>
+  <data name="HeroInfo_aspx_41" xml:space="preserve">
+    <value>连续登录</value>
+  </data>
+  <data name="HeroInfo_aspx_42" xml:space="preserve">
+    <value>占用的层级名称</value>
+  </data>
+  <data name="HeroInfo_aspx_43" xml:space="preserve">
+    <value>职业层级</value>
+  </data>
+  <data name="HeroInfo_aspx_44" xml:space="preserve">
+    <value>职业层级经验</value>
+  </data>
+  <data name="HeroInfo_aspx_45" xml:space="preserve">
+    <value>星号</value>
+  </data>
+  <data name="HeroInfo_aspx_46" xml:space="preserve">
+    <value>灵魂之尘</value>
+  </data>
+  <data name="HeroInfo_aspx_47" xml:space="preserve">
+    <value>购买的仓库槽位数量</value>
+  </data>
+  <data name="HeroInfo_aspx_48" xml:space="preserve">
+    <value>机翼名称</value>
+  </data>
+  <data name="HeroInfo_aspx_49" xml:space="preserve">
+    <value>缘由</value>
+  </data>
+  <data name="HeroInfo_aspx_50" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="HeroInfo_aspx_51" xml:space="preserve">
+    <value>处理历史</value>
+  </data>
+  <data name="HeroList_01" xml:space="preserve">
+    <value>英雄管理</value>
+  </data>
+  <data name="HeroList_02" xml:space="preserve">
+    <value>虚拟服务器</value>
+  </data>
+  <data name="HeroList_03" xml:space="preserve">
+    <value>搜索方式</value>
+  </data>
+  <data name="HeroList_04" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="HeroList_05" xml:space="preserve">
+    <value>英雄名字</value>
+  </data>
+  <data name="HeroList_06" xml:space="preserve">
+    <value>英雄ID</value>
+  </data>
+  <data name="HeroList_07" xml:space="preserve">
+    <value>=选择一个虚拟服务器=</value>
+  </data>
+  <data name="HeroList_08" xml:space="preserve">
+    <value>已删除</value>
+  </data>
+  <data name="HeroList_tr_01" xml:space="preserve">
+    <value>英雄ID</value>
+  </data>
+  <data name="HeroList_tr_02" xml:space="preserve">
+    <value>命名</value>
+  </data>
+  <data name="HeroList_tr_03" xml:space="preserve">
+    <value>帐户ID</value>
+  </data>
+  <data name="HeroList_tr_04" xml:space="preserve">
+    <value>国家ID</value>
+  </data>
+  <data name="HeroList_tr_05" xml:space="preserve">
+    <value>工作编号</value>
+  </data>
+  <data name="HeroList_tr_06" xml:space="preserve">
+    <value>级别</value>
+  </data>
+  <data name="HeroList_tr_07" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="HeroList_tr_08" xml:space="preserve">
+    <value>注册时间</value>
+  </data>
+  <data name="Hero_aspx_01" xml:space="preserve">
+    <value>账户信息</value>
+  </data>
+  <data name="Hero_aspx_02" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="Hero_aspx_03" xml:space="preserve">
+    <value>帐户英雄</value>
+  </data>
+  <data name="Hero_aspx_04" xml:space="preserve">
+    <value>转移一个英雄GM</value>
+  </data>
+  <data name="Hero_aspx_05" xml:space="preserve">
+    <value>GM 昵称</value>
+  </data>
+  <data name="Hero_aspx_06" xml:space="preserve">
+    <value>英雄信息</value>
+  </data>
+  <data name="Hero_aspx_07" xml:space="preserve">
+    <value>库存</value>
+  </data>
+  <data name="Hero_aspx_08" xml:space="preserve">
+    <value>主要任务</value>
+  </data>
+  <data name="Login_05" xml:space="preserve">
+    <value>请输入你的用户名。</value>
+  </data>
+  <data name="Login_06" xml:space="preserve">
+    <value>请输入您的密码。</value>
+  </data>
+  <data name="Login_07" xml:space="preserve">
+    <value>无效的用户名或密码。</value>
+  </data>
+  <data name="MenuUtil_05" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="MenuUtil_05_001" xml:space="preserve">
+    <value>付款方式</value>
+  </data>
+  <data name="UserList_01" xml:space="preserve">
+    <value>管理用户</value>
+  </data>
+  <data name="UserList_02" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="UserList_03" xml:space="preserve">
+    <value>创建一个访客用户</value>
+  </data>
+  <data name="UserList_04" xml:space="preserve">
+    <value>注册一个用户？</value>
+  </data>
+  <data name="UserList_05" xml:space="preserve">
+    <value>用户ID [{0}] 搜索结果：{1}结果</value>
+  </data>
+  <data name="UserList_06" xml:space="preserve">
+    <value>最初</value>
+  </data>
+  <data name="UserList_07" xml:space="preserve">
+    <value>以前的</value>
+  </data>
+  <data name="UserList_08" xml:space="preserve">
+    <value>下一页</value>
+  </data>
+  <data name="UserList_09" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="UserList_10" xml:space="preserve">
+    <value>创建的账户\\n{0}</value>
+  </data>
+  <data name="UserList_11" xml:space="preserve">
+    <value>访客</value>
+  </data>
+  <data name="UserList_12" xml:space="preserve">
+    <value>脸书</value>
+  </data>
+  <data name="UserList_13" xml:space="preserve">
+    <value>谷歌</value>
+  </data>
+  <data name="UserList_14" xml:space="preserve">
+    <value>企业</value>
+  </data>
+  <data name="UserList_15" xml:space="preserve">
+    <value>无效</value>
+  </data>
+  <data name="UserList_16" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UserList_17" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="UserList_tr_01" xml:space="preserve">
+    <value>用户ID</value>
+  </data>
+  <data name="UserList_tr_02" xml:space="preserve">
+    <value>秘钥</value>
+  </data>
+  <data name="UserList_tr_03" xml:space="preserve">
+    <value>安全秘钥</value>
+  </data>
+  <data name="UserList_tr_04" xml:space="preserve">
+    <value>认证类型</value>
+  </data>
+  <data name="UserList_tr_05" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UserList_tr_06" xml:space="preserve">
+    <value>注册时间</value>
+  </data>
+  <data name="UserList_tr_07" xml:space="preserve">
+    <value>访问令牌</value>
+  </data>
+  <data name="WBtnGMSearch" xml:space="preserve">
+    <value>查找</value>
+  </data>
+  <data name="WBtnGMTrans" xml:space="preserve">
+    <value>转移账户英雄</value>
+  </data>
+  <data name="WBtnRecovery" xml:space="preserve">
+    <value>检索账户英雄</value>
+  </data>
+  <data name="WLtlDeleted" xml:space="preserve">
+    <value>状况</value>
+  </data>
+  <data name="WLtlLastLoginIp" xml:space="preserve">
+    <value>最近登录的IP</value>
+  </data>
+  <data name="WLtlLastLoginTime" xml:space="preserve">
+    <value>最后一次登录时间</value>
+  </data>
+  <data name="WLtlRegTime" xml:space="preserve">
+    <value>注册时间</value>
+  </data>
+  <data name="WLtlUserId" xml:space="preserve">
+    <value>用户ID</value>
+  </data>
+  <data name="WLtlVipReward" xml:space="preserve">
+    <value>VIP奖励</value>
+  </data>
+  <data name="WLtlVirtualGameServerId" xml:space="preserve">
+    <value>虚拟游戏服务器ID</value>
+  </data>
+  <data name="WTxtBaseUnOwnDia" xml:space="preserve">
+    <value>默认未归属日期</value>
+  </data>
+  <data name="WTxtBonusUnOwnDia" xml:space="preserve">
+    <value>非归属地奖金</value>
+  </data>
+  <data name="WTxtVipPoint" xml:space="preserve">
+    <value>VIP积分</value>
+  </data>
 </root>

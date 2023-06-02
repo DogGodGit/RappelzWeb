@@ -4,6 +4,7 @@ using System.Web;
 
 /// <summary>
 /// MenuUtil의 요약 설명입니다.
+/// MenuUtil的摘要描述。
 /// </summary>
 public class MenuUtil
 {
@@ -11,8 +12,9 @@ public class MenuUtil
 
 	public MenuUtil()
 	{
-		//
-		// TODO: 여기에 생성자 논리를 추가합니다.
+        //
+        // TODO: 여기에 생성자 논리를 추가합니다.
+        // 在这里添加你的构造器逻辑。
 		//
 	}
 
@@ -25,18 +27,20 @@ public class MenuUtil
 
 		Menu menu;
 
-		// 관리형 메뉴
-		menu = new Menu("ManageMenu");
+        // 관리형 메뉴
+        // 管理的菜单
+        menu = new Menu("ManageMenu");
 		menu.AddSubMenu(new SubMenu("Default", "/Default.aspx", 0, false));
 		menu.AddSubMenu(new SubMenu("AccountHero", "/Game/AccountHero.aspx", 5, false));
 		menu.AddSubMenu(new SubMenu("Sub_MenuSetting", "/Game/Sub_MenuSetting.aspx", 5, false));
 		m_menus.Add(menu);
 
-		// 디스플레이형 메뉴
-		menu = new Menu(Resources.ResLang.MenuUtil_01);	//사용자
-        menu.AddSubMenu(new SubMenu(Resources.ResLang.MenuUtil_01_001, "/User/UserList.aspx", 5));	//사용자
-        //menu.AddSubMenu(new SubMenu("사용자 제재", "/User/UserBlock.aspx", 5));	//사용자 차단
-		m_menus.Add(menu);
+        // 디스플레이형 메뉴
+        // 显示的菜单
+        menu = new Menu(Resources.ResLang.MenuUtil_01);	//사용자 用户
+        menu.AddSubMenu(new SubMenu(Resources.ResLang.MenuUtil_01_001, "/User/UserList.aspx", 5));  //사용자 用户
+        //menu.AddSubMenu(new SubMenu("사용자 제재", "/User/UserBlock.aspx", 5));	//사용자 차단 封锁用户
+        m_menus.Add(menu);
 
 		menu = new Menu(Resources.ResLang.MenuUtil_02);	//게임
 		menu.AddSubMenu(new SubMenu(Resources.ResLang.MenuUtil_02_001, "/Game/HeroList.aspx", 5));	//영웅
@@ -70,8 +74,8 @@ public class MenuUtil
 		menu = new Menu(Resources.ResLang.MenuUtil_04);	//도구
 		menu.AddSubMenu(new SubMenu(Resources.ResLang.MenuUtil_04_001, "/Tools/ClientTextView.aspx", 5));	//클라이언트 텍스트 확인
 
-        menu = new Menu("Logs");
-        menu.AddSubMenu(new SubMenu("결제로그", "/Log/PurchaseAllLog.aspx", 5));//로그
+        menu = new Menu(Resources.ResLang.MenuUtil_05);
+        menu.AddSubMenu(new SubMenu(Resources.ResLang.MenuUtil_05_001, "/Log/PurchaseAllLog.aspx", 5));//로그
 
         m_menus.Add(menu);
 
@@ -82,8 +86,9 @@ public class MenuUtil
 	{
 		int nAuthority = ComUtil.GetAuthority();
 
-		// 관리자는 모든 권한
-		if (nAuthority == 9)
+        // 관리자는 모든 권한
+        // 管理员可以完全访问
+        if (nAuthority == 9)
 			return true;
 
 		GetMenu();
@@ -124,19 +129,11 @@ public class SubMenu
 	public int m_nRequiredAuthority;
 	public bool m_display;
 
-	public SubMenu(string sName, string sUrl, int nAuthority, bool display)
+	public SubMenu(string sName, string sUrl, int nAuthority, bool display = true)
 	{
 		m_sName = sName;
-		m_sUrl = string.Format("http://{0}{1}", Define.S_HOST, sUrl);
+		m_sUrl = string.Format("http://{0}{1}", string.IsNullOrEmpty(Define.S_HOST) ? HttpContext.Current.Request.Url.Authority : Define.S_HOST, sUrl);
 		m_nRequiredAuthority = nAuthority;
 		m_display = display;
-	}
-
-	public SubMenu(string sName, string sUrl, int nAuthority)
-	{
-		m_sName = sName;
-		m_sUrl = string.Format("http://{0}{1}", Define.S_HOST, sUrl);
-		m_nRequiredAuthority = nAuthority;
-		m_display = true;
 	}
 }

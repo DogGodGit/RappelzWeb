@@ -534,4 +534,358 @@
   <data name="ClientText_aspx_12" xml:space="preserve">
     <value>파일 형식이 올바르지 않습니다.</value>
   </data>
+  <data name="btnShow" xml:space="preserve">
+    <value>보기/안보기</value>
+  </data>
+  <data name="HeroInfo_aspx_01" xml:space="preserve">
+    <value>영웅정보</value>
+  </data>
+  <data name="HeroInfo_aspx_02" xml:space="preserve">
+    <value>직업ID</value>
+  </data>
+  <data name="HeroInfo_aspx_03" xml:space="preserve">
+    <value>국가ID</value>
+  </data>
+  <data name="HeroInfo_aspx_04" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="HeroInfo_aspx_05" xml:space="preserve">
+    <value>레벨</value>
+  </data>
+  <data name="HeroInfo_aspx_06" xml:space="preserve">
+    <value>경험치</value>
+  </data>
+  <data name="HeroInfo_aspx_07" xml:space="preserve">
+    <value>전투력</value>
+  </data>
+  <data name="HeroInfo_aspx_08" xml:space="preserve">
+    <value>골드</value>
+  </data>
+  <data name="HeroInfo_aspx_09" xml:space="preserve">
+    <value>라크</value>
+  </data>
+  <data name="HeroInfo_aspx_10" xml:space="preserve">
+    <value>귀속다이아</value>
+  </data>
+  <data name="HeroInfo_aspx_11" xml:space="preserve">
+    <value>VIP포인트</value>
+  </data>
+  <data name="HeroInfo_aspx_12" xml:space="preserve">
+    <value>체력</value>
+  </data>
+  <data name="HeroInfo_aspx_13" xml:space="preserve">
+    <value>공적점수</value>
+  </data>
+  <data name="HeroInfo_aspx_14" xml:space="preserve">
+    <value>착용날개</value>
+  </data>
+  <data name="HeroInfo_aspx_15" xml:space="preserve">
+    <value>날개단계</value>
+  </data>
+  <data name="HeroInfo_aspx_16" xml:space="preserve">
+    <value>날개레벨</value>
+  </data>
+  <data name="HeroInfo_aspx_17" xml:space="preserve">
+    <value>날개경험치</value>
+  </data>
+  <data name="HeroInfo_aspx_18" xml:space="preserve">
+    <value>메인장비강화</value>
+  </data>
+  <data name="HeroInfo_aspx_19" xml:space="preserve">
+    <value>메인장비세련</value>
+  </data>
+  <data name="HeroInfo_aspx_20" xml:space="preserve">
+    <value>무료즉시부활</value>
+  </data>
+  <data name="HeroInfo_aspx_21" xml:space="preserve">
+    <value>유료부활</value>
+  </data>
+  <data name="HeroInfo_aspx_22" xml:space="preserve">
+    <value>휴식시간</value>
+  </data>
+  <data name="HeroInfo_aspx_23" xml:space="preserve">
+    <value>일일출석보상</value>
+  </data>
+  <data name="HeroInfo_aspx_24" xml:space="preserve">
+    <value>일일접속시간</value>
+  </data>
+  <data name="HeroInfo_aspx_25" xml:space="preserve">
+    <value>탈것장비재강화</value>
+  </data>
+  <data name="HeroInfo_aspx_26" xml:space="preserve">
+    <value>경험치물약사용</value>
+  </data>
+  <data name="HeroInfo_aspx_27" xml:space="preserve">
+    <value>착용탈것</value>
+  </data>
+  <data name="HeroInfo_aspx_28" xml:space="preserve">
+    <value>무료소탕사용</value>
+  </data>
+  <data name="HeroInfo_aspx_29" xml:space="preserve">
+    <value>메인퀘스트 번호</value>
+  </data>
+  <data name="HeroInfo_aspx_30" xml:space="preserve">
+    <value>구입인벤토리슬롯수</value>
+  </data>
+  <data name="HeroInfo_aspx_31" xml:space="preserve">
+    <value>메인장비(무기)</value>
+  </data>
+  <data name="HeroInfo_aspx_32" xml:space="preserve">
+    <value>메인장비(방어구)</value>
+  </data>
+  <data name="HeroInfo_aspx_33" xml:space="preserve">
+    <value>이름튜토리얼</value>
+  </data>
+  <data name="HeroInfo_aspx_34" xml:space="preserve">
+    <value>마지막로그인</value>
+  </data>
+  <data name="HeroInfo_aspx_35" xml:space="preserve">
+    <value>마지막로그아웃</value>
+  </data>
+  <data name="HeroInfo_aspx_36" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="HeroInfo_aspx_37" xml:space="preserve">
+    <value>등록시각</value>
+  </data>
+  <data name="HeroInfo_aspx_38" xml:space="preserve">
+    <value>GM여부</value>
+  </data>
+  <data name="HeroInfo_aspx_39" xml:space="preserve">
+    <value>누적구매다이아</value>
+  </data>
+  <data name="HeroInfo_aspx_40" xml:space="preserve">
+    <value>누적소비다이아</value>
+  </data>
+  <data name="HeroInfo_aspx_41" xml:space="preserve">
+    <value>연속로그인</value>
+  </data>
+  <data name="HeroInfo_aspx_42" xml:space="preserve">
+    <value>점령티어이름</value>
+  </data>
+  <data name="HeroInfo_aspx_43" xml:space="preserve">
+    <value>점령티어 레벨</value>
+  </data>
+  <data name="HeroInfo_aspx_44" xml:space="preserve">
+    <value>점령티어 경험치</value>
+  </data>
+  <data name="HeroInfo_aspx_45" xml:space="preserve">
+    <value>별의정수</value>
+  </data>
+  <data name="HeroInfo_aspx_46" xml:space="preserve">
+    <value>영혼가루</value>
+  </data>
+  <data name="HeroInfo_aspx_47" xml:space="preserve">
+    <value>구입한 창고 슬롯수</value>
+  </data>
+  <data name="HeroInfo_aspx_48" xml:space="preserve">
+    <value>날개명칭</value>
+  </data>
+  <data name="HeroInfo_aspx_49" xml:space="preserve">
+    <value>사유</value>
+  </data>
+  <data name="HeroInfo_aspx_50" xml:space="preserve">
+    <value>수정</value>
+  </data>
+  <data name="HeroInfo_aspx_51" xml:space="preserve">
+    <value>처리내역</value>
+  </data>
+  <data name="HeroList_01" xml:space="preserve">
+    <value>영웅관리</value>
+  </data>
+  <data name="HeroList_02" xml:space="preserve">
+    <value>가상서버</value>
+  </data>
+  <data name="HeroList_03" xml:space="preserve">
+    <value>검색대상</value>
+  </data>
+  <data name="HeroList_04" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="HeroList_05" xml:space="preserve">
+    <value>영웅이름</value>
+  </data>
+  <data name="HeroList_06" xml:space="preserve">
+    <value>영웅ID</value>
+  </data>
+  <data name="HeroList_07" xml:space="preserve">
+    <value>=가상서버선택=</value>
+  </data>
+  <data name="HeroList_08" xml:space="preserve">
+    <value>삭제됨</value>
+  </data>
+  <data name="HeroList_tr_01" xml:space="preserve">
+    <value>영웅ID</value>
+  </data>
+  <data name="HeroList_tr_02" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="HeroList_tr_03" xml:space="preserve">
+    <value>계정ID</value>
+  </data>
+  <data name="HeroList_tr_04" xml:space="preserve">
+    <value>국가ID</value>
+  </data>
+  <data name="HeroList_tr_05" xml:space="preserve">
+    <value>직업ID</value>
+  </data>
+  <data name="HeroList_tr_06" xml:space="preserve">
+    <value>레벨</value>
+  </data>
+  <data name="HeroList_tr_07" xml:space="preserve">
+    <value>삭제여부</value>
+  </data>
+  <data name="HeroList_tr_08" xml:space="preserve">
+    <value>등록시각</value>
+  </data>
+  <data name="Hero_aspx_01" xml:space="preserve">
+    <value>계정정보</value>
+  </data>
+  <data name="Hero_aspx_02" xml:space="preserve">
+    <value>수정</value>
+  </data>
+  <data name="Hero_aspx_03" xml:space="preserve">
+    <value>보유계정영웅</value>
+  </data>
+  <data name="Hero_aspx_04" xml:space="preserve">
+    <value>계정영웅 GM 이전</value>
+  </data>
+  <data name="Hero_aspx_05" xml:space="preserve">
+    <value>GM 닉네임</value>
+  </data>
+  <data name="Hero_aspx_06" xml:space="preserve">
+    <value>영웅정보</value>
+  </data>
+  <data name="Hero_aspx_07" xml:space="preserve">
+    <value>인벤토리</value>
+  </data>
+  <data name="Hero_aspx_08" xml:space="preserve">
+    <value>메인퀘스트</value>
+  </data>
+  <data name="Login_05" xml:space="preserve">
+    <value>아이디를 입력해주세요.</value>
+  </data>
+  <data name="Login_06" xml:space="preserve">
+    <value>비밀번호를 입력해주세요.</value>
+  </data>
+  <data name="Login_07" xml:space="preserve">
+    <value>아이디 또는 비밀번호가 올바르지 않습니다.</value>
+  </data>
+  <data name="MenuUtil_05" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="MenuUtil_05_001" xml:space="preserve">
+    <value>결제로그</value>
+  </data>
+  <data name="UserList_01" xml:space="preserve">
+    <value>사용자관리</value>
+  </data>
+  <data name="UserList_02" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="UserList_03" xml:space="preserve">
+    <value>게스트 사용자 생성</value>
+  </data>
+  <data name="UserList_04" xml:space="preserve">
+    <value>사용자를 등록하시겠습니까?</value>
+  </data>
+  <data name="UserList_05" xml:space="preserve">
+    <value>사용자ID [{0}] 검색결과 : {1}건</value>
+  </data>
+  <data name="UserList_06" xml:space="preserve">
+    <value>처음</value>
+  </data>
+  <data name="UserList_07" xml:space="preserve">
+    <value>이전</value>
+  </data>
+  <data name="UserList_08" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="UserList_09" xml:space="preserve">
+    <value>끝</value>
+  </data>
+  <data name="UserList_10" xml:space="preserve">
+    <value>계정생성완료\\n{0}</value>
+  </data>
+  <data name="UserList_11" xml:space="preserve">
+    <value>게스트</value>
+  </data>
+  <data name="UserList_12" xml:space="preserve">
+    <value>페이스북</value>
+  </data>
+  <data name="UserList_13" xml:space="preserve">
+    <value>구글</value>
+  </data>
+  <data name="UserList_14" xml:space="preserve">
+    <value>엔터메이트</value>
+  </data>
+  <data name="UserList_15" xml:space="preserve">
+    <value>유효하지않음</value>
+  </data>
+  <data name="UserList_16" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="UserList_17" xml:space="preserve">
+    <value>정상</value>
+  </data>
+  <data name="UserList_tr_01" xml:space="preserve">
+    <value>사용자ID</value>
+  </data>
+  <data name="UserList_tr_02" xml:space="preserve">
+    <value>비밀키</value>
+  </data>
+  <data name="UserList_tr_03" xml:space="preserve">
+    <value>엑세스키</value>
+  </data>
+  <data name="UserList_tr_04" xml:space="preserve">
+    <value>인증타입</value>
+  </data>
+  <data name="UserList_tr_05" xml:space="preserve">
+    <value>삭제여부</value>
+  </data>
+  <data name="UserList_tr_06" xml:space="preserve">
+    <value>등록시각</value>
+  </data>
+  <data name="UserList_tr_07" xml:space="preserve">
+    <value>엑세스토큰</value>
+  </data>
+  <data name="WBtnGMSearch" xml:space="preserve">
+    <value>찾기</value>
+  </data>
+  <data name="WBtnGMTrans" xml:space="preserve">
+    <value>계정영웅 이전</value>
+  </data>
+  <data name="WBtnRecovery" xml:space="preserve">
+    <value>계정영웅 회수</value>
+  </data>
+  <data name="WLtlDeleted" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="WLtlLastLoginIp" xml:space="preserve">
+    <value>최근로그인IP</value>
+  </data>
+  <data name="WLtlLastLoginTime" xml:space="preserve">
+    <value>최근로그인시각</value>
+  </data>
+  <data name="WLtlRegTime" xml:space="preserve">
+    <value>등록시각</value>
+  </data>
+  <data name="WLtlUserId" xml:space="preserve">
+    <value>사용자ID</value>
+  </data>
+  <data name="WLtlVipReward" xml:space="preserve">
+    <value>VIP보상내역</value>
+  </data>
+  <data name="WLtlVirtualGameServerId" xml:space="preserve">
+    <value>가상게임서버ID</value>
+  </data>
+  <data name="WTxtBaseUnOwnDia" xml:space="preserve">
+    <value>기본비귀속다이아</value>
+  </data>
+  <data name="WTxtBonusUnOwnDia" xml:space="preserve">
+    <value>보너스비귀속다이아</value>
+  </data>
+  <data name="WTxtVipPoint" xml:space="preserve">
+    <value>VIP포인트</value>
+  </data>
 </root>

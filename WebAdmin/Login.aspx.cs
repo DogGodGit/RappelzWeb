@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Resources;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
@@ -13,9 +14,10 @@ public partial class Login : System.Web.UI.Page
     {
         //======================================================================
         //브라우저 캐쉬 제거
+        //清除浏览器缓存
         //======================================================================
         ComUtil.SetNoBrowserCache();
-        CultureInfo ciLang = new CultureInfo(Config.Languages); //코드언어 넣기 
+        CultureInfo ciLang = new CultureInfo(Config.Languages);
         Resources.ResLang.Culture = ciLang;
 
         if (IsPostBack)
@@ -50,13 +52,13 @@ public partial class Login : System.Web.UI.Page
 
             if (sId == "")
             {
-                ComUtil.MsgBox("아이디를 입력해주세요.", "history.back();");
+                ComUtil.MsgBox(ResLang.Login_05, "history.back();");
                 return;
             }
 
             if (sPwd == "")
             {
-                ComUtil.MsgBox("비밀번호를 입력해주세요.", "history.back();");
+                ComUtil.MsgBox(ResLang.Login_06, "history.back();");
                 return;
             }
 
@@ -64,7 +66,7 @@ public partial class Login : System.Web.UI.Page
 
 			if (nAuthority < 0)
             {
-                ComUtil.MsgBox("아이디 또는 비밀번호가 올바르지 않습니다.", "history.back();");
+                ComUtil.MsgBox(ResLang.Login_07, "history.back();");
                 return;
             }
 
@@ -72,8 +74,8 @@ public partial class Login : System.Web.UI.Page
             // Make Login Cookies
             //======================================================================
             HttpCookie hcZeno = new HttpCookie("MNGR");
-            //hcZeno.Path = "/";
-            //hcZeno.Domain = Define.S_HOST;
+            hcZeno.Path = "/";
+            hcZeno.Domain = Define.S_HOST;
 
             string sFId = ComUtil.GetHashValue(sId, "E", "1125");
             string sSId = ComUtil.GetHashValue(sId, "E", "5511");

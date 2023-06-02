@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Resources;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -43,7 +44,7 @@ public partial class User_UserList : System.Web.UI.Page
         // 언어
         WTxtSearch.Text = sUserId;
 
-        WBtnAdd.Attributes.Add("onclick", "return confirm('사용자를 등록하시겠습니까?');");
+        WBtnAdd.Attributes.Add("onclick", $"return confirm('{ResLang.UserList_04}');");
 
         SqlConnection conn = DBUtil.GetUserDBConn();
         DataTable dt = DacUser.GetUserList(conn, null, sUserId, N_PG_MX, nPage, out nTotCnt);
@@ -54,7 +55,7 @@ public partial class User_UserList : System.Web.UI.Page
         WRptList.Dispose();
 
         if (sUserId != "")
-            WLtlSearchResult.Text = String.Format("사용자ID [{0}] 검색결과 : {1}건", sUserId, nTotCnt);
+            WLtlSearchResult.Text = string.Format(ResLang.UserList_05, sUserId, nTotCnt);
 
         nTotPage = (nTotCnt - 1) / N_PG_MX + 1;
 
@@ -68,11 +69,11 @@ public partial class User_UserList : System.Web.UI.Page
         WPageNavigator.CurrentPage = nPage;
         WPageNavigator.UrlParam = String.Format("UID={0}", sUserId);
         WPageNavigator.PageListSize = N_PG_SZ;
-        WPageNavigator.FirstPageItem = "처음";
-        WPageNavigator.PrevPageItem = "이전";
+        WPageNavigator.FirstPageItem = ResLang.UserList_06;
+        WPageNavigator.PrevPageItem = ResLang.UserList_07;
         WPageNavigator.SeparateItem = " &nbsp;|&nbsp; ";
-        WPageNavigator.NextPageItem = "다음";
-        WPageNavigator.LastPageItem = "끝";
+        WPageNavigator.NextPageItem = ResLang.UserList_08;
+        WPageNavigator.LastPageItem = ResLang.UserList_09;
         WPageNavigator.SNumberDecoLeft = "<span>";
         WPageNavigator.SNumberDecoRight = "</span>";
         WPageNavigator.Dispose();
@@ -109,7 +110,7 @@ public partial class User_UserList : System.Web.UI.Page
                 else
                 {
                     DBUtil.CloseDBConn(conn);
-                    ComUtil.MsgBox(String.Format("계정생성완료\\n{0}", uidNewUserId), "location.href='/User/UserList.aspx';");
+                    ComUtil.MsgBox(String.Format(ResLang.UserList_10, uidNewUserId), "location.href='/User/UserList.aspx';");
                     return;
                 }
             DBUtil.CloseDBConn(conn);
@@ -133,15 +134,15 @@ public partial class User_UserList : System.Web.UI.Page
             case "type":
                 switch (Convert.ToInt32(ComUtil.GetDataItem(objData, sFieldNm)))
                 {
-                    case Define.kUserType_Guest: sRtn = "게스트";
+                    case Define.kUserType_Guest: sRtn = ResLang.UserList_11;
                         break;
-                    case Define.kUserType_Facebook: sRtn = "페이스북";
+                    case Define.kUserType_Facebook: sRtn = ResLang.UserList_12;
                         break;
-                    case Define.kUserType_Google: sRtn = "구글";
+                    case Define.kUserType_Google: sRtn = ResLang.UserList_13;
                         break;
-                    case Define.kUserType_Entermate: sRtn = "엔터메이트";
+                    case Define.kUserType_Entermate: sRtn = ResLang.UserList_14;
                         break;
-                    default: sRtn = "유효하지않음";
+                    default: sRtn = ResLang.UserList_15;
                         break;
                 }
                 break;
@@ -150,9 +151,9 @@ public partial class User_UserList : System.Web.UI.Page
                 break;
             case "deleted":
                 if (Boolean.Parse(ComUtil.GetDataItem(objData, sFieldNm)))
-                    sRtn = "삭제";
+                    sRtn = ResLang.UserList_16;
                 else
-                    sRtn = "정상";
+                    sRtn = ResLang.UserList_17;
                 break;
 			case "accessToken":
 				UserAccessToken token = new UserAccessToken(Guid.Parse(ComUtil.GetDataItem(objData, "userId")), ComUtil.GetDataItem(objData, "accessSecret"), UserAccessToken.GetCheckCode(Guid.Parse(ComUtil.GetDataItem(objData, "userId")), ComUtil.GetDataItem(objData, "accessSecret")));

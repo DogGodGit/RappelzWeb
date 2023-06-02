@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 보기/안보기 的本地化字符串。
+        /// </summary>
+        internal static string btnShow {
+            get {
+                return ResourceManager.GetString("btnShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 ---언어선택--- 的本地化字符串。
         /// </summary>
         internal static string ClientText_aspx_01 {
@@ -970,6 +979,681 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 영웅정보 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_01 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 직업ID 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_02 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 국가ID 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_03 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 이름 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_04 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 레벨 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_05 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 경험치 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_06 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 전투력 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_07 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 골드 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_08 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 라크 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_09 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 귀속다이아 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_10 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 VIP포인트 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_11 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 체력 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_12 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 공적점수 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_13 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 착용날개 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_14 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 날개단계 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_15 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 날개레벨 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_16 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 날개경험치 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_17 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 메인장비강화 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_18 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 메인장비세련 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_19 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 무료즉시부활 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_20 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_20", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 유료부활 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_21 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_21", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 휴식시간 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_22 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_22", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 일일출석보상 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_23 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_23", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 일일접속시간 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_24 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_24", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 탈것장비재강화 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_25 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_25", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 경험치물약사용 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_26 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_26", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 착용탈것 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_27 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_27", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 무료소탕사용 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_28 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_28", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 메인퀘스트 번호 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_29 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_29", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 구입인벤토리슬롯수 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_30 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 메인장비(무기) 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_31 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_31", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 메인장비(방어구) 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_32 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 이름튜토리얼 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_33 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_33", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 마지막로그인 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_34 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_34", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 마지막로그아웃 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_35 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 상태 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_36 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_36", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 등록시각 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_37 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_37", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 GM여부 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_38 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_38", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 누적구매다이아 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_39 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_39", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 누적소비다이아 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_40 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_40", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 연속로그인 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_41 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_41", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 점령티어이름 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_42 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_42", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 점령티어 레벨 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_43 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_43", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 점령티어 경험치 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_44 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_44", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 별의정수 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_45 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_45", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 영혼가루 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_46 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_46", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 구입한 창고 슬롯수 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_47 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_47", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 날개명칭 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_48 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_48", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 사유 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_49 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_49", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 수정 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_50 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_50", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 처리내역 的本地化字符串。
+        /// </summary>
+        internal static string HeroInfo_aspx_51 {
+            get {
+                return ResourceManager.GetString("HeroInfo_aspx_51", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 영웅관리 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_01 {
+            get {
+                return ResourceManager.GetString("HeroList_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 가상서버 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_02 {
+            get {
+                return ResourceManager.GetString("HeroList_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 검색대상 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_03 {
+            get {
+                return ResourceManager.GetString("HeroList_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 검색 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_04 {
+            get {
+                return ResourceManager.GetString("HeroList_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 영웅이름 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_05 {
+            get {
+                return ResourceManager.GetString("HeroList_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 영웅ID 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_06 {
+            get {
+                return ResourceManager.GetString("HeroList_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 =가상서버선택= 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_07 {
+            get {
+                return ResourceManager.GetString("HeroList_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 삭제됨 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_08 {
+            get {
+                return ResourceManager.GetString("HeroList_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 영웅ID 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_01 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 이름 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_02 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 계정ID 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_03 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 국가ID 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_04 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 직업ID 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_05 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 레벨 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_06 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 삭제여부 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_07 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 등록시각 的本地化字符串。
+        /// </summary>
+        internal static string HeroList_tr_08 {
+            get {
+                return ResourceManager.GetString("HeroList_tr_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 계정정보 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_01 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 수정 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_02 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 보유계정영웅 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_03 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 계정영웅 GM 이전 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_04 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 GM 닉네임 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_05 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 영웅정보 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_06 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 인벤토리 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_07 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 메인퀘스트 的本地化字符串。
+        /// </summary>
+        internal static string Hero_aspx_08 {
+            get {
+                return ResourceManager.GetString("Hero_aspx_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 개발자 전용입니다. 的本地化字符串。
         /// </summary>
         internal static string Login_01 {
@@ -1002,6 +1686,33 @@ namespace Resources {
         internal static string Login_04 {
             get {
                 return ResourceManager.GetString("Login_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 아이디를 입력해주세요. 的本地化字符串。
+        /// </summary>
+        internal static string Login_05 {
+            get {
+                return ResourceManager.GetString("Login_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 비밀번호를 입력해주세요. 的本地化字符串。
+        /// </summary>
+        internal static string Login_06 {
+            get {
+                return ResourceManager.GetString("Login_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 아이디 또는 비밀번호가 올바르지 않습니다. 的本地化字符串。
+        /// </summary>
+        internal static string Login_07 {
+            get {
+                return ResourceManager.GetString("Login_07", resourceCulture);
             }
         }
         
@@ -1267,6 +1978,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 Logs 的本地化字符串。
+        /// </summary>
+        internal static string MenuUtil_05 {
+            get {
+                return ResourceManager.GetString("MenuUtil_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 결제로그 的本地化字符串。
+        /// </summary>
+        internal static string MenuUtil_05_001 {
+            get {
+                return ResourceManager.GetString("MenuUtil_05_001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 쿠폰 번호 전체 확인 的本地化字符串。
         /// </summary>
         internal static string PopupCoupon_aspx_txt_01 {
@@ -1308,6 +2037,339 @@ namespace Resources {
         internal static string UserControl_TopMenu_001 {
             get {
                 return ResourceManager.GetString("UserControl_TopMenu_001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 사용자관리 的本地化字符串。
+        /// </summary>
+        internal static string UserList_01 {
+            get {
+                return ResourceManager.GetString("UserList_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 검색 的本地化字符串。
+        /// </summary>
+        internal static string UserList_02 {
+            get {
+                return ResourceManager.GetString("UserList_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 게스트 사용자 생성 的本地化字符串。
+        /// </summary>
+        internal static string UserList_03 {
+            get {
+                return ResourceManager.GetString("UserList_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 사용자를 등록하시겠습니까? 的本地化字符串。
+        /// </summary>
+        internal static string UserList_04 {
+            get {
+                return ResourceManager.GetString("UserList_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 사용자ID [{0}] 검색결과 : {1}건 的本地化字符串。
+        /// </summary>
+        internal static string UserList_05 {
+            get {
+                return ResourceManager.GetString("UserList_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 처음 的本地化字符串。
+        /// </summary>
+        internal static string UserList_06 {
+            get {
+                return ResourceManager.GetString("UserList_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 이전 的本地化字符串。
+        /// </summary>
+        internal static string UserList_07 {
+            get {
+                return ResourceManager.GetString("UserList_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 다음 的本地化字符串。
+        /// </summary>
+        internal static string UserList_08 {
+            get {
+                return ResourceManager.GetString("UserList_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 끝 的本地化字符串。
+        /// </summary>
+        internal static string UserList_09 {
+            get {
+                return ResourceManager.GetString("UserList_09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 계정생성완료\\n{0} 的本地化字符串。
+        /// </summary>
+        internal static string UserList_10 {
+            get {
+                return ResourceManager.GetString("UserList_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 게스트 的本地化字符串。
+        /// </summary>
+        internal static string UserList_11 {
+            get {
+                return ResourceManager.GetString("UserList_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 페이스북 的本地化字符串。
+        /// </summary>
+        internal static string UserList_12 {
+            get {
+                return ResourceManager.GetString("UserList_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 구글 的本地化字符串。
+        /// </summary>
+        internal static string UserList_13 {
+            get {
+                return ResourceManager.GetString("UserList_13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 엔터메이트 的本地化字符串。
+        /// </summary>
+        internal static string UserList_14 {
+            get {
+                return ResourceManager.GetString("UserList_14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 유효하지않음 的本地化字符串。
+        /// </summary>
+        internal static string UserList_15 {
+            get {
+                return ResourceManager.GetString("UserList_15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 삭제 的本地化字符串。
+        /// </summary>
+        internal static string UserList_16 {
+            get {
+                return ResourceManager.GetString("UserList_16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 정상 的本地化字符串。
+        /// </summary>
+        internal static string UserList_17 {
+            get {
+                return ResourceManager.GetString("UserList_17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 사용자ID 的本地化字符串。
+        /// </summary>
+        internal static string UserList_tr_01 {
+            get {
+                return ResourceManager.GetString("UserList_tr_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 비밀키 的本地化字符串。
+        /// </summary>
+        internal static string UserList_tr_02 {
+            get {
+                return ResourceManager.GetString("UserList_tr_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 엑세스키 的本地化字符串。
+        /// </summary>
+        internal static string UserList_tr_03 {
+            get {
+                return ResourceManager.GetString("UserList_tr_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 인증타입 的本地化字符串。
+        /// </summary>
+        internal static string UserList_tr_04 {
+            get {
+                return ResourceManager.GetString("UserList_tr_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 삭제여부 的本地化字符串。
+        /// </summary>
+        internal static string UserList_tr_05 {
+            get {
+                return ResourceManager.GetString("UserList_tr_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 등록시각 的本地化字符串。
+        /// </summary>
+        internal static string UserList_tr_06 {
+            get {
+                return ResourceManager.GetString("UserList_tr_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 엑세스토큰 的本地化字符串。
+        /// </summary>
+        internal static string UserList_tr_07 {
+            get {
+                return ResourceManager.GetString("UserList_tr_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 찾기 的本地化字符串。
+        /// </summary>
+        internal static string WBtnGMSearch {
+            get {
+                return ResourceManager.GetString("WBtnGMSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 계정영웅 이전 的本地化字符串。
+        /// </summary>
+        internal static string WBtnGMTrans {
+            get {
+                return ResourceManager.GetString("WBtnGMTrans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 계정영웅 회수 的本地化字符串。
+        /// </summary>
+        internal static string WBtnRecovery {
+            get {
+                return ResourceManager.GetString("WBtnRecovery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 상태 的本地化字符串。
+        /// </summary>
+        internal static string WLtlDeleted {
+            get {
+                return ResourceManager.GetString("WLtlDeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 최근로그인IP 的本地化字符串。
+        /// </summary>
+        internal static string WLtlLastLoginIp {
+            get {
+                return ResourceManager.GetString("WLtlLastLoginIp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 최근로그인시각 的本地化字符串。
+        /// </summary>
+        internal static string WLtlLastLoginTime {
+            get {
+                return ResourceManager.GetString("WLtlLastLoginTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 등록시각 的本地化字符串。
+        /// </summary>
+        internal static string WLtlRegTime {
+            get {
+                return ResourceManager.GetString("WLtlRegTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 사용자ID 的本地化字符串。
+        /// </summary>
+        internal static string WLtlUserId {
+            get {
+                return ResourceManager.GetString("WLtlUserId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 VIP보상내역 的本地化字符串。
+        /// </summary>
+        internal static string WLtlVipReward {
+            get {
+                return ResourceManager.GetString("WLtlVipReward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 가상게임서버ID 的本地化字符串。
+        /// </summary>
+        internal static string WLtlVirtualGameServerId {
+            get {
+                return ResourceManager.GetString("WLtlVirtualGameServerId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 기본비귀속다이아 的本地化字符串。
+        /// </summary>
+        internal static string WTxtBaseUnOwnDia {
+            get {
+                return ResourceManager.GetString("WTxtBaseUnOwnDia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 보너스비귀속다이아 的本地化字符串。
+        /// </summary>
+        internal static string WTxtBonusUnOwnDia {
+            get {
+                return ResourceManager.GetString("WTxtBonusUnOwnDia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 VIP포인트 的本地化字符串。
+        /// </summary>
+        internal static string WTxtVipPoint {
+            get {
+                return ResourceManager.GetString("WTxtVipPoint", resourceCulture);
             }
         }
     }
