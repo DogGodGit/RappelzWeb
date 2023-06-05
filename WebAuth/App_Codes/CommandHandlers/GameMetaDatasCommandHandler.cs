@@ -9,6 +9,7 @@ using System.Data;
 using System.IO;
 using WebCommon;
 using System.Configuration;
+using System.Text;
 
 /// <summary>
 /// GameMetaDatasCommandHandler의 요약 설명입니다.
@@ -81,9 +82,8 @@ public class GameMetaDatasCommandHandler : CommandHandler
 					if (p != null)
 					{
 						var s = p.GetValue(m_gameData);
-						string json = JsonMapper.ToJson(s);
-
-						joRes[tojson] = JsonMapper.ToObject(json);
+						var d = DBUtil.ObjectToTable(s);
+						joRes[tojson] = DataTableToCsv(d);
 					}
 				}
 			}
@@ -101,6 +101,29 @@ public class GameMetaDatasCommandHandler : CommandHandler
 		finally
 		{
 
+        }
+	}
+
+	public string DataTableToCsv(DataTable vContent)
+	{
+		StringBuilder sCsvContent;
+
+		sCsvContent = new StringBuilder();
+
+		for (int i = 0; i < vContent.Columns.Count; i++)
+		{
+			sCsvContent.Append(vContent.Columns[i].ColumnName);
+			sCsvContent.Append(i == vContent.Columns.Count - 1 ? "\r\n" : ",");
 		}
+
+		foreach (DataRow row in vContent.Rows)
+		{
+			for (int i = 0; i < vContent.Columns.Count; i++)
+			{
+				sCsvContent.Append(row[i].ToString().Trim());
+				sCsvContent.Append(i == vContent.Columns.Count - 1 ? "\r\n" : ",");
+			}
+		}
+		return sCsvContent.ToString();
 	}
 }

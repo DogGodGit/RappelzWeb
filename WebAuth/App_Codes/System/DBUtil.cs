@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 
 /// <summary>
@@ -12,76 +13,150 @@ using System.Web;
 /// </summary>
 public static class DBUtil
 {
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Static member functions
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Static member functions
 
-	public static void Close(ref SqlConnection conn)
-	{
-		if (conn == null)
-			return;
+    public static void Close(ref SqlConnection conn)
+    {
+        if (conn == null)
+            return;
 
-		conn.Close();
-		conn = null;
-	}
+        conn.Close();
+        conn = null;
+    }
 
-	public static void Commit(ref SqlTransaction trans)
-	{
-		if (trans == null)
-			return;
+    public static void Commit(ref SqlTransaction trans)
+    {
+        if (trans == null)
+            return;
 
-		trans.Commit();
-		trans = null;
-	}
+        trans.Commit();
+        trans = null;
+    }
 
-	public static SqlConnection GetConnection(ConnectionStringSettings settings)
-	{
-		if (settings == null)
-			return null;
+    public static SqlConnection GetConnection(ConnectionStringSettings settings)
+    {
+        if (settings == null)
+            return null;
 
-		return new SqlConnection(settings.ConnectionString);
-	}
+        return new SqlConnection(settings.ConnectionString);
+    }
 
-	public static SqlConnection GetUserConnection()
-	{
-		return GetConnection(Config.rappelzUserConnectionString);
-	}
+    public static SqlConnection GetUserConnection()
+    {
+        return GetConnection(Config.rappelzUserConnectionString);
+    }
 
-	public static SqlConnection GetGameDBConn(string sConnectionString)
-	{
-		return new SqlConnection(sConnectionString);
-	}
+    public static SqlConnection GetGameDBConn(string sConnectionString)
+    {
+        return new SqlConnection(sConnectionString);
+    }
 
-	public static void Rollback(ref SqlTransaction trans)
-	{
-		if (trans == null)
-			return;
+    public static void Rollback(ref SqlTransaction trans)
+    {
+        if (trans == null)
+            return;
 
-		trans.Rollback();
-		trans = null;
-	}
+        trans.Rollback();
+        trans = null;
+    }
 
-	public static string EscapeSingleQuote(string sValue)
-	{
-		return sValue == null ? null : sValue.Replace("'", "''");
-	}
+    public static string EscapeSingleQuote(string sValue)
+    {
+        return sValue == null ? null : sValue.Replace("'", "''");
+    }
 
-	public static object NullToDBNull(object value)
-	{
-		return value == null ? DBNull.Value : value;
-	}
+    public static object NullToDBNull(object value)
+    {
+        return value == null ? DBNull.Value : value;
+    }
 
-	//
-	// DB 데이터 캐스팅 함수
-	// DBNull인 경우 기본값을 반환한다.
-	//
+    //
+    // DB 데이터 캐스팅 함수
+    // DBNull인 경우 기본값을 반환한다.
+    //
 
-	public static T Convert<T>(object value)
-	{
-		return Convert<T>(value, default(T));
-	}
+    public static T Convert<T>(object value)
+    {
+        return Convert<T>(value, default(T));
+    }
 
-	public static T Convert<T>(object value, T valueForDBNull)
-	{
-		return value == DBNull.Value ? valueForDBNull : (T)value;
-	}
+    public static T Convert<T>(object value, T valueForDBNull)
+    {
+        return value == DBNull.Value ? valueForDBNull : (T)value;
+    }
+
+    public static DataTable ObjectToTable(object obj)
+    {
+        try
+        {
+            Type t;
+            if (obj.GetType().IsGenericType)
+            {
+                t = obj.GetType().GetGenericTypeDefinition();
+            }
+            else
+            {
+                t = obj.GetType();
+            }
+            if (t == typeof(List<>) ||
+                t == typeof(IEnumerable<>))
+            {
+                DataTable dt = new DataTable();
+                IEnumerable<object> lstenum = obj as IEnumerable<object>;
+                if (lstenum.Count() > 0)
+                {
+                    var ob1 = lstenum.GetEnumerator();
+                    ob1.MoveNext();
+                    foreach (var item in ob1.Current.GetType().GetProperties())
+                    {
+                        dt.Columns.Add(new DataColumn() { ColumnName = item.Name });
+                    }
+                    //数据
+                    foreach (var item in lstenum)
+                    {
+                        DataRow row = dt.NewRow();
+                        foreach (var sub in item.GetType().GetProperties())
+                        {
+                            row[sub.Name] = sub.GetValue(item, null);
+                        }
+                        dt.Rows.Add(row);
+                    }
+                    return dt;
+                }
+            }
+            else if (t == typeof(DataTable))
+            {
+                return (DataTable)obj;
+            }
+            else   //(t==typeof(Object))
+            {
+                DataTable dt = new DataTable();
+                DataRow row = dt.NewRow();
+                const BindingFlags InstanceBindFlags = BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public;
+                foreach (var item in obj.GetType().GetFields())
+                {
+                    dt.Columns.Add(new DataColumn() { ColumnName = item.Name });
+
+                    Type type = obj.GetType();
+                    string propertyName = item.Name;
+                    FieldInfo property = null;
+
+                    property = type.GetField(propertyName, InstanceBindFlags);
+                    if (property != null)
+                    {
+                        row[item.Name] = property.GetValue(obj);
+                    }
+                }
+                dt.Rows.Add(row);
+
+                return dt;
+            }
+
+        }
+        catch (Exception ex)
+        {
+        }
+        return null;
+    }
 }
