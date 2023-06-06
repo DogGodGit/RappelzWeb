@@ -888,4 +888,64 @@
   <data name="WTxtVipPoint" xml:space="preserve">
     <value>VIP포인트</value>
   </data>
+  <data name="SystemSetting_aspx_01" xml:space="preserve">
+    <value>변경된 정보로 수정합니다.\n진행하시겠습니까?</value>
+  </data>
+  <data name="SystemSetting_aspx_02" xml:space="preserve">
+    <value>==서버선택==</value>
+  </data>
+  <data name="SystemSetting_aspx_03" xml:space="preserve">
+    <value>최저접속유저수</value>
+  </data>
+  <data name="SystemSetting_aspx_04" xml:space="preserve">
+    <value>빈 데이터가 존재합니다. 확인해주세요.</value>
+  </data>
+  <data name="SystemSetting_aspx_05" xml:space="preserve">
+    <value>로깅을 하려면 로깅URL을 입력해주세요.</value>
+  </data>
+  <data name="SystemSetting_aspx_06" xml:space="preserve">
+    <value>수정내용이 적용되었습니다.</value>
+  </data>
+  <data name="SystemSetting_aspx_07" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="SystemSetting_aspx_08" xml:space="preserve">
+    <value>예외.</value>
+  </data>
+  <data name="SystemSetting_aspx_09" xml:space="preserve">
+    <value>시스템 관리</value>
+  </data>
+  <data name="SystemSetting_aspx_10" xml:space="preserve">
+    <value>이름키</value>
+  </data>
+  <data name="SystemSetting_aspx_11" xml:space="preserve">
+    <value>값</value>
+  </data>
+  <data name="SystemSetting_aspx_12" xml:space="preserve">
+    <value>* 업데이트시 서버에 메타데이터 파일이 생성됩니다.</value>
+  </data>
+  <data name="SystemSetting_aspx_13" xml:space="preserve">
+    <value>* 업데이트시 서버에 메타데이터 파일이 생성됩니다.</value>
+  </data>
+  <data name="SystemSetting_aspx_14" xml:space="preserve">
+    <value>* 공개 상태의 서버만 추천서버에 적용 가능합니다.</value>
+  </data>
+  <data name="SystemSetting_aspx_15" xml:space="preserve">
+    <value>점검중</value>
+  </data>
+  <data name="SystemSetting_aspx_16" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="SystemSetting_aspx_17" xml:space="preserve">
+    <value>* 0 이하 : 무제한</value>
+  </data>
+  <data name="SystemSetting_aspx_18" xml:space="preserve">
+    <value>SDK사용</value>
+  </data>
+  <data name="SystemSetting_aspx_19" xml:space="preserve">
+    <value>웹뷰사용</value>
+  </data>
+  <data name="SystemSetting_aspx_20" xml:space="preserve">
+    <value>수정</value>
+  </data>
 </root>

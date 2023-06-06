@@ -3,21 +3,24 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using LitJson;
+using Resources;
 
 public partial class Setting_SystemSetting : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-		//======================================================================
-		//브라우저 캐쉬 제거
-		//======================================================================
-		ComUtil.SetNoBrowserCache();
+        //======================================================================
+        //브라우저 캐쉬 제거
+        //清除浏览器缓存
+        //======================================================================
+        ComUtil.SetNoBrowserCache();
 
-		//======================================================================
-		// 파라미터
-		//======================================================================
+        //======================================================================
+        // 파라미터
+        // 参数
+        //======================================================================
 
-		if (IsPostBack)
+        if (IsPostBack)
 			return;
 		try
 		{
@@ -32,17 +35,19 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
 
 	private void PageLoad()
 	{
-		// 버튼 속성 추가
-		WBtnUpdate.Attributes.Add("onclick", "return confirm('변경된 정보로 수정합니다.\\n진행하시겠습니까?');");
+        // 버튼 속성 추가
+        // 添加按钮属性
+        WBtnUpdate.Attributes.Add("onclick", $"return confirm('{ResLang.SystemSetting_aspx_01}');");
 
 		SqlConnection conn = DBUtil.GetUserDBConn();
 		DataRow drSetting = DacUser.SystemSetting(conn, null);
 		DataTable dtGameServers = DacUser.GameServerAll(conn, null);
 		DataTable dtLanguages = DacUser.Languages(conn, null);
 		DBUtil.CloseDBConn(conn);
-		
-		//기존 시스템세팅 적용
-		WTxtAssetBundleUrl.Text = drSetting["assetBundleUrl"].ToString();
+
+        //기존 시스템세팅 적용
+        //应用现有的系统设置
+        WTxtAssetBundleUrl.Text = drSetting["assetBundleUrl"].ToString();
 		WTxtTermsOfServiceUrl.Text = drSetting["termsOfServiceUrl"].ToString();
 		WTxtPrivacyPolicyUrl.Text = drSetting["privacyPolicyUrl"].ToString();
 		WTxtClientVersion.Text = drSetting["clientVersion"].ToString();
@@ -69,8 +74,9 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
         WTxtAuthUrl.Text = drSetting["authUrl"].ToString();
         WTxtCsUrl.Text = drSetting["csUrl"].ToString();
         WTxtHomepageUrl.Text = drSetting["homepageUrl"].ToString();
-		// 추천 게임서버 
-		WDDLRecommendGameServer.Items.Add(new ListItem("==서버선택==", "0"));
+        // 추천 게임서버 
+        // 推荐的游戏服务器 
+        WDDLRecommendGameServer.Items.Add(new ListItem(ResLang.SystemSetting_aspx_02, "0"));
 
 		for (int i = 0; i < dtGameServers.Rows.Count; i++)
 		{
@@ -79,8 +85,9 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
 		}
 		WDDLRecommendGameServer.SelectedValue = drSetting["recommendGameServerId"].ToString();
 
-		// 자동추천 조건 타입
-		WDDLRecommendType.Items.Add(new ListItem("최저접속유저수", "1"));
+        // 자동추천 조건 타입
+        // 自动转介条件类型
+        WDDLRecommendType.Items.Add(new ListItem(ResLang.SystemSetting_aspx_03, "1"));
 
 		for (int i = 0; i < dtLanguages.Rows.Count; i++)
 		{
@@ -130,18 +137,19 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
             string sCsUrl = WTxtCsUrl.Text.Trim();
             string sHomepageUrl = WTxtHomepageUrl.Text.Trim();
 
-			//공백체크
-			if (sAssetBundleUrl == "" || sTermsOfServiceUrl == "" || sPrivacyPolicyUrl == "" || sClientVersion == "" || nClientTextVersion.ToString() == "" ||
+            //공백체크
+            //空间检查
+            if (sAssetBundleUrl == "" || sTermsOfServiceUrl == "" || sPrivacyPolicyUrl == "" || sClientVersion == "" || nClientTextVersion.ToString() == "" ||
 				nMetaDataVersion.ToString() == "" || nRecommendGameServerId.ToString() == "" || sAuthApiUrl == "" || sHeroNameRegex == "" || sGuildNameRegex == "" ||
 				sMaintenanceInfoUrl == "")
 			{
-				ComUtil.MsgBox("빈 데이터가 존재합니다. 확인해주세요.");
+				ComUtil.MsgBox(ResLang.SystemSetting_aspx_04);
 				return;
 			}
 
 			if (loggingEnabled && sLoggingUrl == "")
 			{
-				ComUtil.MsgBox("로깅을 하려면 로깅URL을 입력해주세요.");
+				ComUtil.MsgBox(ResLang.SystemSetting_aspx_05);
 				return;
 			}
 
@@ -149,8 +157,9 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
 			string sRtn = "";
 			int nResult = 0;
 
-			//텍스트 파일생성
-			if (nClientTextVersion != nOldClientTextVersion)
+            //텍스트 파일생성
+            //创建一个文本文件
+            if (nClientTextVersion != nOldClientTextVersion)
 			{
 				sReqJson = CreateRequest_ClientTextMetaDataCreate(nClientTextVersion.ToString());
 
@@ -172,8 +181,9 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
 				}
 			}
 
-			//메타 파일생성
-			if (nMetaDataVersion != nOldMetaDataVersion)
+            //메타 파일생성
+            //创建一个元文件
+            if (nMetaDataVersion != nOldMetaDataVersion)
 			{
 				sReqJson = CreateRequest_GameMetaDataCreate(nMetaDataVersion.ToString());
 
@@ -195,8 +205,9 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
 				}
 			}
 
-			//DB연결
-			SqlConnection conn = DBUtil.GetUserDBConn();
+            //DB연결
+            //DB连接
+            SqlConnection conn = DBUtil.GetUserDBConn();
 
 			int nRet = DacUser.UpdateSystemSetting(conn, null, sAssetBundleUrl, sTermsOfServiceUrl, sPrivacyPolicyUrl, sClientVersion, nClientTextVersion, nMetaDataVersion, isMaintenance, sMaintenanceInfoUrl,
                 nRecommendGameServerId, sAuthApiUrl, sLoggingUrl, sStatusLoggingUrl, loggingEnabled, sHeroNameRegex, sGuildNameRegex, nDefaultLanguageId, recommendServerAuto, nRecommendServerConditionType, nMaxUserConnectionCount, nStatusLoggingInterval,
@@ -206,15 +217,15 @@ public partial class Setting_SystemSetting : System.Web.UI.Page
 
 			switch (nRet)
 			{
-				case 0: ComUtil.MsgBox("수정내용이 적용되었습니다.", "location.href='" + Request.Url.ToString() + "';");
+				case 0: ComUtil.MsgBox(ResLang.SystemSetting_aspx_06, "location.href='" + Request.Url.ToString() + "';");
 					break;
-				default: ComUtil.MsgBox("실패", "history.back();");
+				default: ComUtil.MsgBox(ResLang.SystemSetting_aspx_07, "history.back();");
 					break;
 			}
 		}
 		catch(Exception ex)
 		{
-			ComUtil.MsgBox("예외.(" + ex.Message + ")");
+			ComUtil.MsgBox(ResLang.SystemSetting_aspx_08 + "(" + ex.Message + ")");
 		}
 	}
 

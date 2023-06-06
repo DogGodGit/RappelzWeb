@@ -2032,6 +2032,186 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 변경된 정보로 수정합니다.\n진행하시겠습니까? 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_01 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 ==서버선택== 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_02 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 최저접속유저수 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_03 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 빈 데이터가 존재합니다. 확인해주세요. 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_04 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 로깅을 하려면 로깅URL을 입력해주세요. 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_05 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 수정내용이 적용되었습니다. 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_06 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 실패 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_07 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 예외. 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_08 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 시스템 관리 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_09 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 이름키 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_10 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 값 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_11 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 * 업데이트시 서버에 메타데이터 파일이 생성됩니다. 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_12 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 * 업데이트시 서버에 메타데이터 파일이 생성됩니다. 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_13 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 * 공개 상태의 서버만 추천서버에 적용 가능합니다. 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_14 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 점검중 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_15 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 자동 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_16 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 * 0 이하 : 무제한 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_17 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 SDK사용 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_18 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 웹뷰사용 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_19 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 수정 的本地化字符串。
+        /// </summary>
+        internal static string SystemSetting_aspx_20 {
+            get {
+                return ResourceManager.GetString("SystemSetting_aspx_20", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 로그아웃 的本地化字符串。
         /// </summary>
         internal static string UserControl_TopMenu_001 {

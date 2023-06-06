@@ -888,4 +888,64 @@
   <data name="WTxtVipPoint" xml:space="preserve">
     <value>VIP积分</value>
   </data>
+  <data name="SystemSetting_aspx_01" xml:space="preserve">
+    <value>用修改后的信息进行修改。\n你确定你要继续吗？</value>
+  </data>
+  <data name="SystemSetting_aspx_02" xml:space="preserve">
+    <value>==选择服务器==</value>
+  </data>
+  <data name="SystemSetting_aspx_03" xml:space="preserve">
+    <value>最小连接数</value>
+  </data>
+  <data name="SystemSetting_aspx_04" xml:space="preserve">
+    <value>存在空数据。请检查。</value>
+  </data>
+  <data name="SystemSetting_aspx_05" xml:space="preserve">
+    <value>要启用日志记录，请输入日志记录的URL。</value>
+  </data>
+  <data name="SystemSetting_aspx_06" xml:space="preserve">
+    <value>该修改已被应用。</value>
+  </data>
+  <data name="SystemSetting_aspx_07" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="SystemSetting_aspx_08" xml:space="preserve">
+    <value>例外。</value>
+  </data>
+  <data name="SystemSetting_aspx_09" xml:space="preserve">
+    <value>系统管理</value>
+  </data>
+  <data name="SystemSetting_aspx_10" xml:space="preserve">
+    <value>键名</value>
+  </data>
+  <data name="SystemSetting_aspx_11" xml:space="preserve">
+    <value>键值</value>
+  </data>
+  <data name="SystemSetting_aspx_12" xml:space="preserve">
+    <value>* 更新在服务器上创建一个元数据文件。</value>
+  </data>
+  <data name="SystemSetting_aspx_13" xml:space="preserve">
+    <value>* 更新在服务器上创建一个元数据文件。</value>
+  </data>
+  <data name="SystemSetting_aspx_14" xml:space="preserve">
+    <value>* 只有具有公共身份的服务器才有资格被推荐。</value>
+  </data>
+  <data name="SystemSetting_aspx_15" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="SystemSetting_aspx_16" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="SystemSetting_aspx_17" xml:space="preserve">
+    <value>* 0或以下：无限制</value>
+  </data>
+  <data name="SystemSetting_aspx_18" xml:space="preserve">
+    <value>使用SDK</value>
+  </data>
+  <data name="SystemSetting_aspx_19" xml:space="preserve">
+    <value>使用WebView</value>
+  </data>
+  <data name="SystemSetting_aspx_20" xml:space="preserve">
+    <value>修改</value>
+  </data>
 </root>

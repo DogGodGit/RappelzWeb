@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using LitJson;
+using System.Web.UI.WebControls;
 
 public partial class Setting_GameServerList : System.Web.UI.Page
 {
@@ -45,7 +40,6 @@ public partial class Setting_GameServerList : System.Web.UI.Page
 
     private void PageLoad()
     {
-
         WBtnAdd.Text = "등록";
         WBtnVAdd.Text = "등록";
         WBtnAdd.Attributes.Add("onclick", string.Format("return confirm('{0}');", Resources.ResLang.GAMESLIST_cs_cfrm_01));
@@ -68,7 +62,6 @@ public partial class Setting_GameServerList : System.Web.UI.Page
         for (int i = 0; i < dtGroup.Rows.Count; i++)
         {
             WDDLSGroup.Items.Add(new ListItem(dtGroup.Rows[i]["_name"].ToString(), dtGroup.Rows[i]["groupId"].ToString()));
-
         }
 
         WDDLSGroup.SelectedValue = m_nGameServerGroupId.ToString();
@@ -78,7 +71,6 @@ public partial class Setting_GameServerList : System.Web.UI.Page
 
         WRptVList.DataSource = dtV;
         WRptVList.DataBind();
-
     }
 
     protected void WRptList_OnItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -102,18 +94,17 @@ public partial class Setting_GameServerList : System.Web.UI.Page
             WDDLIsNew.Items.FindByValue("1").Text = "활성화";
 
             DropDownList WDDLMaintenance = (DropDownList)e.Item.FindControl("WDDLMaintenance");
-            WDDLMaintenance.SelectedValue = (Convert.ToBoolean(ComUtil.GetDataItem(e.Item.DataItem, "isMaintenance"))) ? "1" : "0";
+            WDDLMaintenance.SelectedValue = ComUtil.GetDataItem(e.Item.DataItem, "isMaintenance") == "1" ? "1" : "0";
             WDDLMaintenance.Items.FindByValue("0").Text = Resources.ResLang.GAMESLIST_aspx_txt_03;
             WDDLMaintenance.Items.FindByValue("1").Text = Resources.ResLang.GAMESLIST_aspx_txt_04;
 
             DropDownList WDDLPublic = (DropDownList)e.Item.FindControl("WDDLPublic");
-            WDDLPublic.SelectedValue = (Convert.ToBoolean(ComUtil.GetDataItem(e.Item.DataItem, "isPublic"))) ? "1" : "0";
+            WDDLPublic.SelectedValue = ComUtil.GetDataItem(e.Item.DataItem, "isPublic") == "1" ? "1" : "0";
             WDDLPublic.Items.FindByValue("0").Text = "비공개";
             WDDLPublic.Items.FindByValue("1").Text = "공개";
 
-
             CheckBox WCBoxRecommendable = (CheckBox)e.Item.FindControl("WCBoxRecommendable");
-            WCBoxRecommendable.Checked = (Convert.ToBoolean(ComUtil.GetDataItem(e.Item.DataItem, "recommendable")));
+            WCBoxRecommendable.Checked = ComUtil.GetDataItem(e.Item.DataItem, "recommendable") == "1";
             if (!Convert.ToBoolean(ComUtil.GetDataItem(e.Item.DataItem, "deleted")))
             {
                 ((Button)e.Item.FindControl("WBtnGameServerUpdate")).Attributes.Add("onclick", "return confirm('수정하시겠습니까?');");
@@ -125,7 +116,6 @@ public partial class Setting_GameServerList : System.Web.UI.Page
                 ((Button)e.Item.FindControl("WBtnGameServerDel")).Visible = false;
                 ((Literal)e.Item.FindControl("WLtlDeleted")).Text = "<span class=\"red\">삭제됨</span>";
             }
-
         }
     }
 
@@ -155,11 +145,12 @@ public partial class Setting_GameServerList : System.Web.UI.Page
                     bool bIsPublic = (((DropDownList)e.Item.FindControl("WDDLPublic")).SelectedValue == "0") ? false : true;
                     bool recommendable = ((CheckBox)e.Item.FindControl("WCBoxRecommendable")).Checked;
                     string sGameDBConnection = ((TextBox)e.Item.FindControl("WTxtGameServerDBConn")).Text.Trim();
-				    string sGameLogDBConnection = ((TextBox)e.Item.FindControl("WTxtGameLogServerDBConn")).Text.Trim();
+                    string sGameLogDBConnection = ((TextBox)e.Item.FindControl("WTxtGameLogServerDBConn")).Text.Trim();
 
                     nRet = DacUser.UpdateGameServer(conn, null, nServerId, sApiUrl, sGameServerIp, nGameServerPort, sGameDBConnection, sGameLogDBConnection, nStatus, bIsNew, bIsMaintenance, recommendable, bIsPublic);
 
                     break;
+
                 case "delete":
                     if (nRecommendGameServerId == nServerId)
                     {
@@ -170,6 +161,7 @@ public partial class Setting_GameServerList : System.Web.UI.Page
 
                     nRet = DacUser.DeleteGameServer(conn, null, nServerId);
                     break;
+
                 default:
                     nRet = 2;
                     break;
@@ -182,9 +174,11 @@ public partial class Setting_GameServerList : System.Web.UI.Page
                 case 0:
                     ComUtil.MsgBox(Resources.ResLang.ACCHRE_cs_mbox_02, "location.href='" + Request.Url.ToString() + "';");
                     break;
+
                 case 1:
                     ComUtil.MsgBox(Resources.ResLang.SENDMAIL_cs_mbox_03, "history.back();");
                     break;
+
                 default:
                     ComUtil.MsgBox(Resources.ResLang.COMMON_mbox_01, "history.back();");
                     break;
@@ -201,7 +195,6 @@ public partial class Setting_GameServerList : System.Web.UI.Page
 
     protected void WRptVList_OnItemDataBound(object sender, RepeaterItemEventArgs e)
     {
-
         if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item)
         {
             Button btnUpdate = (Button)e.Item.FindControl("WBtnUpdate");
@@ -232,9 +225,11 @@ public partial class Setting_GameServerList : System.Web.UI.Page
                     string sDisplayName = ((TextBox)e.Item.FindControl("WTxtName")).Text.Trim();
                     nRet = DacUser.UpdateVirtualGameServer(conn, null, nVirtualGameServerId, nGameServerId, sDisplayName, nDisplayNo);
                     break;
+
                 case "delete":
                     nRet = DacUser.DeleteVirtualGameServer(conn, null, nVirtualGameServerId);
                     break;
+
                 default:
                     nRet = 2;
                     break;
@@ -247,9 +242,11 @@ public partial class Setting_GameServerList : System.Web.UI.Page
                 case 0:
                     ComUtil.MsgBox("성공", "location.href='" + Request.Url.ToString() + "';");
                     break;
+
                 case 1:
                     ComUtil.MsgBox("실패", "history.back();");
                     break;
+
                 default:
                     ComUtil.MsgBox("예외", "history.back();");
                     break;
@@ -286,9 +283,11 @@ public partial class Setting_GameServerList : System.Web.UI.Page
                 case 0:
                     ComUtil.MsgBox("성공", "location.href='" + Request.Url.ToString() + "';");
                     break;
+
                 case 1:
                     ComUtil.MsgBox("실패", "history.back();");
                     break;
+
                 default:
                     ComUtil.MsgBox("예외발생", "history.back();");
                     break;
@@ -344,7 +343,6 @@ public partial class Setting_GameServerList : System.Web.UI.Page
     protected void WDDLServerGroup_OnSelectedIndexChanged(object sender, EventArgs e)
     {
         Response.Redirect("/Setting/GameServerList.aspx?SVRG=" + WDDLSGroup.SelectedValue);
-
     }
 
     protected string GetDataItem(object objData, string sFieldNm)
@@ -357,6 +355,7 @@ public partial class Setting_GameServerList : System.Web.UI.Page
                 if (Convert.ToBoolean(ComUtil.GetDataItem(objData, sFieldNm)))
                     sRtn = "V";
                 break;
+
             default:
                 sRtn = ComUtil.GetDataItem(objData, sFieldNm);
                 break;

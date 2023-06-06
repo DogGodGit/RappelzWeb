@@ -3,13 +3,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MstContent" runat="server">
 <div id="CONTENT_INNER">
-    <h2>시스템 관리</h2>
+    <h2><%= Resources.ResLang.SystemSetting_aspx_09 %></h2>
 
 	<p class="top_line"><br /></p>
 	<table cellspacing="1" cellpadding="0" class="bbs_list">
 	<tr>
-		<th>이름키</th>
-		<th>값</th>
+		<th><%= Resources.ResLang.SystemSetting_aspx_10 %></th>
+		<th><%= Resources.ResLang.SystemSetting_aspx_11 %></th>
 	</tr>
 	<tr>
 		<td class="red">assetBundleUrl</td>
@@ -30,16 +30,16 @@
 	<tr>
 		<td>clientTextVersion</td>
 		<td class="left"><asp:TextBox ID="WTxtClientTextVersion" Width="500" runat="server" /><asp:HiddenField ID="WHFClientTextVersion" runat="server" /><br />
-		<span class="red">* 업데이트시 서버에 메타데이터 파일이 생성됩니다.</span></td>
+		<span class="red"><%= Resources.ResLang.SystemSetting_aspx_12 %></span></td>
 	</tr>
 	<tr>
 		<td>metaDataVersion</td>
 		<td class="left"><asp:TextBox ID="WTxtMetaDataVersion" Width="500" runat="server" /><asp:HiddenField ID="WHFMetaDataVersion" runat="server" /><br />
-		<span class="red">* 업데이트시 서버에 메타데이터 파일이 생성됩니다.</span></td>
+		<span class="red"><%= Resources.ResLang.SystemSetting_aspx_13 %></span></td>
 	</tr>
 	<tr>
 		<td>isMaintenance</td>
-		<td class="left"><asp:CheckBox ID="WCBoxMaintanance" runat="server" /> 점검중</td>
+		<td class="left"><asp:CheckBox ID="WCBoxMaintanance" runat="server" /><%= Resources.ResLang.SystemSetting_aspx_15 %></td>
 	</tr>
 	<tr>
 		<td>MaintenanceInfoUrl</td>
@@ -48,7 +48,7 @@
 	<tr>
 		<td class="red">recommendGameServerId</td>
 		<td class="left"><asp:DropDownList ID="WDDLRecommendGameServer" runat="server" />
-			* 공개 상태의 서버만 추천서버에 적용 가능합니다.</td>
+		<%= Resources.ResLang.SystemSetting_aspx_14 %></td>
 	</tr>
 	<tr>
 		<td class="red">authApiUrl</td>
@@ -77,13 +77,13 @@
 	<tr>
 		<td>recommendServerAuto</td>
 		<td class="left">
-			<asp:CheckBox ID="WCBoxRecommendAuto" Text="자동" runat="server" />
+			<asp:CheckBox ID="WCBoxRecommendAuto" Text="<%$ Resources:ResLang,SystemSetting_aspx_16 %>" runat="server" />
 			<asp:DropDownList ID="WDDLRecommendType" runat="server" />
 		</td>
 	</tr>
 	<tr>
 		<td>maxUserConnectionCount</td>
-		<td class="left"><asp:TextBox ID="WTxtMaxUserConnectionCount" runat="server" /> * 0 이하 : 무제한</td>
+		<td class="left"><asp:TextBox ID="WTxtMaxUserConnectionCount" runat="server" /><%= Resources.ResLang.SystemSetting_aspx_17 %></td>
 	</tr>
 	<tr>
 		<td>StatusLoggingInterval</td>
@@ -96,11 +96,11 @@
 	</tr>
 	<tr>
 		<td>helpshiftSdkEnabled</td>
-		<td class="left"><asp:CheckBox ID="WCBoxHelpshiftSdkEnabled" runat="server" /> SDK사용</td>
+		<td class="left"><asp:CheckBox ID="WCBoxHelpshiftSdkEnabled" runat="server" /><%= Resources.ResLang.SystemSetting_aspx_18 %></td>
 	</tr>
 	<tr>
 		<td>helpshiftWebViewEnabled</td>
-		<td class="left"><asp:CheckBox ID="WCBoxHelpshiftWebViewEnabled" runat="server" /> 웹뷰사용</td>
+		<td class="left"><asp:CheckBox ID="WCBoxHelpshiftWebViewEnabled" runat="server" /><%= Resources.ResLang.SystemSetting_aspx_19 %></td>
 	</tr>
     	<tr>
 		<td>helpshiftUrl</td>
@@ -125,6 +125,6 @@
 	</table>
 	<p class="bottom_line"></p>
 	
-	<asp:Button ID="WBtnUpdate" Text="수정" OnClick="WBtnUpdate_OnClick"  CssClass="button" runat="server" />
+	<asp:Button ID="WBtnUpdate" Text="<%$ Resources:ResLang,SystemSetting_aspx_20 %>" OnClick="WBtnUpdate_OnClick"  CssClass="button" runat="server" />
 </div>
 </asp:Content>
