@@ -53,29 +53,29 @@ public class GameMetaDatasCommandHandler : CommandHandler
 			//===============================================================================================
 			DBUtil.Close(ref conn);
 
-			string sMetaDataVersion = drSystemSetting["metaDataVersion"].ToString();
+			if (!LitJsonUtil.TryGetStringProperty(m_joReq, "version", out string sMetaDataVersion))
+				sMetaDataVersion = drSystemSetting["metaDataVersion"].ToString();
 
 			JsonData joRes = CreateResponse();
 
 			string gameDatas = File.ReadAllText(HttpContext.Current.Server.MapPath(kFileName_MetaDataPath) + "/" + string.Format(kFileName_GameData, sMetaDataVersion));
-            string tojson;
-			if (LitJsonUtil.TryGetStringProperty(m_joReq, "tojson", out tojson))
+			if (LitJsonUtil.TryGetStringProperty(m_joReq, "tojson", out string tojson))
 			{
 				var sBase64String = Util.UnZipFromBase64(gameDatas);
 				var m_gameData = new WPDGameDatas();
 				m_gameData.DeserializeFromBase64String(sBase64String);
 
-				if (tojson == "all") 
+				if (tojson == "all")
 				{
 					var p = m_gameData.GetType().GetFields();
 					var json = new JsonData();
 
-                    foreach (var item in p)
+					foreach (var item in p)
 					{
 						json.Add(item.Name);
 					}
 					joRes["name"] = json;
-                }
+				}
 				else
 				{
 					var p = m_gameData.GetType().GetField(tojson);
@@ -92,7 +92,7 @@ public class GameMetaDatasCommandHandler : CommandHandler
 				joRes["gameDatas"] = gameDatas;
 			}
 
-            return joRes;
+			return joRes;
 		}
 		catch (FileNotFoundException ex)
 		{

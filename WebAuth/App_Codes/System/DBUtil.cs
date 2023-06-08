@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
-using System.Web;
 
 /// <summary>
 /// DBUtil'的摘要描述.
@@ -99,7 +97,10 @@ public static class DBUtil
             {
                 t = obj.GetType();
             }
-            if (t == typeof(List<>) ||
+
+            const BindingFlags InstanceBindFlags = BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public;
+
+            if (t == typeof(List<>) || obj is Array ||
                 t == typeof(IEnumerable<>))
             {
                 DataTable dt = new DataTable();
@@ -108,7 +109,7 @@ public static class DBUtil
                 {
                     var ob1 = lstenum.GetEnumerator();
                     ob1.MoveNext();
-                    foreach (var item in ob1.Current.GetType().GetProperties())
+                    foreach (var item in ob1.Current.GetType().GetFields())
                     {
                         dt.Columns.Add(new DataColumn() { ColumnName = item.Name });
                     }
@@ -116,9 +117,14 @@ public static class DBUtil
                     foreach (var item in lstenum)
                     {
                         DataRow row = dt.NewRow();
-                        foreach (var sub in item.GetType().GetProperties())
+                        Type type = ob1.Current.GetType();
+                        foreach (var sub in type.GetFields())
                         {
-                            row[sub.Name] = sub.GetValue(item, null);
+                            FieldInfo property = type.GetField(sub.Name, InstanceBindFlags);
+                            if (property != null)
+                            {
+                                row[sub.Name] = property.GetValue(item);
+                            }
                         }
                         dt.Rows.Add(row);
                     }
@@ -133,16 +139,13 @@ public static class DBUtil
             {
                 DataTable dt = new DataTable();
                 DataRow row = dt.NewRow();
-                const BindingFlags InstanceBindFlags = BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public;
-                foreach (var item in obj.GetType().GetFields())
+
+                Type type = obj.GetType();
+                foreach (var item in type.GetFields())
                 {
                     dt.Columns.Add(new DataColumn() { ColumnName = item.Name });
 
-                    Type type = obj.GetType();
-                    string propertyName = item.Name;
-                    FieldInfo property = null;
-
-                    property = type.GetField(propertyName, InstanceBindFlags);
+                    FieldInfo property = type.GetField(item.Name, InstanceBindFlags);
                     if (property != null)
                     {
                         row[item.Name] = property.GetValue(obj);
@@ -152,7 +155,6 @@ public static class DBUtil
 
                 return dt;
             }
-
         }
         catch (Exception ex)
         {
