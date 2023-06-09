@@ -10,6 +10,7 @@ using System.IO;
 using WebCommon;
 using System.Configuration;
 using System.Text;
+using System.Reflection;
 
 /// <summary>
 /// GameMetaDatasCommandHandler의 요약 설명입니다.
@@ -72,7 +73,19 @@ public class GameMetaDatasCommandHandler : CommandHandler
 
 					foreach (var item in p)
 					{
-						json.Add(item.Name);
+						var obj = item.GetValue(m_gameData);
+						if (obj is Array)
+						{
+							json[item.Name] = (obj as Array).Length;
+						}
+						else if (obj != null)
+						{
+							json[item.Name] = 1;
+						}
+						else
+						{
+							json[item.Name] = 0;
+						}
 					}
 					joRes["name"] = json;
 				}
