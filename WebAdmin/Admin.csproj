@@ -13,7 +13,7 @@
     <RootNamespace>Admin</RootNamespace>
     <AssemblyName>Admin</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44300</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -753,7 +753,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62021</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://127.0.0.1:44300/</IISUrl>
+          <IISUrl>http://127.0.0.1:8060/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

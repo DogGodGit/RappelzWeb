@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
+using System.Text;
+using System.Web.Script.Serialization;
 
 /// <summary>
 /// DBUtil'的摘要描述.
@@ -160,5 +162,45 @@ public static class DBUtil
         {
         }
         return null;
+    }
+
+    public static string DataTableToJson(DataTable table)
+    {
+        JavaScriptSerializer jsSerializer = new JavaScriptSerializer();
+        List<Dictionary<string, object>> parentRow = new List<Dictionary<string, object>>();
+        Dictionary<string, object> childRow;
+        foreach (DataRow row in table.Rows)
+        {
+            childRow = new Dictionary<string, object>();
+            foreach (DataColumn col in table.Columns)
+            {
+                childRow.Add(col.ColumnName, row[col]);
+            }
+            parentRow.Add(childRow);
+        }
+        return jsSerializer.Serialize(parentRow);
+    }
+
+    public static string DataTableToCsv(DataTable vContent)
+    {
+        StringBuilder sCsvContent;
+
+        sCsvContent = new StringBuilder();
+
+        for (int i = 0; i < vContent.Columns.Count; i++)
+        {
+            sCsvContent.Append(vContent.Columns[i].ColumnName);
+            sCsvContent.Append(i == vContent.Columns.Count - 1 ? "\r\n" : ",");
+        }
+
+        foreach (DataRow row in vContent.Rows)
+        {
+            for (int i = 0; i < vContent.Columns.Count; i++)
+            {
+                sCsvContent.Append(row[i].ToString().Trim());
+                sCsvContent.Append(i == vContent.Columns.Count - 1 ? "\r\n" : ",");
+            }
+        }
+        return sCsvContent.ToString();
     }
 }

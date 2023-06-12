@@ -11,6 +11,8 @@ using WebCommon;
 using System.Configuration;
 using System.Text;
 using System.Reflection;
+using System.Web.UI.WebControls;
+using System.Web.Script.Serialization;
 
 /// <summary>
 /// GameMetaDatasCommandHandler의 요약 설명입니다.
@@ -58,8 +60,9 @@ public class GameMetaDatasCommandHandler : CommandHandler
 				sMetaDataVersion = drSystemSetting["metaDataVersion"].ToString();
 
 			JsonData joRes = CreateResponse();
-
-			string gameDatas = File.ReadAllText(HttpContext.Current.Server.MapPath(kFileName_MetaDataPath) + "/" + string.Format(kFileName_GameData, sMetaDataVersion));
+			string dir = HttpContext.Current.Server.MapPath(kFileName_MetaDataPath);
+            if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+            string gameDatas = File.ReadAllText(dir + "/" + string.Format(kFileName_GameData, sMetaDataVersion));
 			if (LitJsonUtil.TryGetStringProperty(m_joReq, "tojson", out string tojson))
 			{
 				var sBase64String = Util.UnZipFromBase64(gameDatas);
@@ -96,11 +99,61 @@ public class GameMetaDatasCommandHandler : CommandHandler
 					{
 						var s = p.GetValue(m_gameData);
 						var d = DBUtil.ObjectToTable(s);
-						joRes[tojson] = DataTableToCsv(d);
-					}
-				}
+						joRes[tojson] = JsonMapper.ToObject(DBUtil.DataTableToJson(d));
+                    }
+
+                }
 			}
-			else
+            else if (LitJsonUtil.TryGetStringProperty(m_joReq, "tocsv", out string tocsv))
+            {
+                var sBase64String = Util.UnZipFromBase64(gameDatas);
+                var m_gameData = new WPDGameDatas();
+                m_gameData.DeserializeFromBase64String(sBase64String);
+				string path = dir + "/" + "csv";
+                if (!Directory.Exists(path)) Directory.CreateDirectory(path);
+                if (tocsv == "all")
+                {
+                    var p = m_gameData.GetType().GetFields();
+                    var json = new JsonData();
+
+                    foreach (var item in p)
+                    {
+                        var obj = item.GetValue(m_gameData);
+                        var d = DBUtil.ObjectToTable(obj);
+						if (d != null)
+						{
+							var csv = DBUtil.DataTableToCsv(d);
+							File.WriteAllText(path + "/" + item.Name + ".csv", csv, Encoding.UTF8);
+							json[item.Name] = d.Rows.Count;
+                        }
+						else
+						{
+                            json[item.Name] = 0;
+                        }
+                    }
+                    joRes["name"] = json;
+                }
+                else
+                {
+                    var p = m_gameData.GetType().GetField(tocsv);
+                    if (p != null)
+                    {
+                        var s = p.GetValue(m_gameData);
+                        var d = DBUtil.ObjectToTable(s);
+						if (d != null)
+						{
+							var csv = DBUtil.DataTableToCsv(d);
+							File.WriteAllText(path + "/" + tocsv + ".csv", csv, Encoding.UTF8);
+                            joRes[tocsv] = d.Rows.Count;
+                        }
+						else
+						{
+                            joRes[tocsv] = 0;
+                        }
+                    }
+                }
+            }
+            else
 			{
 				joRes["gameDatas"] = gameDatas;
 			}
@@ -115,28 +168,5 @@ public class GameMetaDatasCommandHandler : CommandHandler
 		{
 
         }
-	}
-
-	public string DataTableToCsv(DataTable vContent)
-	{
-		StringBuilder sCsvContent;
-
-		sCsvContent = new StringBuilder();
-
-		for (int i = 0; i < vContent.Columns.Count; i++)
-		{
-			sCsvContent.Append(vContent.Columns[i].ColumnName);
-			sCsvContent.Append(i == vContent.Columns.Count - 1 ? "\r\n" : ",");
-		}
-
-		foreach (DataRow row in vContent.Rows)
-		{
-			for (int i = 0; i < vContent.Columns.Count; i++)
-			{
-				sCsvContent.Append(row[i].ToString().Trim());
-				sCsvContent.Append(i == vContent.Columns.Count - 1 ? "\r\n" : ",");
-			}
-		}
-		return sCsvContent.ToString();
 	}
 }
